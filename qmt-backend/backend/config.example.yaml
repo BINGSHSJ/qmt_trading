@@ -1,0 +1,49 @@
+server:
+  host: "0.0.0.0"
+  port: 8000
+
+database:
+  path: "app/db/app.db"
+  busy_timeout: 5000
+
+runtime:
+  heartbeat_dir: "runtime/heartbeat"
+  strategy_state_dir: "runtime/strategy_state"
+  log_dir: "runtime/logs"
+  backup_dir: "runtime/backups"
+
+polling:
+  position_interval_sec: 3
+  strategy_interval_sec: 5
+  health_interval_sec: 10
+  log_interval_sec: 30
+
+risk:
+  max_single_order_value: 100000
+  max_daily_order_count: 50
+  max_daily_loss_pct: 5.0
+
+log:
+  retention_days: 30
+  level: "INFO"
+
+backup:
+  retention_days: 7
+
+trading_calendar:
+  morning_start: "09:30"
+  morning_end: "11:30"
+  afternoon_start: "13:00"
+  afternoon_end: "15:00"
+
+trading:
+  lot_size: 100
+
+strategy:
+  start_probe_sec: 2
+  stop_timeout_sec: 30
+  heartbeat_timeout_sec: 120
+
+rate_limit:
+  enabled: false
+  max_per_second: 10
