@@ -1,26 +1,26 @@
-# 本地量化控制台
+# Local Quant Console
 
-本地量化控制台（Local Quant Console）是一个面向个人量化研究和本地交易辅助的桌面化 Web 控制台。项目围绕 MiniQMT / QMT 本地环境构建，目标是把“数据同步、Python 策略开发、可信回测、交易确认、日志诊断、备份恢复”这些日常工作收束到一个可视化后台中。
+Local Quant Console is a local-first quantitative trading workstation for personal research, strategy development, backtesting, and assisted execution around MiniQMT / QMT. It brings market data synchronization, Python strategy workflows, local SQLite-based research, order confirmation, logs, backups, and system diagnostics into one desktop-style web console.
 
-它不是云端 SaaS，也不是多用户交易平台；第一版重点是本地、轻量、可审计、可长期使用。
+This project is not a cloud SaaS product and not a multi-user trading platform. The first version focuses on local use, lightweight architecture, auditability, and long-term daily operation.
 
-## 核心能力
+## Core Features
 
-- **总览看板**：汇总 QMT 状态、账户资产、任务队列、策略信号和交易摘要。
-- **数据中心**：按 QMT 官方数据边界同步账户、持仓、委托、成交、日 K、分钟 K、交易日历等数据，先落 SQLite 再供策略和回测使用。
-- **策略开发**：支持 Python 策略文件管理、代码编辑、接口检查、运行、信号展示和版本记录。
-- **回测研究**：提供本地 SQLite 数据驱动的单策略回测、分钟信号本地撮合、资金曲线、交易明细、日志和导出能力。
-- **交易执行**：策略只生成信号，真实下单必须经过交易执行模块、人工确认和幂等保护。
-- **系统管理**：提供环境检测、配置管理、日志中心、备份恢复、运行监控和启动健康检查。
+- **Dashboard**: QMT status, account assets, task queue, strategy signals, and trading summaries.
+- **Data Center**: Synchronizes account snapshots, positions, orders, trades, daily bars, minute bars, and trading calendars through the QMT data boundary; all data is persisted into SQLite before being used by strategies or backtests.
+- **Strategy Development**: Python strategy file management, code editing, interface validation, strategy execution, signal display, and version records.
+- **Backtest Research**: Single-strategy local backtesting powered by SQLite data, minute-signal local matching, equity curves, trade details, logs, and Excel export.
+- **Trading Execution**: Strategies only generate signals. Real orders must go through the trading execution module, manual confirmation, and idempotency protection.
+- **System Management**: Environment checks, configuration, log center, backup and restore, runtime monitoring, and startup health checks.
 
-## 安全边界
+## Safety Boundary
 
-- 回测只读取已落库的历史行情，不调用真实 QMT 下单接口。
-- 策略只能通过受控 `StrategyContext` 读取数据，不允许直接访问 QMT 原始对象、数据库连接或交易服务。
-- 真实下单必须经过交易执行模块和确认弹窗；默认不启用自动实盘交易。
-- SQLite 数据库、日志、备份、真实账号、本机路径和用户私有策略不会提交到公开仓库。
+- Backtests only read historical data already stored in SQLite and never call real QMT order APIs.
+- Strategies can only read data through the controlled `StrategyContext`; they do not receive raw QMT objects, database connections, or trading services.
+- Real orders require the trading execution module and confirmation dialog; automatic live trading is not enabled by default.
+- SQLite databases, logs, backups, real account IDs, local machine paths, and private user strategies are not included in the public repository.
 
-## 技术栈
+## Tech Stack
 
 ```text
 Frontend  React + TypeScript + Vite + Ant Design + Lightweight Charts + Monaco Editor
@@ -30,17 +30,17 @@ QMT       xtquant / MiniQMT through Adapter layer
 Runtime   Windows local scripts: start.bat / stop.bat / backup.bat
 ```
 
-## 适合谁
+## Who Is This For?
 
-这个项目适合想在本地管理 QMT 数据、编写 Python 策略、做回测研究和人工确认交易的个人用户或开发者。它也适合作为“本地量化控制台”类产品的工程参考：分层后端、长任务、SQLite 数据可信、策略沙箱、交易幂等、前端密度控制和深浅主题。
+This project is for individual users and developers who want to manage QMT data locally, write Python strategies, run local research workflows, and keep real trading actions behind explicit human confirmation. It can also serve as an engineering reference for local quant-console products: layered backend design, long-running tasks, SQLite data trust, strategy sandboxing, trading idempotency, compact frontend density, and dark/light themes.
 
-## 不适合什么
+## What This Is Not
 
-本项目不提供投资建议，不保证收益，不内置商业数据源，不做多用户权限系统、审批流、复杂风控中心、云部署或默认自动实盘交易。
+This project does not provide investment advice, does not guarantee returns, does not bundle commercial data sources, and does not implement multi-user permissions, approval workflows, a complex risk-control center, cloud deployment, or default automatic live trading.
 
-## 开源版提示
+## Public Snapshot Notice
 
-本仓库为可公开源码快照，不包含本地 SQLite 数据、日志、备份、真实账号、历史报告截图和 `strategies/user/` 用户私有策略。真实 QMT 路径、账户 ID 和运行数据请只保存在本机配置中，不要提交到 Git。更多边界见 [OPEN_SOURCE.md](OPEN_SOURCE.md)。
+This repository is a public source snapshot. It does not include local SQLite data, logs, backups, real account IDs, historical report screenshots, or private strategies under `strategies/user/`. Keep real QMT paths, account IDs, and runtime data in local configuration only, and never commit them to Git. See [OPEN_SOURCE.md](OPEN_SOURCE.md) for details.
 
 ## 一键启动
 
