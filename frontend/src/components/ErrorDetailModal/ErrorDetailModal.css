@@ -1,0 +1,81 @@
+.error-detail-modal .ant-modal-content {
+  color: var(--lqc-terminal-text);
+  border: 1px solid var(--lqc-terminal-line-strong);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+  box-shadow: 0 24px 60px rgba(var(--lqc-shadow-rgb), 0.42);
+}
+
+.error-detail-modal .ant-modal-header {
+  min-height: 48px;
+  margin-bottom: 0;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--lqc-terminal-line);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel-2);
+}
+
+.error-detail-modal .ant-modal-body {
+  padding: 14px 16px 16px;
+  max-height: var(--lqc-modal-content-max-height, min(58vh, 560px));
+  overflow: auto;
+  scrollbar-color: var(--lqc-scrollbar-thumb) var(--lqc-scrollbar-track);
+}
+
+.error-detail-modal .ant-modal-title,
+.error-detail-modal .ant-modal-close,
+.error-detail-modal .ant-typography {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.error-detail-modal__content {
+  width: 100%;
+}
+
+.error-detail-modal__message {
+  color: var(--lqc-terminal-text);
+}
+
+.error-detail-modal__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.error-detail-modal__suggestion {
+  padding: 8px 10px;
+  border: 1px solid var(--lqc-warning-border-soft);
+  border-radius: 0;
+  color: var(--lqc-warning-text);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.error-detail-modal__technical {
+  max-height: min(30vh, 240px);
+  padding: 10px;
+  border: 1px solid var(--lqc-terminal-line);
+  border-radius: 0;
+  overflow: auto;
+  color: var(--lqc-text-soft);
+  background: var(--lqc-bg-page);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.error-detail-modal .ant-modal-body::-webkit-scrollbar,
+.error-detail-modal__technical::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.error-detail-modal .ant-modal-body::-webkit-scrollbar-track,
+.error-detail-modal__technical::-webkit-scrollbar-track {
+  background: var(--lqc-scrollbar-track);
+}
+
+.error-detail-modal .ant-modal-body::-webkit-scrollbar-thumb,
+.error-detail-modal__technical::-webkit-scrollbar-thumb {
+  border: 2px solid var(--lqc-scrollbar-border);
+  border-radius: 999px;
+  background: var(--lqc-scrollbar-thumb);
+}

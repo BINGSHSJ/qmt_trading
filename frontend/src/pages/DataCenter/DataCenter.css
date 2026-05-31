@@ -1,0 +1,3752 @@
+.data-center-page {
+  gap: 16px;
+}
+
+.data-center-overview .ant-col {
+  display: flex;
+}
+
+.data-center-overview .metric-card {
+  width: 100%;
+}
+
+.data-center-tabs .ant-tabs-tab {
+  font-weight: 600;
+}
+
+.data-source-grid {
+  margin-bottom: 14px;
+}
+
+.data-source-cell {
+  min-height: 72px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-control);
+  background: var(--lqc-bg-card-muted);
+}
+
+.data-2026-plan-panel {
+  min-height: 142px;
+  padding: 14px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-card);
+  background: var(--lqc-bg-card-muted);
+}
+
+.data-catalog-unsupported {
+  margin-top: 12px;
+  padding: 12px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid rgba(var(--lqc-warning-rgb), 0.22);
+  border-radius: var(--lqc-radius-card);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.data-center-note {
+  margin-top: 4px;
+  border-radius: var(--lqc-radius-control);
+}
+
+.data-provenance-alert {
+  border-color: rgba(var(--lqc-primary-rgb), 0.18);
+  border-radius: var(--lqc-radius-card);
+}
+
+.data-source-account {
+  max-width: 138px;
+  font-size: 12px;
+  color: var(--lqc-text-secondary);
+}
+
+.account-scope-panel {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border: 1px solid rgba(var(--lqc-primary-rgb), 0.18);
+  border-radius: var(--lqc-radius-card);
+  background: linear-gradient(180deg, var(--lqc-bg-card) 0%, var(--lqc-bg-card-muted) 100%);
+  box-shadow: var(--lqc-shadow-card);
+}
+
+.account-scope-panel__hint {
+  margin: 6px 0 0;
+}
+
+.data-center-risk-note {
+  margin-top: 12px;
+}
+
+.data-flow-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.data-flow-strip__node {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  min-width: 0;
+}
+
+.data-flow-strip__card {
+  flex: 1;
+  min-height: 104px;
+  padding: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-card);
+  background: linear-gradient(180deg, var(--lqc-bg-card) 0%, var(--lqc-bg-card-muted) 100%);
+  box-shadow: var(--lqc-shadow-card);
+}
+
+.data-flow-strip__index {
+  width: 30px;
+  height: 30px;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: var(--lqc-text-inverse);
+  font-weight: 700;
+  background: var(--lqc-primary);
+}
+
+.data-flow-strip__card .ant-typography {
+  display: block;
+}
+
+.data-flow-strip__arrow {
+  align-self: center;
+  flex: none;
+  color: var(--lqc-text-muted);
+}
+
+.market-kline-card .ant-card-body {
+  padding-top: 14px;
+}
+
+.market-kline-card .kline-chart {
+  min-height: 452px;
+}
+
+.market-kline-card .kline-chart--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 452px;
+  border: 1px dashed var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-card);
+  background: var(--lqc-bg-card-muted);
+}
+
+.market-freshness-item {
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-control);
+  background: var(--lqc-bg-card-muted);
+}
+
+.market-sync-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.data-sync-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.data-sync-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.data-sync-card {
+  min-height: 216px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-card);
+  background: var(--lqc-bg-card);
+  box-shadow: var(--lqc-shadow-card);
+}
+
+.data-sync-card--primary {
+  border-color: rgba(var(--lqc-primary-rgb), 0.28);
+  background: linear-gradient(180deg, var(--lqc-info-soft-bg) 0%, var(--lqc-bg-card) 78%);
+}
+
+.data-sync-card--failed {
+  border-color: rgba(var(--lqc-danger-rgb), 0.32);
+}
+
+.data-sync-card__head {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.data-sync-card__head .ant-typography {
+  display: block;
+}
+
+.data-sync-card__icon {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: var(--lqc-primary);
+  background: var(--lqc-info-soft-bg);
+}
+
+.data-sync-card__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--lqc-text-secondary);
+}
+
+.data-sync-card__time {
+  min-height: 18px;
+  margin-top: auto;
+  font-size: 12px;
+}
+
+.data-sync-current-task {
+  padding: 14px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-card);
+  background: var(--lqc-bg-card-muted);
+}
+
+.data-sync-current-task__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.data-sync-current-task__head > .ant-typography {
+  max-width: 520px;
+  text-align: right;
+}
+
+.data-task-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 8px;
+}
+
+.data-task-detail-item {
+  min-height: 50px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-control);
+  background: var(--lqc-bg-card);
+}
+
+.data-sync-current-task--empty {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.quality-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.quality-check-card {
+  min-height: 178px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-card);
+  background: var(--lqc-bg-card);
+}
+
+.quality-check-card--failed {
+  border-color: rgba(var(--lqc-danger-rgb), 0.32);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.quality-check-card--warning {
+  border-color: rgba(var(--lqc-warning-rgb), 0.32);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.quality-check-card--success {
+  border-color: rgba(var(--lqc-success-rgb), 0.22);
+}
+
+.quality-check-card__head,
+.quality-check-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.quality-check-card__message {
+  min-height: 40px;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.quality-check-card__meta {
+  font-size: 12px;
+  color: var(--lqc-text-secondary);
+}
+
+.quality-check-card__next {
+  min-height: 40px;
+  padding: 8px 10px;
+  border-radius: var(--lqc-radius-control);
+  background: rgba(var(--lqc-shadow-rgb), 0.04);
+}
+
+.dictionary-table-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.dictionary-table-card {
+  min-height: 132px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-card);
+  background: var(--lqc-bg-card);
+  box-shadow: var(--lqc-shadow-card);
+}
+
+.dictionary-table-card--empty {
+  grid-column: 1 / -1;
+}
+
+.dictionary-table-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.dictionary-table-card .ant-btn {
+  margin-top: auto;
+  align-self: flex-start;
+  min-height: 28px;
+}
+
+.data-flow-step {
+  min-height: 92px;
+  padding: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-control);
+  background: var(--lqc-bg-card-muted);
+}
+
+.data-flow-step__index {
+  width: 28px;
+  height: 28px;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  color: var(--lqc-text-inverse);
+  font-weight: 700;
+  background: var(--lqc-primary);
+}
+
+.data-flow-step .ant-typography {
+  display: block;
+}
+
+.data-center-page .section-card .kline-chart {
+  min-height: 280px;
+}
+
+@media (min-width: 1600px) {
+  .data-center-page .ant-table-cell {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 1280px) {
+  .data-flow-strip,
+  .data-sync-card-grid,
+  .data-task-detail-grid,
+  .quality-matrix-grid,
+  .dictionary-table-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .data-flow-strip,
+  .data-sync-card-grid,
+  .data-task-detail-grid,
+  .quality-matrix-grid,
+  .dictionary-table-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .data-flow-strip__node {
+    flex-direction: column;
+  }
+
+  .data-flow-strip__arrow {
+    display: none;
+  }
+
+  .account-scope-panel {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .data-sync-current-task__head {
+    flex-direction: column;
+  }
+
+  .data-sync-current-task__head > .ant-typography {
+    max-width: none;
+    text-align: left;
+  }
+}
+
+/* IBKR-style data center audit pass: dense terminal panes for sync, quality, and dictionary pages. */
+.data-center-page {
+  gap: 8px;
+  color: var(--lqc-text-soft);
+}
+
+.data-center-page .page-header-panel {
+  min-height: 42px;
+  padding: 5px 6px;
+  border: 0;
+  border-bottom: 1px solid var(--lqc-terminal-line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.data-center-page .page-header-panel::before,
+.data-center-page .section-card::before {
+  display: none;
+}
+
+.data-center-page .page-header-title {
+  margin: 0 !important;
+  color: var(--lqc-terminal-text) !important;
+  font-size: 16px !important;
+  line-height: 1.15 !important;
+}
+
+.data-center-page .page-header-description,
+.data-center-page .page-header-meta {
+  display: none;
+}
+
+.data-center-page .page-header-actions {
+  max-width: 72%;
+  gap: 5px !important;
+}
+
+.data-center-page .command-panel {
+  min-height: 104px;
+  padding: 10px;
+  gap: 10px;
+  border-color: var(--lqc-terminal-line);
+  border-radius: 0;
+  background: linear-gradient(135deg, var(--lqc-terminal-sunken), var(--lqc-terminal-panel));
+  box-shadow: none;
+}
+
+.data-center-page .command-panel::after {
+  opacity: 0.45;
+}
+
+.data-center-page .command-panel__title {
+  margin: 2px 0 4px !important;
+  font-size: 16px !important;
+}
+
+.data-center-page .command-panel__description {
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.data-center-page .command-panel__actions {
+  margin-top: 8px;
+}
+
+.data-center-page .command-panel__items {
+  gap: 6px;
+}
+
+.data-center-page .command-panel__item {
+  min-height: 74px;
+  padding: 8px;
+  border-radius: 0;
+  background: rgba(var(--lqc-highlight-rgb), 0.05);
+}
+
+.data-center-page .command-panel__item-value {
+  font-size: 15px;
+}
+
+.data-center-page .workbench-nav {
+  grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border-top: 1px solid var(--lqc-terminal-line);
+  border-bottom: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-line);
+}
+
+.data-center-page .workbench-nav__item {
+  min-height: 48px;
+  padding: 7px 8px;
+  gap: 7px;
+  border: 0;
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+  box-shadow: none;
+}
+
+.data-center-page .workbench-nav__item:hover,
+.data-center-page .workbench-nav__item--active {
+  background: var(--lqc-terminal-panel-2);
+  box-shadow: none;
+}
+
+.data-center-page .workbench-nav__index {
+  width: 23px;
+  height: 23px;
+  border-radius: 4px;
+  background: var(--lqc-terminal-active);
+}
+
+.data-center-page .workbench-nav__copy strong {
+  color: var(--lqc-terminal-text);
+  font-size: 12px;
+}
+
+.data-center-page .workbench-nav__copy span {
+  color: var(--lqc-terminal-muted);
+}
+
+.data-center-tabs .ant-tabs-nav {
+  margin: 0 0 6px;
+  padding: 0 2px;
+  border-bottom: 1px solid var(--lqc-terminal-line);
+}
+
+.data-center-tabs .ant-tabs-nav::before {
+  border-bottom-color: var(--lqc-terminal-line);
+}
+
+.data-center-tabs .ant-tabs-tab {
+  padding: 7px 0;
+  color: var(--lqc-terminal-muted);
+  font-size: 12px;
+}
+
+.data-center-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.data-center-tabs .ant-tabs-ink-bar {
+  background: var(--lqc-terminal-blue);
+}
+
+.data-center-page .section-card.ant-card {
+  border: 1px solid var(--lqc-terminal-line) !important;
+  border-radius: 0 !important;
+  color: var(--lqc-text-soft);
+  background: var(--lqc-terminal-panel) !important;
+  box-shadow: none !important;
+}
+
+.data-center-page .section-card .ant-card-head {
+  min-height: 32px;
+  padding-inline: 8px;
+  border-bottom-color: var(--lqc-terminal-line) !important;
+  background: var(--lqc-terminal-panel-2) !important;
+}
+
+.data-center-page .section-card .ant-card-head-title,
+.data-center-page .section-card .ant-card-extra {
+  padding: 6px 0;
+}
+
+.data-center-page .section-card .ant-card-body {
+  padding: 8px;
+  background: transparent;
+}
+
+.data-center-page .section-card__title {
+  color: var(--lqc-terminal-text);
+  font-size: 12px;
+}
+
+.data-center-page .section-card__description,
+.data-center-page .ant-typography-secondary {
+  color: var(--lqc-terminal-muted) !important;
+}
+
+.data-sync-card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
+  gap: 6px;
+}
+
+.data-sync-card {
+  min-height: 126px;
+  padding: 8px;
+  gap: 6px;
+  border-color: var(--lqc-terminal-line);
+  border-radius: 0;
+  color: var(--lqc-text-soft);
+  background: var(--lqc-terminal-panel);
+  box-shadow: none;
+}
+
+.data-sync-card--primary {
+  border-color: var(--lqc-terminal-line-strong);
+  border-left: 2px solid var(--lqc-terminal-blue);
+  background: var(--lqc-terminal-panel-2);
+}
+
+.data-sync-card--failed {
+  border-color: var(--lqc-danger-border-soft);
+  border-left: 2px solid var(--lqc-danger);
+}
+
+.data-sync-card__head {
+  gap: 8px;
+}
+
+.data-sync-card__head .ant-typography {
+  line-height: 1.35;
+}
+
+.data-sync-card__head .ant-typography:not(.ant-typography-secondary),
+.data-sync-card__head .ant-typography strong,
+.data-sync-card__head .ant-typography-strong {
+  color: var(--lqc-terminal-text) !important;
+  font-size: 12px;
+}
+
+.data-sync-card__head .ant-typography-secondary {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 11px;
+}
+
+.data-sync-card__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  color: var(--lqc-terminal-blue);
+  background: rgba(var(--lqc-primary-rgb), 0.14);
+}
+
+.data-sync-card__meta {
+  color: var(--lqc-terminal-muted);
+  font-size: 11px;
+}
+
+.data-sync-card__meta .ant-typography {
+  color: var(--lqc-text-soft);
+  font-family: var(--lqc-font-number);
+  font-size: 11px;
+}
+
+.data-sync-card__time {
+  min-height: 14px;
+  margin-top: 0;
+  font-size: 11px;
+}
+
+.data-sync-card .ant-btn {
+  width: auto !important;
+  min-width: 74px;
+  height: 28px;
+  min-height: 28px;
+  margin-top: auto;
+  align-self: flex-start;
+  padding-inline: 8px;
+  font-size: 12px;
+}
+
+.data-center-page .ant-btn-default {
+  color: var(--lqc-text-soft);
+  border-color: var(--lqc-terminal-line-strong);
+  background: var(--lqc-terminal-panel-2);
+  box-shadow: none;
+}
+
+.data-center-page .ant-btn-default:hover {
+  color: var(--lqc-text-inverse) !important;
+  border-color: var(--lqc-action-primary-bg) !important;
+  background: var(--lqc-terminal-hover) !important;
+}
+
+.data-center-page .ant-btn-primary {
+  box-shadow: none;
+}
+
+.data-center-page .metric-card.ant-card {
+  border: 1px solid var(--lqc-terminal-line) !important;
+  border-radius: 0 !important;
+  color: var(--lqc-text-soft);
+  background: var(--lqc-terminal-panel) !important;
+  box-shadow: none !important;
+}
+
+.data-center-page .metric-card.ant-card .ant-card-body {
+  min-height: 74px;
+  padding: 10px 12px !important;
+}
+
+.data-center-page .metric-card::before {
+  width: 2px;
+}
+
+.data-center-page .metric-card-label,
+.data-center-page .metric-card-subvalue,
+.data-center-page .metric-card__footer {
+  color: var(--lqc-terminal-muted) !important;
+}
+
+.data-center-page .metric-card-value {
+  margin: 4px 0 0 !important;
+  color: var(--lqc-terminal-text) !important;
+  font-family: var(--lqc-font-number);
+  font-size: 16px !important;
+  line-height: 1.15 !important;
+}
+
+.data-center-page .metric-card--blue .metric-card-value,
+.data-center-page .metric-card--default .metric-card-value {
+  color: var(--lqc-link-hover) !important;
+}
+
+.data-center-page .metric-card--green .metric-card-value {
+  color: var(--lqc-terminal-green) !important;
+}
+
+.data-center-page .metric-card--red .metric-card-value {
+  color: var(--lqc-danger-text) !important;
+}
+
+.data-center-page .metric-card--orange .metric-card-value {
+  color: var(--lqc-terminal-orange) !important;
+}
+
+.data-center-page .metric-card__icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  color: var(--lqc-link-hover);
+  background: var(--lqc-terminal-blue-soft);
+}
+
+.data-center-page .ant-tag {
+  border-color: var(--lqc-terminal-line-strong);
+  color: var(--lqc-text-soft);
+  background: var(--lqc-terminal-panel-2);
+}
+
+.data-center-page .ant-tag-success {
+  border-color: var(--lqc-success-border-soft);
+  color: var(--lqc-success-text);
+  background: var(--lqc-success-soft-bg);
+}
+
+.data-center-page .ant-tag-error {
+  border-color: var(--lqc-danger-border-soft);
+  color: var(--lqc-danger-text);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.data-center-page .ant-tag-warning {
+  border-color: var(--lqc-warning-border-soft);
+  color: var(--lqc-warning-text);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.data-center-page .ant-tag-processing,
+.data-center-page .ant-tag-blue {
+  border-color: var(--lqc-info-border-soft);
+  color: var(--lqc-link-hover);
+  background: var(--lqc-info-soft-bg);
+}
+
+.data-center-page .data-freshness-tag {
+  color: var(--lqc-terminal-muted);
+  border-color: var(--lqc-terminal-line-strong);
+  background: var(--lqc-terminal-panel-2);
+}
+
+.data-center-page .data-freshness-tag--fresh {
+  color: var(--lqc-link-hover);
+  border-color: var(--lqc-info-border-soft);
+  background: var(--lqc-info-soft-bg);
+}
+
+.data-sync-current-task {
+  padding: 8px;
+  border-color: var(--lqc-terminal-line);
+  border-radius: 0;
+  color: var(--lqc-text-soft);
+  background: var(--lqc-terminal-panel);
+}
+
+.data-sync-current-task--focused {
+  border-color: rgba(var(--lqc-primary-rgb), 0.82);
+  box-shadow:
+    inset 3px 0 0 var(--lqc-terminal-blue),
+    0 0 0 1px rgba(var(--lqc-primary-rgb), 0.34),
+    0 0 22px rgba(var(--lqc-primary-rgb), 0.18);
+}
+
+.data-sync-current-task__head {
+  gap: 8px;
+}
+
+.data-sync-current-task__head > .ant-typography {
+  max-width: 720px;
+  font-size: 11px;
+}
+
+.data-sync-current-task--empty {
+  min-height: 48px;
+  justify-content: center;
+}
+
+.data-task-detail-grid {
+  grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
+  gap: 4px;
+}
+
+.data-task-detail-item {
+  min-height: 42px;
+  padding: 6px 7px;
+  border-color: var(--lqc-terminal-line);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.data-task-detail-item .ant-typography-strong {
+  color: var(--lqc-terminal-text);
+  font-family: var(--lqc-font-number);
+  font-size: 12px;
+}
+
+/* UI-QA-20260521: active sync task and search controls must never fall back to Ant light card/input styles. */
+.data-center-page .task-progress-inline.ant-card,
+.data-center-page .task-progress-inline.ant-card .ant-card-body,
+.data-center-page .data-sync-current-task,
+.data-center-page .data-task-detail-item {
+  border-color: var(--lqc-terminal-line) !important;
+  border-radius: 0 !important;
+  color: var(--lqc-terminal-text) !important;
+  background: var(--lqc-terminal-panel) !important;
+  box-shadow: none !important;
+}
+
+.data-center-page .task-progress-inline .ant-progress-inner,
+.data-center-page .data-sync-current-task .ant-progress-inner {
+  background: var(--lqc-terminal-line) !important;
+}
+
+.data-center-page .task-progress-inline .ant-typography,
+.data-center-page .data-sync-current-task .ant-typography,
+.data-center-page .data-task-detail-item .ant-typography {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.data-center-page .task-progress-inline .ant-typography-secondary,
+.data-center-page .data-sync-current-task .ant-typography-secondary,
+.data-center-page .data-task-detail-item .ant-typography-secondary {
+  color: var(--lqc-terminal-muted) !important;
+}
+
+.data-center-page .ant-input-search,
+.data-center-page .ant-input-search .ant-input-wrapper,
+.data-center-page .ant-input-search .ant-input-group,
+.data-center-page .ant-input-search .ant-input-affix-wrapper,
+.data-center-page .ant-input-search .ant-input {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page .ant-input-search .ant-input-affix-wrapper,
+.data-center-page .ant-input-search .ant-input {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.data-center-page .toolbar {
+  margin-bottom: 6px;
+  padding: 6px 8px;
+  border-color: var(--lqc-terminal-line);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.data-center-page .filter-bar {
+  gap: 6px;
+}
+
+.data-center-page .ant-input,
+.data-center-page .ant-input-affix-wrapper,
+.data-center-page .ant-input-search .ant-input-wrapper,
+.data-center-page .ant-select-selector {
+  color: var(--lqc-text-soft) !important;
+  border-color: var(--lqc-terminal-line-strong) !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page .ant-input-search-button {
+  color: var(--lqc-text-soft) !important;
+  border-color: var(--lqc-terminal-line-strong) !important;
+  background: var(--lqc-terminal-panel-2) !important;
+}
+
+.data-center-page .data-table__table .ant-table {
+  border-color: var(--lqc-terminal-line);
+  border-radius: 0;
+  color: var(--lqc-text-soft);
+  background: var(--lqc-terminal-panel);
+}
+
+.data-center-page .data-table__table .ant-table-container,
+.data-center-page .data-table__table .ant-table-content,
+.data-center-page .data-table__table .ant-table-body {
+  background: var(--lqc-terminal-panel);
+}
+
+.data-center-page .data-table__table .ant-table-thead > tr > th {
+  color: var(--lqc-terminal-muted) !important;
+  border-color: var(--lqc-terminal-line) !important;
+  background: var(--lqc-terminal-panel-3) !important;
+  font-size: 12px;
+}
+
+.data-center-page .data-table__table .ant-table-tbody > tr > td {
+  color: var(--lqc-terminal-text);
+  border-color: var(--lqc-terminal-line);
+  background: var(--lqc-terminal-panel);
+}
+
+.data-center-page .data-table__table .ant-table-tbody > tr:nth-child(even) > td {
+  background: var(--lqc-terminal-panel-2);
+}
+
+.data-center-page .data-table__table .ant-table-tbody > tr:hover > td {
+  background: var(--lqc-terminal-hover) !important;
+}
+
+.data-center-page .data-table__table .ant-table-placeholder,
+.data-center-page .data-table__table .ant-table-placeholder:hover > td {
+  color: var(--lqc-terminal-muted) !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page .empty-guide {
+  margin: 6px 0;
+  padding: 8px;
+}
+
+.data-center-page .ant-empty-image {
+  display: none;
+}
+
+.data-center-page .ant-alert {
+  border-radius: 0;
+}
+
+.data-center-page .data-provenance-alert {
+  border-color: var(--lqc-warning-border-soft);
+  color: var(--lqc-warning-text);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.data-center-page .data-provenance-alert .ant-alert-message,
+.data-center-page .data-provenance-alert .ant-alert-description {
+  color: var(--lqc-warning-text);
+}
+
+.quality-matrix-grid,
+.dictionary-table-grid {
+  gap: 6px;
+}
+
+.quality-check-card,
+.dictionary-table-card,
+.data-flow-strip__card,
+.data-flow-step,
+.market-freshness-item,
+.account-scope-panel,
+.data-2026-plan-panel,
+.data-source-cell {
+  border-color: var(--lqc-terminal-line);
+  border-radius: 0;
+  color: var(--lqc-text-soft);
+  background: var(--lqc-terminal-panel);
+  box-shadow: none;
+}
+
+.quality-check-card {
+  min-height: 132px;
+  padding: 8px;
+  gap: 6px;
+}
+
+.quality-check-card--failed {
+  border-color: var(--lqc-danger-border-soft);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.quality-check-card--warning {
+  border-color: var(--lqc-warning-border-soft);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.quality-check-card--success {
+  border-color: var(--lqc-success-border-soft);
+}
+
+.quality-check-card__message,
+.quality-check-card__next {
+  min-height: 30px;
+}
+
+.quality-check-card__next {
+  padding: 6px 7px;
+  border-radius: 0;
+  background: rgba(var(--lqc-highlight-rgb), 0.035);
+}
+
+.dictionary-table-card {
+  min-height: 106px;
+  padding: 8px;
+}
+
+.dictionary-table-card .ant-btn {
+  height: 28px;
+  min-height: 28px;
+  padding-inline: 8px;
+  font-size: 12px;
+}
+
+.data-flow-strip {
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-line);
+}
+
+.data-flow-strip__card {
+  min-height: 74px;
+  padding: 8px;
+}
+
+.data-flow-strip__index,
+.data-flow-step__index {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: var(--lqc-terminal-blue);
+}
+
+/* UI-20: align Data Center to the dashboard workspace module standard. */
+.data-center-page {
+  padding: 6px;
+  gap: 6px;
+  overflow: auto;
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-bg);
+}
+
+.data-center-page .page-header-panel {
+  min-height: 38px;
+  padding: 4px 6px 7px;
+  border: 0;
+  border-bottom: 1px solid var(--lqc-terminal-line);
+  border-radius: 0;
+  background: transparent;
+}
+
+.data-center-page .page-header-title {
+  color: var(--lqc-terminal-text) !important;
+  font-size: 15px !important;
+}
+
+.data-center-page .page-header-actions {
+  max-width: 76%;
+}
+
+.data-center-page .command-panel {
+  min-height: 86px;
+  padding: 8px;
+  gap: 8px;
+  border-color: var(--lqc-terminal-line);
+  background:
+    linear-gradient(90deg, rgba(var(--lqc-primary-rgb), 0.08), transparent 42%),
+    var(--lqc-terminal-panel);
+}
+
+.data-center-page .command-panel__title {
+  font-size: 15px !important;
+}
+
+.data-center-page .command-panel__description {
+  max-width: 760px;
+  color: var(--lqc-text-secondary) !important;
+  line-height: 1.42;
+}
+
+.data-center-page .command-panel__item {
+  min-height: 60px;
+  padding: 7px 8px;
+  border-color: rgba(var(--lqc-muted-rgb), 0.16);
+  background: rgba(var(--lqc-highlight-rgb), 0.04);
+}
+
+.data-center-page .command-panel__item-value {
+  font-size: 14px;
+}
+
+.data-center-page .workbench-nav {
+  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  gap: 0;
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-line);
+}
+
+.data-center-page .workbench-nav__item {
+  min-height: 42px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.data-center-page .workbench-nav__item:hover,
+.data-center-page .workbench-nav__item--active {
+  background: var(--lqc-terminal-panel-3);
+  box-shadow: inset 0 -2px 0 var(--lqc-terminal-blue);
+}
+
+.data-center-page .workbench-nav__index {
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+}
+
+.data-center-page .workbench-nav__copy strong {
+  font-size: 12px;
+}
+
+.data-center-tabs .ant-tabs-nav {
+  margin-bottom: 6px;
+  padding: 0 2px;
+  border-bottom-color: var(--lqc-terminal-line);
+}
+
+.data-center-page .section-card.ant-card,
+.data-center-page .metric-card.ant-card,
+.data-sync-card,
+.data-flow-strip,
+.quality-check-card,
+.dictionary-table-card {
+  border-color: var(--lqc-terminal-line) !important;
+  border-radius: 0 !important;
+  background: var(--lqc-terminal-panel) !important;
+  box-shadow: none !important;
+}
+
+.data-center-page .section-card .ant-card-head,
+.data-center-page .metric-card .ant-card-head {
+  min-height: 32px !important;
+  padding-inline: 8px;
+  border-bottom-color: var(--lqc-terminal-line) !important;
+  background: var(--lqc-terminal-panel-2) !important;
+}
+
+.data-center-page .section-card .ant-card-body,
+.data-center-page .metric-card .ant-card-body {
+  padding: 8px !important;
+}
+
+.data-center-page .data-table__table .ant-table {
+  border-color: var(--lqc-terminal-line);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.data-center-page .data-table__table .ant-table-thead > tr > th,
+.data-center-page .data-table__table .ant-table-tbody > tr > td {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+/* UI-22: deep Data Center surfaces: data dictionary and K-line viewer. */
+.data-center-page .market-kline-card.ant-card,
+.data-center-page .kline-chart-card.ant-card {
+  border: 1px solid var(--lqc-terminal-line) !important;
+  border-radius: 0 !important;
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-panel) !important;
+  box-shadow: none !important;
+}
+
+.data-center-page .market-kline-card .ant-card-head,
+.data-center-page .kline-chart-card .ant-card-head {
+  min-height: 32px !important;
+  padding-inline: 8px;
+  border-bottom-color: var(--lqc-terminal-line) !important;
+  background: var(--lqc-terminal-panel-2) !important;
+}
+
+.data-center-page .market-kline-card .ant-card-body,
+.data-center-page .kline-chart-card .ant-card-body {
+  padding: 8px !important;
+}
+
+.data-center-page .kline-chart {
+  color: var(--lqc-terminal-text);
+}
+
+.data-center-page .kline-chart > div:first-child {
+  overflow: hidden;
+  border: 1px solid var(--lqc-terminal-line);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.data-center-page .kline-chart--empty {
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-panel);
+}
+
+.data-center-page .dictionary-table-grid {
+  gap: 6px;
+}
+
+.data-center-page .dictionary-table-card {
+  min-height: 88px;
+  padding: 8px;
+  border: 1px solid var(--lqc-terminal-line);
+  border-radius: 0;
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-panel);
+  box-shadow: none;
+}
+
+.data-center-page .dictionary-table-card__head {
+  gap: 8px;
+}
+
+.data-center-page .dictionary-table-card__head .ant-typography {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.data-center-page .dictionary-table-card .ant-typography-secondary {
+  color: var(--lqc-terminal-muted) !important;
+}
+
+.data-center-page .dictionary-table-card .ant-btn {
+  height: 28px;
+  min-height: 28px;
+  padding-inline: 8px;
+  font-size: 12px;
+}
+
+/* QA follow-up: two-column dictionary index, terminal workstation density. */
+.data-center-page .dictionary-index-workbench {
+  min-height: 336px;
+  display: grid;
+  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+  gap: 6px;
+}
+
+.data-center-page .dictionary-index-list,
+.data-center-page .dictionary-index-detail {
+  min-width: 0;
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-panel);
+}
+
+.data-center-page .dictionary-index-list {
+  max-height: 420px;
+  overflow: auto;
+  padding: 4px;
+}
+
+.data-center-page .dictionary-index-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 28px;
+  align-items: stretch;
+  gap: 4px;
+  border-bottom: 1px solid rgba(var(--lqc-line-strong-rgb), 0.72);
+}
+
+.data-center-page .dictionary-index-item:last-child {
+  border-bottom: 0;
+}
+
+.data-center-page .dictionary-index-row {
+  width: 100%;
+  min-width: 0;
+  padding: 6px 7px;
+  display: grid;
+  gap: 2px;
+  border: 0;
+  border-left: 2px solid transparent;
+  color: var(--lqc-terminal-text);
+  text-align: left;
+  background: transparent;
+  cursor: pointer;
+}
+
+.data-center-page .dictionary-index-row:hover,
+.data-center-page .dictionary-index-row:focus-visible,
+.data-center-page .dictionary-index-row--active {
+  outline: 0;
+  border-left-color: var(--lqc-terminal-blue);
+  background: rgba(var(--lqc-primary-rgb), 0.11);
+}
+
+.data-center-page .dictionary-index-row__main {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.data-center-page .dictionary-index-row__main .ant-typography {
+  font-size: 12px;
+  color: var(--lqc-terminal-text) !important;
+}
+
+.data-center-page .dictionary-index-row__main .ant-typography-secondary {
+  flex: none;
+  color: var(--lqc-terminal-muted) !important;
+  font-family: var(--lqc-font-number);
+}
+
+.data-center-page .dictionary-index-row__sample {
+  overflow: hidden;
+  color: var(--lqc-terminal-muted);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.data-center-page .dictionary-index-item > .ant-btn {
+  width: 28px;
+  height: auto;
+  min-height: 100%;
+  padding: 0;
+  border-radius: 0;
+  color: var(--lqc-text-secondary);
+  border-color: transparent;
+  background: transparent;
+}
+
+.data-center-page .dictionary-index-item > .ant-btn:hover {
+  color: var(--lqc-text-inverse);
+  border-color: rgba(var(--lqc-primary-rgb), 0.45);
+  background: rgba(var(--lqc-primary-rgb), 0.14);
+}
+
+.data-center-page .dictionary-index-detail {
+  max-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.data-center-page .dictionary-index-detail__head {
+  min-height: 42px;
+  padding: 7px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-panel-2);
+}
+
+.data-center-page .dictionary-index-detail__head > div {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.data-center-page .dictionary-index-detail__head .ant-typography {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.data-center-page .dictionary-index-detail__head .ant-typography-secondary {
+  color: var(--lqc-terminal-muted) !important;
+}
+
+.data-center-page .dictionary-field-list {
+  min-height: 0;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  gap: 0;
+}
+
+.data-center-page .dictionary-field-row {
+  min-height: 82px;
+  padding: 7px 8px;
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  border-right: 1px solid rgba(var(--lqc-line-strong-rgb), 0.72);
+  border-bottom: 1px solid rgba(var(--lqc-line-strong-rgb), 0.72);
+  background: var(--lqc-terminal-sunken);
+}
+
+.data-center-page .dictionary-field-row:nth-child(2n) {
+  border-right: 0;
+}
+
+.data-center-page .dictionary-field-row__meta {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.data-center-page .dictionary-field-row__meta .ant-typography {
+  overflow: hidden;
+  color: var(--lqc-terminal-text) !important;
+  font-family: var(--lqc-font-number);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.data-center-page .dictionary-field-row > .ant-typography-secondary {
+  min-height: 18px;
+  overflow: hidden;
+  color: var(--lqc-terminal-muted) !important;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.data-center-page .dictionary-field-row__foot {
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  color: var(--lqc-terminal-muted);
+  font-size: 11px;
+}
+
+.data-center-page .dictionary-field-row__foot span {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 1px 5px;
+  border: 1px solid rgba(var(--lqc-line-strong-rgb), 0.72);
+  background: var(--lqc-terminal-panel);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.data-center-page .dictionary-index-empty {
+  min-height: 120px;
+  padding: 12px;
+  display: grid;
+  place-content: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.data-center-page .dictionary-index-empty .ant-typography {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.data-center-page .dictionary-index-empty .ant-typography-secondary {
+  color: var(--lqc-terminal-muted) !important;
+}
+
+@media (max-width: 1180px) {
+  .data-center-page .dictionary-index-workbench,
+  .data-center-page .dictionary-field-list {
+    grid-template-columns: 1fr;
+  }
+
+  .data-center-page .dictionary-index-list,
+  .data-center-page .dictionary-index-detail {
+    max-height: none;
+  }
+
+  .data-center-page .dictionary-field-row {
+    border-right: 0;
+  }
+}
+
+/* UI-25: K-line viewer follows the dashboard workstation standard. */
+.data-center-page .market-kline-workbench {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.45fr);
+  gap: 6px;
+  align-items: start;
+}
+
+.data-center-page .market-kline-workbench__chart,
+.data-center-page .market-kline-side-panel {
+  min-width: 0;
+  height: auto;
+}
+
+.data-center-page .market-kline-side-panel .ant-card-body {
+  min-height: 0;
+}
+
+.data-center-page .market-freshness-item {
+  min-height: 28px;
+  padding: 5px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-panel);
+}
+
+.data-center-page .market-freshness-item .ant-typography {
+  font-size: 12px;
+}
+
+.data-center-page .kline-chart {
+  gap: 6px !important;
+}
+
+.data-center-page .kline-chart > div:first-child {
+  box-shadow: inset 0 1px 0 rgba(var(--lqc-highlight-rgb), 0.035);
+}
+
+.data-center-page .kline-chart-hover-strip {
+  min-height: 40px;
+}
+
+.data-center-page .kline-chart-hover-strip__cell strong {
+  font-size: 12px;
+}
+
+@media (max-width: 1180px) {
+  .data-center-page .market-kline-workbench {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* UI-26: remove remaining light catalog warning surface. */
+.data-center-page .data-catalog-unsupported {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border: 1px solid var(--lqc-warning-border-soft);
+  border-radius: 0;
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.data-center-page .data-catalog-unsupported .ant-typography {
+  color: var(--lqc-warning-text) !important;
+}
+
+.data-center-page .data-catalog-unsupported .ant-tag {
+  color: var(--lqc-text-soft);
+  border-color: var(--lqc-terminal-line-strong);
+  background: var(--lqc-terminal-panel);
+}
+
+/* UI-IBKR-37: Data Center deep verification surfaces and risk confirmations. */
+.data-center-confirm-modal.ant-modal-confirm {
+  width: min(var(--lqc-modal-confirm-width), calc(100vw - 48px)) !important;
+}
+
+.data-center-confirm-modal .ant-modal-confirm-content {
+  max-height: var(--lqc-modal-content-max-height);
+  overflow: auto;
+}
+
+.data-center-confirm-modal .risk-confirm-content__details .ant-descriptions-item-label {
+  width: 112px;
+}
+
+.data-center-page .market-kline-side-panel .section-card__description {
+  display: none;
+}
+
+.data-center-page .market-kline-side-panel .ant-card-body {
+  padding: 6px !important;
+}
+
+.data-center-page .market-kline-side-panel .ant-space {
+  gap: 6px !important;
+}
+
+.data-center-page .market-freshness-item {
+  min-height: 26px;
+  padding: 4px 7px;
+}
+
+.data-center-page .market-freshness-item .ant-typography:last-child {
+  max-width: 58%;
+  overflow: hidden;
+  color: var(--lqc-terminal-text) !important;
+  font-family: var(--lqc-font-number);
+  font-size: 11px;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.data-center-page .data-table__table .ant-table-cell-fix-left,
+.data-center-page .data-table__table .ant-table-cell-fix-right {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page .data-table__table .ant-table-cell-fix-right {
+  box-shadow: -1px 0 0 var(--lqc-terminal-line) !important;
+}
+
+.data-center-page .data-table__table .ant-table-cell .table-action-group {
+  min-width: 0;
+}
+
+.data-center-page .data-table__table .ant-table-cell .table-action-group .ant-btn {
+  min-width: 56px;
+  white-space: nowrap;
+}
+
+.data-center-page .data-table__table .ant-table-tbody > tr.ant-table-placeholder > td {
+  height: 118px !important;
+}
+
+.data-center-page .data-table__quick-hint {
+  color: var(--lqc-terminal-muted) !important;
+}
+
+.data-center-page .data-center-long-text {
+  display: -webkit-box;
+  overflow: hidden;
+  max-width: 100%;
+  cursor: help;
+  color: var(--lqc-terminal-text) !important;
+  line-height: 1.45;
+  white-space: normal;
+  word-break: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.data-center-long-text-tooltip .ant-tooltip-inner {
+  max-width: min(560px, calc(100vw - 48px));
+  padding: 10px 12px;
+  border: 1px solid var(--lqc-terminal-line-strong);
+  border-radius: 2px;
+  background: var(--lqc-terminal-elevated);
+  color: var(--lqc-terminal-text);
+  font-size: 12px;
+  line-height: 1.6;
+  word-break: break-word;
+  box-shadow: 0 14px 34px rgba(var(--lqc-shadow-rgb), 0.42);
+}
+
+.data-center-long-text-tooltip .ant-tooltip-arrow::before {
+  background: var(--lqc-terminal-elevated);
+}
+
+.data-center-page .dictionary-table-card {
+  border-left: 2px solid rgba(var(--lqc-primary-rgb), 0.72);
+}
+
+.data-center-page .dictionary-table-card__head .ant-tag {
+  flex: 0 0 auto;
+}
+
+.data-center-page .dictionary-table-card > .ant-typography {
+  display: -webkit-box;
+  overflow: hidden;
+  min-height: 34px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.data-center-page .data-2026-plan-panel {
+  min-height: 120px;
+  padding: 10px;
+  border-color: var(--lqc-terminal-line);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.data-center-page .data-2026-plan-panel .ant-typography {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.data-center-page .data-2026-plan-panel .ant-typography-secondary {
+  color: var(--lqc-terminal-muted) !important;
+}
+
+/* QA right-panel pass: K-line inspector and dictionary detail use one terminal-side panel rhythm. */
+.data-center-page .market-kline-side-panel.section-card.ant-card,
+.data-center-page .dictionary-index-detail {
+  overflow: hidden;
+  border: 1px solid var(--lqc-terminal-line) !important;
+  border-left: 2px solid var(--lqc-terminal-blue) !important;
+  border-radius: 0 !important;
+  background: var(--lqc-terminal-panel) !important;
+  box-shadow: none !important;
+}
+
+.data-center-page .market-kline-side-panel.section-card.ant-card > .ant-card-head {
+  min-height: 34px !important;
+  padding: 0 8px !important;
+  border-bottom: 1px solid var(--lqc-terminal-line) !important;
+  background: var(--lqc-terminal-panel-2) !important;
+}
+
+.data-center-page .market-kline-side-panel.section-card.ant-card > .ant-card-head .ant-card-head-title {
+  color: var(--lqc-terminal-text) !important;
+  font-size: 12px;
+}
+
+.data-center-page .market-kline-side-panel.section-card.ant-card > .ant-card-body {
+  max-height: 100%;
+  overflow: auto;
+  scrollbar-color: var(--lqc-scrollbar-thumb) var(--lqc-scrollbar-track);
+  scrollbar-width: thin;
+}
+
+.data-center-page .market-kline-side-panel.section-card.ant-card > .ant-card-body::-webkit-scrollbar,
+.data-center-page .dictionary-field-list::-webkit-scrollbar,
+.data-center-page .dictionary-index-list::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.data-center-page .market-kline-side-panel.section-card.ant-card > .ant-card-body::-webkit-scrollbar-track,
+.data-center-page .dictionary-field-list::-webkit-scrollbar-track,
+.data-center-page .dictionary-index-list::-webkit-scrollbar-track {
+  background: var(--lqc-scrollbar-track);
+}
+
+.data-center-page .market-kline-side-panel.section-card.ant-card > .ant-card-body::-webkit-scrollbar-thumb,
+.data-center-page .dictionary-field-list::-webkit-scrollbar-thumb,
+.data-center-page .dictionary-index-list::-webkit-scrollbar-thumb {
+  border: 2px solid var(--lqc-scrollbar-border);
+  border-radius: 8px;
+  background: var(--lqc-scrollbar-thumb);
+}
+
+.data-center-page .market-kline-side-panel .market-freshness-item {
+  display: grid;
+  grid-template-columns: minmax(72px, 0.42fr) minmax(0, 1fr);
+  align-items: center;
+  min-height: 26px !important;
+}
+
+.data-center-page .market-kline-side-panel .ant-alert {
+  margin-top: 2px;
+  border-color: var(--lqc-warning-border-soft);
+  border-radius: 0;
+  background: var(--lqc-warning-soft-bg);
+}
+
+.data-center-page .market-kline-side-panel .ant-alert-message {
+  color: var(--lqc-warning-text) !important;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.data-center-page .dictionary-index-detail {
+  border-left-color: var(--lqc-terminal-green) !important;
+}
+
+.data-center-page .dictionary-index-detail__head {
+  min-height: 38px;
+  padding: 6px 8px;
+}
+
+.data-center-page .dictionary-index-detail__head .ant-btn {
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 0;
+  font-size: 11px;
+}
+
+.data-center-page .dictionary-field-list {
+  scrollbar-color: var(--lqc-scrollbar-thumb) var(--lqc-scrollbar-track);
+  scrollbar-width: thin;
+}
+
+.data-center-page .dictionary-field-row {
+  min-height: 74px;
+  padding: 6px 8px;
+}
+
+.data-center-page .dictionary-field-row__meta {
+  min-height: 20px;
+}
+
+.data-center-page .dictionary-field-row__foot span {
+  max-width: min(100%, 220px);
+}
+
+/* QA follow-up: low-frequency Data Center table column density. */
+.data-center-page .data-table-number {
+  color: var(--lqc-terminal-text) !important;
+  font-family: var(--lqc-font-number);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.data-center-page .data-table--freshness .ant-table-cell,
+.data-center-page .data-table--official-catalog .ant-table-cell,
+.data-center-page .data-table--coverage .ant-table-cell,
+.data-center-page .data-table--account-positions .ant-table-cell,
+.data-center-page .data-table--account-orders .ant-table-cell,
+.data-center-page .data-table--account-trades .ant-table-cell,
+.data-center-page .data-table--stock-basic .ant-table-cell,
+.data-center-page .data-table--daily-kline .ant-table-cell,
+.data-center-page .data-table--instrument-detail .ant-table-cell,
+.data-center-page .data-table--trading-calendar .ant-table-cell,
+.data-center-page .data-table--sync-tasks .ant-table-cell,
+.data-center-page .data-table--quality .ant-table-cell,
+.data-center-page .data-table--account-duplicates .ant-table-cell,
+.data-center-page .data-table--dictionary .ant-table-cell {
+  vertical-align: top;
+}
+
+.data-center-page .data-table--coverage .ant-progress,
+.data-center-page .data-table--sync-tasks .ant-progress {
+  min-width: 112px;
+}
+
+.data-center-page .data-table--coverage .ant-progress-text,
+.data-center-page .data-table--sync-tasks .ant-progress-text {
+  color: var(--lqc-terminal-muted) !important;
+  font-family: var(--lqc-font-number);
+  font-size: 11px;
+}
+
+.data-center-page .data-table--freshness .ant-table-cell:nth-child(3),
+.data-center-page .data-table--freshness .ant-table-cell:nth-child(4),
+.data-center-page .data-table--freshness .ant-table-cell:nth-child(5),
+.data-center-page .data-table--freshness .ant-table-cell:nth-child(6),
+.data-center-page .data-table--official-catalog .ant-table-cell:nth-child(1),
+.data-center-page .data-table--official-catalog .ant-table-cell:nth-child(5),
+.data-center-page .data-table--coverage .ant-table-cell:nth-child(4),
+.data-center-page .data-table--coverage .ant-table-cell:nth-child(5),
+.data-center-page .data-table--coverage .ant-table-cell:nth-child(6),
+.data-center-page .data-table--coverage .ant-table-cell:nth-child(9),
+.data-center-page .data-table--coverage .ant-table-cell:nth-child(10),
+.data-center-page .data-table--account-positions .ant-table-cell:nth-child(1),
+.data-center-page .data-table--account-positions .ant-table-cell:nth-child(2),
+.data-center-page .data-table--account-positions .ant-table-cell:nth-child(4),
+.data-center-page .data-table--account-positions .ant-table-cell:nth-child(5),
+.data-center-page .data-table--account-positions .ant-table-cell:nth-child(6),
+.data-center-page .data-table--account-positions .ant-table-cell:nth-child(7),
+.data-center-page .data-table--account-positions .ant-table-cell:nth-child(8),
+.data-center-page .data-table--account-positions .ant-table-cell:nth-child(9),
+.data-center-page .data-table--account-positions .ant-table-cell:nth-child(10),
+.data-center-page .data-table--account-positions .ant-table-cell:nth-child(11),
+.data-center-page .data-table--account-orders .ant-table-cell:nth-child(1),
+.data-center-page .data-table--account-orders .ant-table-cell:nth-child(2),
+.data-center-page .data-table--account-orders .ant-table-cell:nth-child(3),
+.data-center-page .data-table--account-orders .ant-table-cell:nth-child(4),
+.data-center-page .data-table--account-orders .ant-table-cell:nth-child(5),
+.data-center-page .data-table--account-orders .ant-table-cell:nth-child(8),
+.data-center-page .data-table--account-orders .ant-table-cell:nth-child(9),
+.data-center-page .data-table--account-orders .ant-table-cell:nth-child(10),
+.data-center-page .data-table--account-orders .ant-table-cell:nth-child(14),
+.data-center-page .data-table--account-trades .ant-table-cell:nth-child(1),
+.data-center-page .data-table--account-trades .ant-table-cell:nth-child(2),
+.data-center-page .data-table--account-trades .ant-table-cell:nth-child(3),
+.data-center-page .data-table--account-trades .ant-table-cell:nth-child(4),
+.data-center-page .data-table--account-trades .ant-table-cell:nth-child(7),
+.data-center-page .data-table--account-trades .ant-table-cell:nth-child(8),
+.data-center-page .data-table--account-trades .ant-table-cell:nth-child(9),
+.data-center-page .data-table--account-trades .ant-table-cell:nth-child(10),
+.data-center-page .data-table--stock-basic .ant-table-cell:nth-child(1),
+.data-center-page .data-table--stock-basic .ant-table-cell:nth-child(7),
+.data-center-page .data-table--daily-kline .ant-table-cell:nth-child(1),
+.data-center-page .data-table--daily-kline .ant-table-cell:nth-child(2),
+.data-center-page .data-table--daily-kline .ant-table-cell:nth-child(3),
+.data-center-page .data-table--daily-kline .ant-table-cell:nth-child(4),
+.data-center-page .data-table--daily-kline .ant-table-cell:nth-child(5),
+.data-center-page .data-table--daily-kline .ant-table-cell:nth-child(6),
+.data-center-page .data-table--daily-kline .ant-table-cell:nth-child(7),
+.data-center-page .data-table--daily-kline .ant-table-cell:nth-child(8),
+.data-center-page .data-table--daily-kline .ant-table-cell:nth-child(9),
+.data-center-page .data-table--instrument-detail .ant-table-cell:nth-child(1),
+.data-center-page .data-table--instrument-detail .ant-table-cell:nth-child(2),
+.data-center-page .data-table--instrument-detail .ant-table-cell:nth-child(5),
+.data-center-page .data-table--instrument-detail .ant-table-cell:nth-child(6),
+.data-center-page .data-table--instrument-detail .ant-table-cell:nth-child(7),
+.data-center-page .data-table--instrument-detail .ant-table-cell:nth-child(8),
+.data-center-page .data-table--instrument-detail .ant-table-cell:nth-child(11),
+.data-center-page .data-table--instrument-detail .ant-table-cell:nth-child(12),
+.data-center-page .data-table--instrument-detail .ant-table-cell:nth-child(13),
+.data-center-page .data-table--instrument-detail .ant-table-cell:nth-child(14),
+.data-center-page .data-table--trading-calendar .ant-table-cell:nth-child(1),
+.data-center-page .data-table--trading-calendar .ant-table-cell:nth-child(2),
+.data-center-page .data-table--trading-calendar .ant-table-cell:nth-child(5),
+.data-center-page .data-table--sync-tasks .ant-table-cell:nth-child(5),
+.data-center-page .data-table--sync-tasks .ant-table-cell:nth-child(6),
+.data-center-page .data-table--sync-tasks .ant-table-cell:nth-child(7),
+.data-center-page .data-table--account-duplicates .ant-table-cell:nth-child(1),
+.data-center-page .data-table--account-duplicates .ant-table-cell:nth-child(2),
+.data-center-page .data-table--account-duplicates .ant-table-cell:nth-child(3),
+.data-center-page .data-table--account-duplicates .ant-table-cell:nth-child(4),
+.data-center-page .data-table--account-duplicates .ant-table-cell:nth-child(5),
+.data-center-page .data-table--account-duplicates .ant-table-cell:nth-child(6) {
+  font-family: var(--lqc-font-number);
+  white-space: nowrap;
+}
+
+.data-center-page .data-table--official-catalog .ant-table-cell:first-child,
+.data-center-page .data-table--account-positions .ant-table-cell:first-child,
+.data-center-page .data-table--account-orders .ant-table-cell:first-child,
+.data-center-page .data-table--account-trades .ant-table-cell:first-child,
+.data-center-page .data-table--stock-basic .ant-table-cell:first-child,
+.data-center-page .data-table--daily-kline .ant-table-cell:first-child,
+.data-center-page .data-table--instrument-detail .ant-table-cell:first-child,
+.data-center-page .data-table--trading-calendar .ant-table-cell:first-child,
+.data-center-page .data-table--sync-tasks .ant-table-cell:first-child,
+.data-center-page .data-table--dictionary .ant-table-cell:first-child,
+.data-center-page .data-table--dictionary .ant-table-cell:nth-child(2) {
+  font-family: var(--lqc-font-number);
+}
+
+.data-center-page .data-table--freshness .data-center-long-text,
+.data-center-page .data-table--official-catalog .data-center-long-text,
+.data-center-page .data-table--account-orders .data-center-long-text,
+.data-center-page .data-table--account-trades .data-center-long-text,
+.data-center-page .data-table--stock-basic .data-center-long-text,
+.data-center-page .data-table--instrument-detail .data-center-long-text,
+.data-center-page .data-table--quality .data-center-long-text,
+.data-center-page .data-table--dictionary .data-center-long-text {
+  -webkit-line-clamp: 2;
+}
+
+.data-center-page .data-table--coverage .data-center-long-text,
+.data-center-page .data-table--daily-kline .data-center-long-text,
+.data-center-page .data-table--trading-calendar .data-center-long-text,
+.data-center-page .data-table--sync-tasks .data-center-long-text {
+  -webkit-line-clamp: 1;
+}
+
+.data-center-page .data-table--coverage .table-action-group,
+.data-center-page .data-table--daily-kline .table-action-group,
+.data-center-page .data-table--sync-tasks .table-action-group,
+.data-center-page .data-table--quality .table-action-group,
+.data-center-page .data-table--account-duplicates .table-action-group,
+.data-center-page .data-table--dictionary .table-action-group {
+  width: 100%;
+  min-width: 92px;
+  justify-content: flex-end;
+}
+
+.data-center-page .data-table--dictionary .table-action-group {
+  justify-content: flex-start;
+}
+
+.data-center-page .data-table--freshness .ant-table-thead > tr > th,
+.data-center-page .data-table--official-catalog .ant-table-thead > tr > th,
+.data-center-page .data-table--coverage .ant-table-thead > tr > th,
+.data-center-page .data-table--account-positions .ant-table-thead > tr > th,
+.data-center-page .data-table--account-orders .ant-table-thead > tr > th,
+.data-center-page .data-table--account-trades .ant-table-thead > tr > th,
+.data-center-page .data-table--stock-basic .ant-table-thead > tr > th,
+.data-center-page .data-table--daily-kline .ant-table-thead > tr > th,
+.data-center-page .data-table--instrument-detail .ant-table-thead > tr > th,
+.data-center-page .data-table--trading-calendar .ant-table-thead > tr > th,
+.data-center-page .data-table--sync-tasks .ant-table-thead > tr > th,
+.data-center-page .data-table--quality .ant-table-thead > tr > th,
+.data-center-page .data-table--account-duplicates .ant-table-thead > tr > th,
+.data-center-page .data-table--dictionary .ant-table-thead > tr > th {
+  line-height: 1.25;
+}
+
+.data-center-page .data-table--official-catalog .ant-table-cell-fix-right,
+.data-center-page .data-table--coverage .ant-table-cell-fix-right,
+.data-center-page .data-table--account-orders .ant-table-cell-fix-right,
+.data-center-page .data-table--daily-kline .ant-table-cell-fix-right,
+.data-center-page .data-table--sync-tasks .ant-table-cell-fix-right,
+.data-center-page .data-table--quality .ant-table-cell-fix-right,
+.data-center-page .data-table--account-duplicates .ant-table-cell-fix-right,
+.data-center-page .data-table--dictionary .ant-table-cell-fix-right {
+  background: var(--lqc-terminal-panel) !important;
+  box-shadow: -1px 0 0 var(--lqc-terminal-line) !important;
+}
+
+/* QA final pass: deep Data Center tables keep terminal chrome on every tab. */
+.data-center-page .data-table--sync-tasks .data-table__table,
+.data-center-page .data-table--quality .data-table__table,
+.data-center-page .data-table--account-duplicates .data-table__table,
+.data-center-page .data-table--dictionary .data-table__table {
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page .data-table--sync-tasks .ant-table,
+.data-center-page .data-table--quality .ant-table,
+.data-center-page .data-table--account-duplicates .ant-table,
+.data-center-page .data-table--dictionary .ant-table,
+.data-center-page .data-table--sync-tasks .ant-table-container,
+.data-center-page .data-table--quality .ant-table-container,
+.data-center-page .data-table--account-duplicates .ant-table-container,
+.data-center-page .data-table--dictionary .ant-table-container,
+.data-center-page .data-table--sync-tasks .ant-table-content,
+.data-center-page .data-table--quality .ant-table-content,
+.data-center-page .data-table--account-duplicates .ant-table-content,
+.data-center-page .data-table--dictionary .ant-table-content {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page .data-table--sync-tasks .ant-table-tbody > tr > td,
+.data-center-page .data-table--quality .ant-table-tbody > tr > td,
+.data-center-page .data-table--account-duplicates .ant-table-tbody > tr > td,
+.data-center-page .data-table--dictionary .ant-table-tbody > tr > td {
+  height: 38px;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page .data-table--sync-tasks .ant-table-tbody > tr:nth-child(even) > td,
+.data-center-page .data-table--quality .ant-table-tbody > tr:nth-child(even) > td,
+.data-center-page .data-table--account-duplicates .ant-table-tbody > tr:nth-child(even) > td,
+.data-center-page .data-table--dictionary .ant-table-tbody > tr:nth-child(even) > td {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page .data-table--sync-tasks .ant-table-tbody > tr:hover > td,
+.data-center-page .data-table--quality .ant-table-tbody > tr:hover > td,
+.data-center-page .data-table--account-duplicates .ant-table-tbody > tr:hover > td,
+.data-center-page .data-table--dictionary .ant-table-tbody > tr:hover > td {
+  background: var(--lqc-terminal-active) !important;
+}
+
+.data-center-page .data-table--sync-tasks .ant-table-placeholder > td,
+.data-center-page .data-table--quality .ant-table-placeholder > td,
+.data-center-page .data-table--account-duplicates .ant-table-placeholder > td,
+.data-center-page .data-table--dictionary .ant-table-placeholder > td {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page .data-table--sync-tasks .ant-progress-inner,
+.data-center-page .data-table--coverage .ant-progress-inner {
+  background: var(--lqc-terminal-line) !important;
+}
+
+.data-center-page .data-table--sync-tasks .ant-progress-bg,
+.data-center-page .data-table--coverage .ant-progress-bg {
+  background: linear-gradient(90deg, var(--lqc-action-primary-bg), var(--lqc-info-text)) !important;
+}
+
+.data-center-page .data-table--sync-tasks .ant-table-sticky-scroll,
+.data-center-page .data-table--quality .ant-table-sticky-scroll,
+.data-center-page .data-table--account-duplicates .ant-table-sticky-scroll,
+.data-center-page .data-table--dictionary .ant-table-sticky-scroll {
+  height: 8px !important;
+  background: var(--lqc-scrollbar-track) !important;
+}
+
+.data-center-page .data-table--sync-tasks .ant-table-sticky-scroll-bar,
+.data-center-page .data-table--quality .ant-table-sticky-scroll-bar,
+.data-center-page .data-table--account-duplicates .ant-table-sticky-scroll-bar,
+.data-center-page .data-table--dictionary .ant-table-sticky-scroll-bar {
+  height: 8px !important;
+  border-radius: 999px;
+  background: var(--lqc-scrollbar-thumb) !important;
+}
+
+.data-center-page .data-table--sync-tasks .ant-table-pagination.ant-pagination,
+.data-center-page .data-table--quality .ant-table-pagination.ant-pagination,
+.data-center-page .data-table--account-duplicates .ant-table-pagination.ant-pagination,
+.data-center-page .data-table--dictionary .ant-table-pagination.ant-pagination {
+  margin: 8px 0 0 !important;
+  padding-top: 8px;
+  border-top: 1px solid var(--lqc-terminal-line);
+}
+
+.data-center-page .data-table--sync-tasks .ant-pagination-item,
+.data-center-page .data-table--quality .ant-pagination-item,
+.data-center-page .data-table--account-duplicates .ant-pagination-item,
+.data-center-page .data-table--dictionary .ant-pagination-item,
+.data-center-page .data-table--sync-tasks .ant-pagination-prev .ant-pagination-item-link,
+.data-center-page .data-table--quality .ant-pagination-prev .ant-pagination-item-link,
+.data-center-page .data-table--account-duplicates .ant-pagination-prev .ant-pagination-item-link,
+.data-center-page .data-table--dictionary .ant-pagination-prev .ant-pagination-item-link,
+.data-center-page .data-table--sync-tasks .ant-pagination-next .ant-pagination-item-link,
+.data-center-page .data-table--quality .ant-pagination-next .ant-pagination-item-link,
+.data-center-page .data-table--account-duplicates .ant-pagination-next .ant-pagination-item-link,
+.data-center-page .data-table--dictionary .ant-pagination-next .ant-pagination-item-link {
+  border-color: var(--lqc-terminal-line-strong) !important;
+  color: var(--lqc-terminal-text) !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page .data-table--sync-tasks .ant-pagination-item-active,
+.data-center-page .data-table--quality .ant-pagination-item-active,
+.data-center-page .data-table--account-duplicates .ant-pagination-item-active,
+.data-center-page .data-table--dictionary .ant-pagination-item-active {
+  border-color: var(--lqc-action-primary-bg) !important;
+  background: var(--lqc-info-soft-bg) !important;
+}
+
+.data-center-page .data-table--sync-tasks .ant-select-selector,
+.data-center-page .data-table--quality .ant-select-selector,
+.data-center-page .data-table--account-duplicates .ant-select-selector,
+.data-center-page .data-table--dictionary .ant-select-selector {
+  border-color: var(--lqc-terminal-line-strong) !important;
+  color: var(--lqc-terminal-text) !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page .data-table--dictionary .table-action-group {
+  justify-content: flex-end;
+}
+
+/* QA final pass: all low-frequency Data Center tables share one terminal table baseline. */
+.data-center-page :is(
+  .data-table--freshness,
+  .data-table--official-catalog,
+  .data-table--coverage,
+  .data-table--account-positions,
+  .data-table--account-orders,
+  .data-table--account-trades,
+  .data-table--stock-basic,
+  .data-table--daily-kline,
+  .data-table--instrument-detail,
+  .data-table--trading-calendar,
+  .data-table--sync-tasks,
+  .data-table--quality,
+  .data-table--account-duplicates,
+  .data-table--dictionary
+) .data-table__table {
+  border: 1px solid var(--lqc-terminal-line) !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page :is(
+  .data-table--freshness,
+  .data-table--official-catalog,
+  .data-table--coverage,
+  .data-table--account-positions,
+  .data-table--account-orders,
+  .data-table--account-trades,
+  .data-table--stock-basic,
+  .data-table--daily-kline,
+  .data-table--instrument-detail,
+  .data-table--trading-calendar,
+  .data-table--sync-tasks,
+  .data-table--quality,
+  .data-table--account-duplicates,
+  .data-table--dictionary
+) :is(.ant-table, .ant-table-container, .ant-table-content, .ant-table-body, .ant-table-header, .ant-table-sticky-holder) {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page :is(
+  .data-table--freshness,
+  .data-table--official-catalog,
+  .data-table--coverage,
+  .data-table--account-positions,
+  .data-table--account-orders,
+  .data-table--account-trades,
+  .data-table--stock-basic,
+  .data-table--daily-kline,
+  .data-table--instrument-detail,
+  .data-table--trading-calendar,
+  .data-table--sync-tasks,
+  .data-table--quality,
+  .data-table--account-duplicates,
+  .data-table--dictionary
+) .ant-table-tbody > tr > td {
+  height: 38px;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page :is(
+  .data-table--freshness,
+  .data-table--official-catalog,
+  .data-table--coverage,
+  .data-table--account-positions,
+  .data-table--account-orders,
+  .data-table--account-trades,
+  .data-table--stock-basic,
+  .data-table--daily-kline,
+  .data-table--instrument-detail,
+  .data-table--trading-calendar,
+  .data-table--sync-tasks,
+  .data-table--quality,
+  .data-table--account-duplicates,
+  .data-table--dictionary
+) .ant-table-tbody > tr:nth-child(even) > td {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page :is(
+  .data-table--freshness,
+  .data-table--official-catalog,
+  .data-table--coverage,
+  .data-table--account-positions,
+  .data-table--account-orders,
+  .data-table--account-trades,
+  .data-table--stock-basic,
+  .data-table--daily-kline,
+  .data-table--instrument-detail,
+  .data-table--trading-calendar,
+  .data-table--sync-tasks,
+  .data-table--quality,
+  .data-table--account-duplicates,
+  .data-table--dictionary
+) .ant-table-tbody > tr:hover > td {
+  background: var(--lqc-terminal-active) !important;
+}
+
+.data-center-page :is(
+  .data-table--freshness,
+  .data-table--official-catalog,
+  .data-table--coverage,
+  .data-table--account-positions,
+  .data-table--account-orders,
+  .data-table--account-trades,
+  .data-table--stock-basic,
+  .data-table--daily-kline,
+  .data-table--instrument-detail,
+  .data-table--trading-calendar,
+  .data-table--sync-tasks,
+  .data-table--quality,
+  .data-table--account-duplicates,
+  .data-table--dictionary
+) .ant-table-placeholder > td {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page :is(
+  .data-table--freshness,
+  .data-table--official-catalog,
+  .data-table--coverage,
+  .data-table--account-positions,
+  .data-table--account-orders,
+  .data-table--account-trades,
+  .data-table--stock-basic,
+  .data-table--daily-kline,
+  .data-table--instrument-detail,
+  .data-table--trading-calendar,
+  .data-table--sync-tasks,
+  .data-table--quality,
+  .data-table--account-duplicates,
+  .data-table--dictionary
+) :is(.ant-table-cell-fix-left, .ant-table-cell-fix-right) {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page :is(
+  .data-table--freshness,
+  .data-table--official-catalog,
+  .data-table--coverage,
+  .data-table--account-positions,
+  .data-table--account-orders,
+  .data-table--account-trades,
+  .data-table--stock-basic,
+  .data-table--daily-kline,
+  .data-table--instrument-detail,
+  .data-table--trading-calendar,
+  .data-table--sync-tasks,
+  .data-table--quality,
+  .data-table--account-duplicates,
+  .data-table--dictionary
+) .ant-table-tbody > tr:hover :is(.ant-table-cell-fix-left, .ant-table-cell-fix-right) {
+  background: var(--lqc-terminal-active) !important;
+}
+
+.data-center-page :is(
+  .data-table--freshness,
+  .data-table--official-catalog,
+  .data-table--coverage,
+  .data-table--account-positions,
+  .data-table--account-orders,
+  .data-table--account-trades,
+  .data-table--stock-basic,
+  .data-table--daily-kline,
+  .data-table--instrument-detail,
+  .data-table--trading-calendar,
+  .data-table--sync-tasks,
+  .data-table--quality,
+  .data-table--account-duplicates,
+  .data-table--dictionary
+) .ant-table-sticky-scroll {
+  height: 8px !important;
+  border-top: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-scrollbar-track) !important;
+}
+
+.data-center-page :is(
+  .data-table--freshness,
+  .data-table--official-catalog,
+  .data-table--coverage,
+  .data-table--account-positions,
+  .data-table--account-orders,
+  .data-table--account-trades,
+  .data-table--stock-basic,
+  .data-table--daily-kline,
+  .data-table--instrument-detail,
+  .data-table--trading-calendar,
+  .data-table--sync-tasks,
+  .data-table--quality,
+  .data-table--account-duplicates,
+  .data-table--dictionary
+) .ant-table-sticky-scroll-bar {
+  height: 8px !important;
+  border-radius: 999px;
+  background: var(--lqc-scrollbar-thumb) !important;
+}
+
+.data-center-page :is(
+  .data-table--freshness,
+  .data-table--official-catalog,
+  .data-table--coverage,
+  .data-table--account-positions,
+  .data-table--account-orders,
+  .data-table--account-trades,
+  .data-table--stock-basic,
+  .data-table--daily-kline,
+  .data-table--instrument-detail,
+  .data-table--trading-calendar,
+  .data-table--sync-tasks,
+  .data-table--quality,
+  .data-table--account-duplicates,
+  .data-table--dictionary
+) .ant-table-pagination.ant-pagination {
+  min-height: 36px;
+  margin: 0 !important;
+  padding: 5px 8px !important;
+  border: 1px solid var(--lqc-terminal-line);
+  border-top: 0;
+  background: var(--lqc-terminal-sunken) !important;
+}
+
+.data-center-page :is(
+  .data-table--freshness,
+  .data-table--official-catalog,
+  .data-table--coverage,
+  .data-table--account-positions,
+  .data-table--account-orders,
+  .data-table--account-trades,
+  .data-table--stock-basic,
+  .data-table--daily-kline,
+  .data-table--instrument-detail,
+  .data-table--trading-calendar,
+  .data-table--sync-tasks,
+  .data-table--quality,
+  .data-table--account-duplicates,
+  .data-table--dictionary
+) :is(.ant-pagination-item, .ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link) {
+  min-width: 28px;
+  height: 28px;
+  border-color: var(--lqc-terminal-line-strong) !important;
+  border-radius: 0 !important;
+  color: var(--lqc-terminal-muted) !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page :is(
+  .data-table--freshness,
+  .data-table--official-catalog,
+  .data-table--coverage,
+  .data-table--account-positions,
+  .data-table--account-orders,
+  .data-table--account-trades,
+  .data-table--stock-basic,
+  .data-table--daily-kline,
+  .data-table--instrument-detail,
+  .data-table--trading-calendar,
+  .data-table--sync-tasks,
+  .data-table--quality,
+  .data-table--account-duplicates,
+  .data-table--dictionary
+) .ant-pagination-item-active {
+  border-color: var(--lqc-terminal-blue) !important;
+  background: var(--lqc-terminal-blue) !important;
+}
+
+.data-center-page :is(
+  .data-table--freshness,
+  .data-table--official-catalog,
+  .data-table--coverage,
+  .data-table--account-positions,
+  .data-table--account-orders,
+  .data-table--account-trades,
+  .data-table--stock-basic,
+  .data-table--daily-kline,
+  .data-table--instrument-detail,
+  .data-table--trading-calendar,
+  .data-table--sync-tasks,
+  .data-table--quality,
+  .data-table--account-duplicates,
+  .data-table--dictionary
+) .ant-pagination-options .ant-select-selector {
+  height: 28px !important;
+  min-height: 28px !important;
+  border-color: var(--lqc-terminal-line-strong) !important;
+  border-radius: 0 !important;
+  color: var(--lqc-terminal-text) !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page :is(
+  .data-table--coverage,
+  .data-table--daily-kline,
+  .data-table--sync-tasks,
+  .data-table--quality,
+  .data-table--account-duplicates,
+  .data-table--dictionary
+) .data-table-col--action {
+  min-width: 112px;
+  box-shadow: -1px 0 0 var(--lqc-terminal-line) !important;
+}
+
+/* UI-QA-20260522: Data Center sync and coverage evidence boards keep proof points above large tables. */
+.data-center-evidence-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-line);
+}
+
+.data-center-evidence-board--coverage {
+  margin-bottom: 8px;
+}
+
+.data-center-evidence-board--account,
+.data-center-evidence-board--market,
+.data-center-evidence-board--basic {
+  margin: 0;
+}
+
+.data-center-evidence-board--account .data-center-evidence-card,
+.data-center-evidence-board--market .data-center-evidence-card,
+.data-center-evidence-board--basic .data-center-evidence-card {
+  min-height: 82px;
+}
+
+.data-center-evidence-card {
+  min-height: 92px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-panel);
+}
+
+.data-center-evidence-card__head {
+  min-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.data-center-evidence-card__head .ant-typography-secondary,
+.data-center-evidence-card__hint {
+  color: var(--lqc-terminal-muted) !important;
+  font-size: 11px;
+}
+
+.data-center-evidence-card__value {
+  color: var(--lqc-terminal-text) !important;
+  font-family: var(--lqc-font-number);
+  font-size: 18px;
+  line-height: 1.15;
+}
+
+.data-center-evidence-card__detail {
+  color: var(--lqc-text-soft) !important;
+  font-family: var(--lqc-font-number);
+  font-size: 12px;
+}
+
+.data-center-evidence-card__hint {
+  display: -webkit-box;
+  overflow: hidden;
+  min-height: 28px;
+  line-height: 1.35;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.data-center-evidence-card .ant-tag {
+  margin-inline-end: 0;
+}
+
+.data-center-page .data-task-detail-grid {
+  grid-template-columns: repeat(auto-fit, minmax(156px, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-line);
+}
+
+.data-center-page .data-task-detail-item {
+  min-height: 50px;
+  padding: 7px 9px;
+  border: 0 !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.data-center-page .data-sync-current-task .ant-progress-outer {
+  padding-inline-end: 0;
+}
+
+.data-center-page .data-sync-current-task .ant-progress-text {
+  color: var(--lqc-terminal-text) !important;
+  font-family: var(--lqc-font-number);
+}
+
+/* Device-density audit pass: Data Sync is a primary long-task console.
+   It must expose proof, actions, active task and history without leaving a
+   large blank lower half on 27-inch displays. */
+.data-center-page .data-sync-workbench {
+  min-width: 0;
+  display: grid;
+  gap: var(--lqc-module-grid-gap, 8px);
+}
+
+.data-center-page .data-sync-workbench__main {
+  min-width: 0;
+  display: grid;
+  gap: var(--lqc-module-grid-gap, 8px);
+  align-items: stretch;
+}
+
+.data-center-page .data-sync-entry-card,
+.data-center-page .data-sync-current-card,
+.data-center-page .data-sync-table-card {
+  min-width: 0;
+  height: 100%;
+}
+
+.data-center-page .data-sync-entry-card .ant-card-body,
+.data-center-page .data-sync-current-card .ant-card-body,
+.data-center-page .data-sync-table-card .ant-card-body {
+  min-width: 0;
+}
+
+.data-center-page .data-sync-current-card .ant-card-body,
+.data-center-page .data-sync-current-task {
+  height: auto;
+  min-height: 0;
+}
+
+.data-center-page .data-sync-current-task--empty {
+  min-height: 100%;
+  align-content: center;
+  justify-items: start;
+}
+
+/* Device-density follow-up: account and basic-data tabs are real inspection
+   workbenches. Large monitors should show structured tables instead of a
+   short proof strip followed by a blank lower half. */
+.data-center-page .data-account-workbench.ant-space,
+.data-center-page .data-basic-workbench.ant-space {
+  min-width: 0;
+  display: grid;
+  gap: var(--lqc-module-grid-gap, 8px) !important;
+}
+
+.data-center-page .data-account-workbench > .ant-space-item,
+.data-center-page .data-basic-workbench > .ant-space-item {
+  min-width: 0;
+}
+
+.data-center-page :is(.data-account-workbench, .data-basic-workbench) .section-card {
+  min-width: 0;
+}
+
+.data-center-page :is(
+  .data-account-workbench .data-table--account-positions,
+  .data-account-workbench .data-table--account-orders,
+  .data-account-workbench .data-table--account-trades,
+  .data-basic-workbench .data-table--instrument-detail,
+  .data-basic-workbench .data-table--trading-calendar
+) .data-table__table {
+  min-height: 0;
+}
+
+@media (min-width: 1281px) {
+  .data-center-page .data-account-workbench .data-table--account-positions .ant-table {
+    min-height: clamp(260px, calc(100vh - var(--lqc-status-height, 40px) - 700px), 420px);
+  }
+
+  .data-center-page .data-account-workbench :is(.data-table--account-orders, .data-table--account-trades) .ant-table {
+    min-height: clamp(300px, calc(100vh - var(--lqc-status-height, 40px) - 680px), 480px);
+  }
+
+  .data-center-page .data-basic-workbench .data-table--instrument-detail .ant-table {
+    min-height: clamp(360px, calc(100vh - var(--lqc-status-height, 40px) - 700px), 560px);
+  }
+
+  .data-center-page .data-basic-workbench .data-table--trading-calendar .ant-table {
+    min-height: clamp(260px, calc(100vh - var(--lqc-status-height, 40px) - 770px), 420px);
+  }
+
+  .data-center-page .data-sync-workbench {
+    min-height: clamp(760px, calc(100vh - var(--lqc-status-height, 40px) - 238px), 1120px);
+    grid-template-rows: auto minmax(444px, max-content) minmax(320px, 0.58fr);
+  }
+
+  .data-center-page .data-sync-workbench__main {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 280px);
+  }
+
+  .data-center-page .data-sync-entry-card .ant-card-body,
+  .data-center-page .data-sync-current-card .ant-card-body {
+    min-height: 330px;
+  }
+
+  .data-center-page .data-sync-card-grid {
+    height: 100%;
+    align-content: stretch;
+  }
+
+  .data-center-page .data-sync-card {
+    min-height: 172px;
+  }
+
+  .data-center-page .data-sync-table-card .ant-card-body {
+    min-height: 0;
+    display: grid;
+  }
+
+  .data-center-page .data-sync-table-card .data-table--sync-tasks {
+    min-height: 0;
+    display: grid !important;
+    grid-template-rows: auto auto minmax(0, 1fr);
+    overflow: hidden;
+  }
+
+  .data-center-page .data-sync-table-card .data-table--sync-tasks .data-table__table {
+    min-height: 0 !important;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 2400px) {
+  .data-center-page .data-account-workbench .data-table--account-positions .ant-table {
+    min-height: clamp(340px, calc(100vh - var(--lqc-status-height, 40px) - 760px), 540px);
+  }
+
+  .data-center-page .data-account-workbench :is(.data-table--account-orders, .data-table--account-trades) .ant-table {
+    min-height: clamp(430px, calc(100vh - var(--lqc-status-height, 40px) - 720px), 660px);
+  }
+
+  .data-center-page .data-basic-workbench .data-table--instrument-detail .ant-table {
+    min-height: clamp(520px, calc(100vh - var(--lqc-status-height, 40px) - 740px), 760px);
+  }
+
+  .data-center-page .data-basic-workbench .data-table--trading-calendar .ant-table {
+    min-height: clamp(360px, calc(100vh - var(--lqc-status-height, 40px) - 840px), 560px);
+  }
+
+  .data-center-page .data-sync-workbench {
+    min-height: clamp(980px, calc(100vh - var(--lqc-status-height, 40px) - 226px), 1320px);
+    grid-template-rows: auto minmax(456px, max-content) minmax(520px, 0.62fr);
+  }
+
+  .data-center-page .data-sync-workbench__main {
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 420px);
+  }
+
+  .data-center-page .data-sync-entry-card .ant-card-body,
+  .data-center-page .data-sync-current-card .ant-card-body {
+    min-height: 390px;
+  }
+
+  .data-center-page .data-sync-card {
+    min-height: 172px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .data-center-page .data-sync-workbench__main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1281px) and (max-height: 1000px) {
+  .data-center-page .data-sync-workbench {
+    min-height: 640px;
+    grid-template-rows: auto auto minmax(260px, auto);
+  }
+
+  .data-center-page .data-sync-workbench__main {
+    grid-template-columns: minmax(0, 1fr) minmax(252px, 300px);
+  }
+
+  .data-center-page .data-sync-entry-card .ant-card-body,
+  .data-center-page .data-sync-current-card .ant-card-body {
+    min-height: 0;
+  }
+
+  .data-center-page .data-sync-entry-card .section-card__description,
+  .data-center-page .data-sync-current-card .section-card__description,
+  .data-center-page .data-sync-table-card .section-card__description {
+    display: none !important;
+  }
+
+  .data-center-page .data-sync-entry-card .ant-card-head,
+  .data-center-page .data-sync-current-card .ant-card-head,
+  .data-center-page .data-sync-table-card .ant-card-head {
+    min-height: 32px !important;
+    padding-inline: 8px !important;
+  }
+
+  .data-center-page .data-sync-card-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 4px;
+    height: auto;
+    align-content: start;
+  }
+
+  .data-center-page .data-sync-card {
+    min-height: 112px;
+    padding: 7px;
+    gap: 4px;
+  }
+
+  .data-center-page .data-sync-card__head {
+    min-height: 20px;
+    gap: 6px;
+  }
+
+  .data-center-page .data-sync-card__head > div {
+    min-width: 0;
+  }
+
+  .data-center-page .data-sync-card__head .ant-typography-secondary {
+    display: -webkit-box !important;
+    overflow: hidden;
+    line-height: 1.25 !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  .data-center-page .data-sync-card__icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .data-center-page .data-sync-card__meta {
+    gap: 6px;
+    font-size: 11px;
+    line-height: 1.22;
+  }
+
+  .data-center-page .data-sync-card__time {
+    display: none;
+  }
+
+  .data-center-page .data-sync-card__meta:nth-of-type(2) {
+    display: none;
+  }
+
+  .data-center-page .data-sync-card .ant-btn {
+    min-height: 28px !important;
+    height: 28px !important;
+    margin-top: 1px;
+    padding-inline: 8px !important;
+  }
+
+  .data-center-page .data-sync-table-card .ant-card-body {
+    min-height: 0;
+  }
+
+  .data-center-page .data-sync-table-card .data-table--sync-tasks .ant-table-content {
+    max-height: 290px;
+    overflow-y: auto !important;
+  }
+
+  .data-center-page .data-sync-table-card .data-table--sync-tasks .ant-table-tbody > tr > td {
+    height: 34px;
+  }
+}
+
+@media (max-height: 820px) {
+  .data-center-page .command-panel {
+    padding: 6px 8px !important;
+    gap: 6px !important;
+  }
+
+  .data-center-page .command-panel__description {
+    -webkit-line-clamp: 1;
+  }
+
+  .data-center-page .command-panel__items {
+    gap: 1px !important;
+  }
+
+  .data-center-page .command-panel__item {
+    min-height: 42px !important;
+    padding: 5px 7px !important;
+  }
+
+  .data-center-page .data-center-evidence-card {
+    min-height: 58px;
+    padding: 5px 8px;
+  }
+
+  .data-center-page .data-center-evidence-card__head {
+    min-height: 18px;
+  }
+
+  .data-center-page .data-center-evidence-card__value {
+    font-size: 16px;
+  }
+
+  .data-center-page .data-center-evidence-card__hint {
+    display: none;
+  }
+
+  .data-center-page .data-sync-card {
+    min-height: 100px;
+    padding: 6px;
+  }
+
+  .data-center-page .data-sync-card__meta:nth-of-type(2) {
+    display: none;
+  }
+}
+
+/* Compact-elastic closeout: the current task panel should expand only when a
+   real long task is running. With no active task it becomes a dense status row
+   instead of a tall empty card. */
+@media (max-width: 1600px) and (max-height: 900px) {
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-sync-current-card:has(.data-sync-current-task--empty) {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-sync-workbench__main {
+    align-items: start !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-sync-workbench__main > div:has(.data-sync-current-card) {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-sync-current-card:has(.data-sync-current-task--empty) .ant-card-head {
+    min-height: 28px !important;
+    padding: 0 7px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-sync-current-card:has(.data-sync-current-task--empty) .ant-card-body {
+    min-height: 0 !important;
+    padding: 5px 7px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-sync-current-card:has(.data-sync-current-task--empty) .section-card__description {
+    display: none !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-sync-current-task--empty {
+    min-height: 34px !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 2px;
+    align-content: center !important;
+    align-items: center !important;
+    overflow: hidden !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-sync-current-task--empty .ant-typography {
+    margin: 0 !important;
+    line-height: 16px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-sync-current-task--empty .ant-typography-secondary {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1280px) {
+  .data-center-evidence-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .data-center-evidence-board {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Device density follow-up: data source and dictionary tabs are primary
+   reference workspaces. They should fill large monitors with structured
+   evidence, not leave a half-screen void under short cards. */
+.data-center-page .data-source-workbench,
+.data-center-page .data-dictionary-workbench {
+  min-width: 0;
+  display: grid;
+  gap: var(--lqc-module-grid-gap, 8px);
+}
+
+.data-center-page .data-source-workbench .section-card,
+.data-center-page .data-dictionary-workbench .section-card {
+  min-width: 0;
+}
+
+.data-center-page .data-source-workbench__top {
+  min-width: 0;
+}
+
+.data-center-page .data-source-main-card,
+.data-center-page .data-source-action-card,
+.data-center-page .data-source-flow-card,
+.data-center-page .data-source-boundary-card,
+.data-center-page .data-dictionary-index-card,
+.data-center-page .data-dictionary-table-card {
+  height: 100%;
+}
+
+.data-center-page .data-source-main-card .ant-card-body,
+.data-center-page .data-source-action-card .ant-card-body,
+.data-center-page .data-source-flow-card .ant-card-body,
+.data-center-page .data-source-boundary-card .ant-card-body,
+.data-center-page .data-dictionary-index-card .ant-card-body,
+.data-center-page .data-dictionary-table-card .ant-card-body {
+  min-width: 0;
+}
+
+.data-center-page .data-source-boundary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.data-center-page .data-source-boundary-item {
+  min-height: 58px;
+  padding: 7px 8px;
+  display: grid;
+  gap: 2px;
+  align-content: start;
+  border: 1px solid var(--lqc-terminal-line);
+  background:
+    linear-gradient(180deg, rgba(var(--lqc-primary-rgb), 0.06), transparent 70%),
+    var(--lqc-terminal-panel);
+}
+
+.data-center-page .data-source-boundary-item span,
+.data-center-page .data-source-boundary-item em {
+  overflow: hidden;
+  color: var(--lqc-terminal-muted);
+  font-size: 11px;
+  font-style: normal;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.data-center-page .data-source-boundary-item strong {
+  overflow: hidden;
+  color: var(--lqc-terminal-text);
+  font-size: 13px;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.data-center-page .data-source-workbench .data-source-grid {
+  margin-bottom: 6px;
+}
+
+.data-center-page .data-source-workbench .data-source-cell {
+  min-height: 52px;
+  padding: 7px 9px;
+  gap: 3px;
+  border-color: var(--lqc-terminal-line);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.data-center-page .data-source-workbench .data-source-cell .ant-typography {
+  line-height: 1.3;
+}
+
+.data-center-page .data-source-workbench .data-source-cell .ant-typography-secondary {
+  color: var(--lqc-terminal-muted) !important;
+  font-size: 11px;
+}
+
+.data-center-page .data-source-workbench .data-center-note {
+  margin-top: 6px;
+}
+
+.data-center-page .data-source-action-card .ant-space {
+  gap: 6px !important;
+}
+
+@media (min-width: 1281px) {
+  .data-center-page .data-source-workbench {
+    min-height: clamp(680px, calc(100vh - var(--lqc-status-height, 40px) - 276px), 940px);
+    grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+
+  .data-center-page .data-source-workbench__top {
+    grid-column: 1 / -1;
+  }
+
+  .data-center-page .data-source-main-card .ant-card-body {
+    min-height: 0;
+  }
+
+  .data-center-page .data-source-action-card .ant-card-body {
+    min-height: 0;
+    display: grid;
+    align-content: start;
+  }
+
+  .data-center-page .data-source-flow-card .ant-card-body {
+    min-height: 176px;
+    display: grid;
+  }
+
+  .data-center-page .data-source-flow-card .data-flow-strip {
+    min-height: 100%;
+    align-items: stretch;
+  }
+
+  .data-center-page .data-source-flow-card .data-flow-strip__card {
+    min-height: 100%;
+  }
+
+  .data-center-page .data-source-boundary-card .ant-card-body {
+    min-height: 124px;
+    display: grid;
+  }
+
+  .data-center-page .data-source-boundary-grid {
+    min-height: 100%;
+  }
+
+  .data-center-page .data-source-boundary-item {
+    min-height: 58px;
+  }
+
+  .data-center-page .data-dictionary-workbench {
+    height: clamp(760px, calc(100vh - var(--lqc-status-height, 40px) - 238px), 1080px);
+    min-height: 0;
+    overflow: hidden;
+    grid-template-rows: minmax(0, 0.58fr) minmax(0, 0.42fr);
+  }
+
+  .data-center-page .data-dictionary-index-card,
+  .data-center-page .data-dictionary-table-card {
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .data-center-page .data-dictionary-index-card .ant-card-body,
+  .data-center-page .data-dictionary-table-card .ant-card-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .data-center-page .dictionary-index-workbench {
+    flex: 1 1 auto;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .data-center-page .dictionary-index-list,
+  .data-center-page .dictionary-index-detail {
+    height: 100%;
+    min-height: 0;
+    max-height: 100%;
+  }
+
+  .data-center-page .data-dictionary-table-card .data-table__table {
+    min-height: 0;
+  }
+
+  .data-center-page .data-dictionary-table-card .data-table--dictionary {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: visible;
+  }
+}
+
+@media (min-width: 2400px) {
+  .data-center-page .data-source-workbench {
+    min-height: clamp(900px, calc(100vh - var(--lqc-status-height, 40px) - 252px), 1220px);
+  }
+
+  .data-center-page .data-source-main-card .ant-card-body,
+  .data-center-page .data-source-action-card .ant-card-body {
+    min-height: 220px;
+  }
+
+  .data-center-page .data-source-flow-card .ant-card-body {
+    min-height: 290px;
+  }
+
+  .data-center-page .data-source-boundary-card .ant-card-body {
+    min-height: 180px;
+  }
+
+  .data-center-page .data-source-boundary-item {
+    min-height: 76px;
+  }
+
+  .data-center-page .data-dictionary-workbench {
+    height: clamp(980px, calc(100vh - var(--lqc-status-height, 40px) - 228px), 1240px);
+    min-height: 0;
+    grid-template-rows: minmax(0, 0.6fr) minmax(0, 0.4fr);
+  }
+
+  .data-center-page .dictionary-index-workbench {
+    min-height: 0;
+  }
+
+  .data-center-page .data-dictionary-table-card .data-table__table {
+    min-height: 0;
+  }
+}
+
+@media (min-width: 2800px) and (min-height: 1600px) {
+  .data-center-page .data-table--official-catalog .ant-table {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .data-center-page .data-source-workbench {
+    grid-template-columns: 1fr;
+  }
+
+  .data-center-page .data-source-workbench__top,
+  .data-center-page .data-source-flow-card,
+  .data-center-page .data-source-boundary-card {
+    grid-column: auto;
+  }
+
+  .data-center-page .data-source-boundary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .data-center-page .data-source-boundary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* UI-DEEP-RERUN-CLOSEOUT-20260525:
+   Compact the data overview at 1512x758 so freshness and coverage tables do
+   not sit under the bottom status bar. Large display stretch rules remain
+   active above this breakpoint. */
+@media (max-width: 1600px) and (max-height: 900px) {
+  .data-center-page {
+    gap: 6px;
+  }
+
+  .data-center-page .page-header-panel {
+    min-height: 38px;
+    padding: 4px 8px;
+  }
+
+  .data-center-page .command-panel {
+    min-height: 54px;
+    padding: 6px 8px;
+    grid-template-columns: 1fr;
+  }
+
+  .data-center-page .command-panel__description {
+    -webkit-line-clamp: 1;
+  }
+
+  .data-center-page .command-panel__items,
+  .data-center-page .command-panel__actions {
+    display: none;
+  }
+
+  .data-center-page .data-center-overview .metric-card.ant-card .ant-card-body {
+    min-height: 44px;
+    padding: 6px 8px !important;
+  }
+
+  .data-center-page .data-center-overview .metric-card__icon {
+    display: none;
+  }
+
+  .data-center-page .data-center-overview .metric-card-value {
+    font-size: 13px !important;
+    line-height: 1.15 !important;
+  }
+
+  .data-center-page .workbench-nav__item {
+    min-height: 40px;
+    padding: 6px 8px;
+  }
+
+  .data-center-page .ant-alert {
+    min-height: 34px;
+    padding: 5px 8px;
+  }
+
+  .data-center-page .ant-alert-message {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .data-center-page .ant-alert-description {
+    display: none;
+  }
+
+  .data-center-page .data-table--freshness .ant-table-placeholder > td {
+    height: 66px !important;
+  }
+
+  .data-center-page .data-table--freshness .empty-guide {
+    min-height: 58px !important;
+  }
+
+  .data-center-page .market-kline-card .section-card__description,
+  .data-center-page .market-kline-side-panel .ant-alert {
+    display: none !important;
+  }
+
+  .data-center-page .market-kline-card .ant-card-head {
+    min-height: 32px !important;
+  }
+
+  .data-center-page .market-kline-card .ant-card-body {
+    padding: 4px !important;
+  }
+
+  .data-center-page .section-card.market-kline-card .kline-chart,
+  .data-center-page .section-card.market-kline-card .kline-chart--empty {
+    min-height: 112px !important;
+  }
+
+  .data-center-page .section-card.market-kline-card .kline-chart--empty {
+    height: 112px !important;
+  }
+
+  .data-center-page .section-card.market-kline-card .kline-chart--empty .empty-guide {
+    min-height: 52px !important;
+    max-height: 56px !important;
+  }
+
+  .data-center-page .section-card.market-kline-card .kline-chart__canvas {
+    height: 160px !important;
+  }
+
+  .data-center-page .market-kline-side-panel .ant-card-body {
+    max-height: 214px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1600px) and (max-height: 740px) {
+  .data-center-page :is(.ant-btn, .ant-btn-sm, .ant-select-selector, .ant-input, .ant-input-affix-wrapper, .ant-switch) {
+    min-height: 30px !important;
+    height: 30px !important;
+    line-height: 28px !important;
+  }
+
+  .data-center-page .ant-switch {
+    min-width: 44px !important;
+  }
+
+  .data-center-page a:has(.ant-btn) {
+    min-height: 30px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .data-center-page .command-panel {
+    min-height: 40px !important;
+    max-height: 42px !important;
+    overflow: hidden !important;
+    padding: 5px 8px !important;
+    grid-template-columns: minmax(0, 0.52fr) minmax(480px, 1fr) !important;
+  }
+
+  .data-center-page .command-panel__description,
+  .data-center-page .command-panel__item-helper,
+  .data-center-page .command-panel__actions {
+    display: none !important;
+  }
+
+  .data-center-page .command-panel__items {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+  }
+
+  .data-center-page .command-panel__item {
+    min-height: 28px !important;
+    padding: 3px 6px !important;
+  }
+
+  .data-center-page .data-center-overview .metric-card.ant-card {
+    max-height: 50px !important;
+    overflow: hidden !important;
+  }
+
+  .data-center-page .data-center-overview .metric-card.ant-card .ant-card-body {
+    min-height: 44px !important;
+    padding: 4px 7px !important;
+  }
+
+  .data-center-page .data-center-tabs .ant-tabs-content-holder {
+    min-height: 0 !important;
+  }
+
+  .data-center-page .data-center-tabs .ant-tabs-tabpane-active > .ant-space {
+    display: grid !important;
+    width: 100% !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: start !important;
+    gap: 6px !important;
+  }
+
+  .data-center-page .data-center-tabs .ant-tabs-tabpane-active > .ant-space > .ant-space-item {
+    min-width: 0 !important;
+  }
+
+  .data-center-page .data-center-tabs .ant-tabs-tabpane-active > .ant-space > .ant-space-item:has(.data-center-official-boundary),
+  .data-center-page .data-center-tabs .ant-tabs-tabpane-active > .ant-space > .ant-space-item:has(.data-center-overview),
+  .data-center-page .data-center-tabs .ant-tabs-tabpane-active > .ant-space > .ant-space-item:has(.data-center-risk-note),
+  .data-center-page .data-center-tabs .ant-tabs-tabpane-active > .ant-space > .ant-space-item:has(.data-center-evidence-board) {
+    grid-column: 1 / -1 !important;
+  }
+
+  .data-center-page .data-table__table .ant-table-content,
+  .data-center-page .data-table__table .ant-table-body {
+    max-height: 320px !important;
+    overflow: auto !important;
+  }
+
+  .data-center-page .data-table__table .ant-table-placeholder,
+  .data-center-page .data-table__table .ant-table-placeholder:hover > td,
+  .data-center-page .data-table__table .ant-table-tbody > tr.ant-table-placeholder > td,
+  .data-center-page .data-table--freshness .ant-table-placeholder > td {
+    height: 44px !important;
+    min-height: 44px !important;
+    max-height: 44px !important;
+    padding: 0 !important;
+  }
+
+  .data-center-page .empty-guide.empty-guide,
+  .data-center-page .data-table--freshness .empty-guide {
+    height: 40px !important;
+    min-height: 40px !important;
+    max-height: 42px !important;
+    margin: 0 !important;
+    padding: 4px 8px !important;
+    overflow: hidden !important;
+  }
+
+  .data-center-page .data-center-note,
+  .data-center-page .data-center-risk-note {
+    max-height: 42px !important;
+    overflow: hidden !important;
+  }
+}
+
+/* UI-CLOSEOUT-CONTROLS-20260525:
+   Data center contains many low-frequency tables; this closes the remaining
+   action/pager height drift without changing table data or sync behavior. */
+.data-center-page .data-table__table :is(.table-action-group .ant-btn, .task-action-group--inline .ant-btn, td .ant-btn.ant-btn-sm),
+.data-center-page .data-table--coverage .data-table-col--action :is(.ant-btn, .ant-btn-sm),
+.data-center-page .data-table--daily-kline .data-table-col--action :is(.ant-btn, .ant-btn-sm),
+.data-center-page .data-table--sync-tasks .data-table-col--action :is(.ant-btn, .ant-btn-sm),
+.data-center-page .data-table--quality .data-table-col--action :is(.ant-btn, .ant-btn-sm),
+.data-center-page .data-table--dictionary .data-table-col--action :is(.ant-btn, .ant-btn-sm) {
+  height: 28px !important;
+  min-height: 28px !important;
+  max-height: 30px !important;
+  line-height: 26px !important;
+  padding-block: 0 !important;
+}
+
+.data-center-page .data-table__table .ant-table-pagination.ant-pagination :is(
+  .ant-pagination-item,
+  .ant-pagination-prev,
+  .ant-pagination-next,
+  .ant-pagination-jump-prev,
+  .ant-pagination-jump-next,
+  .ant-pagination-item-link,
+  .ant-select-selector,
+  .ant-pagination-options-quick-jumper input
+) {
+  height: 30px !important;
+  min-height: 30px !important;
+  line-height: 28px !important;
+}
+
+.data-center-page .data-table__table .ant-table-pagination.ant-pagination :is(
+  .ant-pagination-item a,
+  .ant-pagination-prev button,
+  .ant-pagination-next button,
+  .ant-pagination-jump-prev a,
+  .ant-pagination-jump-next a,
+  .ant-select-selection-item,
+  .ant-select-selection-placeholder
+) {
+  height: 30px !important;
+  min-height: 30px !important;
+  line-height: 28px !important;
+}
+
+/* UI-DENSITY-CLOSEOUT-20260526:
+   Final Data Center large-screen fill: the remaining 4K blanks were isolated
+   to market data and data quality tabs. These rules stretch only their work
+   surfaces and tables; sync, QMT and business behavior are untouched. */
+@media (min-width: 2800px) and (min-height: 1600px) {
+  .data-center-page .data-market-workbench.ant-space,
+  .data-center-page .data-quality-workbench.ant-space {
+    min-height: calc(100vh - var(--lqc-status-height, 40px) - var(--lqc-shell-bottom-height, 24px) - 526px);
+  }
+
+  .data-center-page .data-market-workbench .market-kline-workbench {
+    min-height: 420px;
+  }
+
+  .data-center-page .data-market-workbench :is(.data-table--stock-basic, .data-table--daily-kline) .ant-table {
+    min-height: 184px;
+  }
+
+  .data-center-page .data-quality-workbench .quality-matrix-grid {
+    min-height: 456px;
+  }
+
+  .data-center-page .data-quality-workbench :is(.data-table--account-duplicates, .data-table--quality) .ant-table {
+    min-height: 184px;
+  }
+}
+
+/* UI-DENSITY-CLOSEOUT-20260526:
+   Chrome-safe 1512x702 must not revive older 48px empty-row fallbacks. */
+@media (max-width: 1600px) and (max-height: 740px) {
+  .data-center-page .data-table__table .ant-table-placeholder,
+  .data-center-page .data-table__table .ant-table-placeholder:hover > td,
+  .data-center-page .data-table__table .ant-table-tbody > tr.ant-table-placeholder > td,
+  .data-center-page .data-table--freshness .ant-table-placeholder > td {
+    height: 44px !important;
+    min-height: 44px !important;
+    max-height: 44px !important;
+  }
+
+  .data-center-page .empty-guide.empty-guide,
+  .data-center-page .data-table--freshness .empty-guide {
+    height: 40px !important;
+    min-height: 40px !important;
+    max-height: 42px !important;
+  }
+}
+
+/* UI-THEME-CLOSEOUT-20260529:
+   Page CSS is loaded after the global guard, so keep busy/disabled buttons
+   variable-driven here as well. This fixes real Chrome transitions during
+   sync and refresh without changing any data-center behavior. */
+html[data-theme] body .app-shell .data-center-page :is(
+  button.ant-btn[disabled],
+  button.ant-btn.ant-btn-disabled,
+  button.ant-btn.ant-btn-loading
+) {
+  color: var(--lqc-control-disabled-text) !important;
+  background: var(--lqc-control-disabled-bg) !important;
+  border-color: var(--lqc-border-soft) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+html[data-theme] body .app-shell .data-center-page :is(
+  button.ant-btn[disabled],
+  button.ant-btn.ant-btn-disabled,
+  button.ant-btn.ant-btn-loading
+) :is(span:not(.anticon), svg, .anticon) {
+  color: var(--lqc-control-disabled-text) !important;
+}
+
+html[data-theme] body .app-shell .data-center-page button.ant-btn-primary:not(:disabled):not([disabled]):not(.ant-btn-disabled):not(.ant-btn-loading) {
+  color: var(--lqc-text-inverse) !important;
+  background: var(--lqc-action-primary-bg) !important;
+  border-color: var(--lqc-action-primary-bg) !important;
+}
+
+html[data-theme] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page :is(
+  button.ant-btn.ant-btn-primary[disabled],
+  button.ant-btn.ant-btn-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-primary.ant-btn-loading,
+  button.ant-btn.ant-btn-color-primary[disabled],
+  button.ant-btn.ant-btn-color-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-color-primary.ant-btn-loading
+) {
+  color: var(--lqc-control-disabled-text) !important;
+  background: var(--lqc-control-disabled-bg) !important;
+  border-color: var(--lqc-border-soft) !important;
+}
+
+html[data-theme] body .app-shell.app-shell .data-center-page.data-center-page :is(
+  button.ant-btn.ant-btn-primary[disabled],
+  button.ant-btn.ant-btn-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-primary.ant-btn-loading,
+  button.ant-btn.ant-btn-color-primary[disabled],
+  button.ant-btn.ant-btn-color-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-color-primary.ant-btn-loading
+) {
+  color: var(--lqc-control-disabled-text) !important;
+  background: var(--lqc-control-disabled-bg) !important;
+  background-color: var(--lqc-control-disabled-bg) !important;
+  background-image: none !important;
+  border-color: var(--lqc-border-soft) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+html[data-theme] body .app-shell.app-shell .data-center-page.data-center-page :is(
+  button.ant-btn.ant-btn-primary[disabled],
+  button.ant-btn.ant-btn-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-primary.ant-btn-loading,
+  button.ant-btn.ant-btn-color-primary[disabled],
+  button.ant-btn.ant-btn-color-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-color-primary.ant-btn-loading
+) :is(span:not(.anticon), svg, .anticon) {
+  color: var(--lqc-control-disabled-text) !important;
+}
+
+html[data-theme] body .app-shell.app-shell .data-center-page.data-center-page button.ant-btn.ant-btn-variant-solid:is([disabled], .ant-btn-disabled, .ant-btn-loading) {
+  color: var(--lqc-control-disabled-text) !important;
+  background: var(--lqc-control-disabled-bg) !important;
+  background-color: var(--lqc-control-disabled-bg) !important;
+  background-image: none !important;
+  border-color: var(--lqc-border-soft) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+/* UI-MACBOOK14-LAYOUT-CLOSEOUT-20260529:
+   The source action card only contains three commands. On a 1512px MacBook
+   work area, forcing it to match the source detail card creates a large empty
+   box. Keep the main data-source panel dense while allowing this auxiliary
+   action panel to size to its actual content. */
+@media (min-width: 1281px) and (max-width: 1600px) and (max-height: 900px) {
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-source-action-card.data-source-action-card {
+    height: auto !important;
+    min-height: 0 !important;
+    align-self: start !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-source-action-card.data-source-action-card .ant-card-body {
+    min-height: 0 !important;
+    display: block !important;
+    padding: 7px 8px !important;
+  }
+}
+
+/* UI-MACBOOK14-DATACENTER-SCROLL-CLOSEOUT-20260529:
+   Data Center has the densest set of tabs. Keep running sync state, step nav
+   and table work areas consistent with the terminal surface in the real
+   1512x625 Chrome work area. */
+@media (min-width: 1281px) and (max-width: 1600px) and (max-height: 680px) {
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page {
+    gap: 5px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-center-overview .metric-card.ant-card .ant-card-body {
+    min-height: 40px !important;
+    padding: 4px 7px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-center-page .metric-card-value,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .metric-card-value {
+    font-size: 13px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .workbench-nav {
+    min-height: 34px !important;
+    overflow: hidden !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .workbench-nav__item {
+    min-height: 34px !important;
+    padding: 4px 6px !important;
+    gap: 5px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .workbench-nav__index {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 10px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-sync-current-card .ant-card-head {
+    min-height: 28px !important;
+    padding: 0 7px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-sync-current-card .ant-card-body {
+    padding: 6px 7px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .task-progress-inline.ant-card,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .task-progress-inline.ant-card .ant-card-body,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-sync-current-task {
+    color: var(--lqc-terminal-text) !important;
+    background: var(--lqc-terminal-panel) !important;
+    border-color: var(--lqc-terminal-line) !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .task-progress-inline.ant-card {
+    max-height: 146px !important;
+    overflow: auto !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .task-progress-inline__detail {
+    grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)) !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-task-detail-grid {
+    grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)) !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-task-detail-item {
+    min-height: 34px !important;
+    padding: 4px 6px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-table__header,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .toolbar {
+    min-height: 32px !important;
+    padding: 4px 6px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-table__table .ant-table-pagination.ant-pagination {
+    min-height: 32px !important;
+    padding: 3px 6px !important;
+    margin-top: 4px !important;
+    margin-bottom: 8px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-dictionary-workbench {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    grid-template-rows: none !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-dictionary-index-card,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-dictionary-table-card {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-dictionary-index-card .ant-card-body,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-dictionary-table-card .ant-card-body {
+    min-height: 0 !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .dictionary-index-workbench {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .dictionary-index-list,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .dictionary-index-detail {
+    height: auto !important;
+    max-height: 168px !important;
+    overflow: auto !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-dictionary-table-card .data-table--dictionary,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.data-center-page.data-center-page .data-dictionary-table-card .data-table__table {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+}

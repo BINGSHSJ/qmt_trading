@@ -1,0 +1,17 @@
+.filter-bar {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-bar__main,
+.filter-bar__right {
+  min-width: 0;
+}
+
+.filter-bar__main .ant-input-search {
+  max-width: 100%;
+}

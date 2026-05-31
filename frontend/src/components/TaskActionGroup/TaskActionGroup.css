@@ -1,0 +1,25 @@
+.task-action-group {
+  max-width: 100%;
+}
+
+.task-action-group--inline .ant-btn {
+  height: 28px !important;
+  min-height: 28px !important;
+  padding: 0 8px !important;
+  border-radius: 0 !important;
+  font-size: 12px !important;
+  line-height: 26px !important;
+}
+
+.task-action-detail-drawer .detail-drawer__technical {
+  max-height: 300px;
+}
+
+@media (max-width: 1600px) and (max-height: 740px) {
+  .task-action-group--inline .ant-btn {
+    height: 28px !important;
+    min-height: 28px !important;
+    line-height: 26px !important;
+    padding-block: 0 !important;
+  }
+}

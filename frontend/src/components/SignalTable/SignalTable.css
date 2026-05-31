@@ -1,0 +1,38 @@
+.signal-reason {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--lqc-text-primary);
+  cursor: pointer;
+  text-align: left;
+}
+
+.signal-reason:hover span {
+  color: var(--lqc-primary);
+}
+
+.signal-reason span {
+  display: -webkit-box;
+  overflow: hidden;
+  max-height: 40px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.signal-audit-cell-text {
+  display: -webkit-box;
+  overflow: hidden;
+  max-width: 100%;
+  line-height: 1.42;
+  white-space: normal;
+  word-break: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+[data-testid='table-strategy-signals'] .ant-table-cell {
+  vertical-align: middle;
+}

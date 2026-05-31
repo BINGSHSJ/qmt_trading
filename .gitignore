@@ -1,0 +1,34 @@
+# Python / test cache
+backend/.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.log
+.env
+.env.*
+!.env.example
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+frontend/docs/reports/
+docs/reports/ui-audit/
+docs/reports/
+!docs/reports/.gitkeep
+*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts
+
+# Local runtime data: never commit real QMT data, SQLite WAL, logs or backups
+data/*
+!data/.gitkeep
+logs/*
+!logs/.gitkeep
+backups/
+test-results/
+
+# Local generated access shortcuts
+*.url

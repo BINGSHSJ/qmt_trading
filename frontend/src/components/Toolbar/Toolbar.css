@@ -1,0 +1,30 @@
+.toolbar {
+  margin-bottom: 4px;
+  padding: 5px 8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  border: 1px solid var(--lqc-terminal-line);
+  border-radius: 0;
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-panel);
+}
+
+.toolbar__copy {
+  min-width: 0;
+}
+
+.toolbar__actions {
+  justify-content: flex-end;
+}
+
+@media (max-width: 720px) {
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .toolbar__actions {
+    justify-content: flex-start;
+  }
+}

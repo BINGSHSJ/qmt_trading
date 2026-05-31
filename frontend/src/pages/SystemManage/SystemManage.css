@@ -1,0 +1,2628 @@
+.system-page {
+  gap: 16px;
+}
+
+.system-ops-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(420px, 0.9fr);
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--lqc-info-border-soft);
+  border-radius: var(--lqc-radius-card);
+  background: linear-gradient(135deg, var(--lqc-bg-card-muted) 0%, var(--lqc-info-soft-bg) 100%);
+  box-shadow: var(--lqc-shadow-card);
+}
+
+.system-ops-panel__main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.system-ops-panel__icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  color: var(--lqc-info-text);
+  background: var(--lqc-info-soft-bg);
+  font-size: 22px;
+}
+
+.system-ops-panel__title {
+  margin: 0 0 4px;
+  color: var(--lqc-text-primary);
+}
+
+.system-ops-panel__description {
+  color: var(--lqc-text-secondary);
+  line-height: 1.7;
+}
+
+.system-ops-panel__checks {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.system-ops-panel__check {
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid var(--lqc-border);
+  border-radius: 10px;
+  background: rgba(var(--lqc-highlight-rgb), 0.82);
+}
+
+.system-ops-panel__check span,
+.system-ops-panel__check strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.system-ops-panel__check span {
+  color: var(--lqc-text-secondary);
+  font-size: 12px;
+}
+
+.system-ops-panel__check strong {
+  margin-top: 4px;
+  color: var(--lqc-text-primary);
+  font-size: 13px;
+}
+
+.system-ops-panel__check--success {
+  border-color: var(--lqc-success-border-soft);
+  background: var(--lqc-success-soft-bg);
+}
+
+.system-ops-panel__check--info {
+  border-color: var(--lqc-info-border-soft);
+  background: var(--lqc-info-soft-bg);
+}
+
+.system-ops-panel__check--warning {
+  border-color: var(--lqc-warning-border-soft);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.system-ops-panel__check--danger {
+  border-color: var(--lqc-danger-border-soft);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.system-workflow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.system-workflow__step {
+  min-width: 0;
+  min-height: 74px;
+  padding: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-card);
+  background: var(--lqc-bg-card);
+  box-shadow: var(--lqc-shadow-card);
+  cursor: pointer;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.system-workflow__step:hover,
+.system-workflow__step--active {
+  border-color: rgba(var(--lqc-primary-rgb), 0.42);
+  box-shadow: 0 10px 22px rgba(var(--lqc-shadow-rgb), 0.08);
+  transform: translateY(-1px);
+}
+
+.system-workflow__index {
+  width: 26px;
+  height: 26px;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  color: var(--lqc-primary);
+  font-weight: 700;
+  background: var(--lqc-primary-soft);
+}
+
+.system-workflow__content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.system-workflow__content strong,
+.system-workflow__content span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.system-workflow__content strong {
+  color: var(--lqc-text);
+}
+
+.system-workflow__content span {
+  color: var(--lqc-text-secondary);
+  font-size: 12px;
+}
+
+.system-workflow__step--success .system-workflow__index {
+  color: var(--lqc-success-text);
+  background: var(--lqc-success-soft-bg);
+}
+
+.system-workflow__step--warning .system-workflow__index {
+  color: var(--lqc-warning-text);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.system-workflow__step--danger .system-workflow__index {
+  color: var(--lqc-danger-text);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.system-workflow__step--info .system-workflow__index {
+  color: var(--lqc-primary);
+  background: var(--lqc-primary-soft);
+}
+
+.system-overview .ant-col {
+  display: flex;
+}
+
+.system-overview .metric-card {
+  width: 100%;
+}
+
+.system-tabs .ant-tabs-tab {
+  font-weight: 600;
+}
+
+.system-path-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.system-path-summary__item {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-control);
+  background: var(--lqc-bg-card-muted);
+}
+
+.system-path-summary__item--success {
+  border-color: var(--lqc-success-border-soft);
+  background: var(--lqc-success-soft-bg);
+}
+
+.system-path-summary__item--warning {
+  border-color: var(--lqc-warning-border-soft);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.system-path-summary__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.system-path-summary__head span {
+  color: var(--lqc-text-primary);
+  font-weight: 600;
+}
+
+.system-path-summary__value {
+  display: block;
+  max-width: 100%;
+  color: var(--lqc-text-primary);
+  font-size: 13px;
+}
+
+.system-path-summary__hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.system-form-block {
+  height: 100%;
+  padding: 14px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-control);
+  background: var(--lqc-bg-card-muted);
+}
+
+.system-form-block > .ant-typography {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.system-form-actions {
+  margin-top: 16px;
+}
+
+.env-group-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.env-group-card {
+  min-height: 210px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-card);
+  background: var(--lqc-bg-card);
+  box-shadow: var(--lqc-shadow-card);
+}
+
+.env-group-card--success {
+  border-color: rgba(var(--lqc-success-rgb), 0.22);
+}
+
+.env-group-card--warning {
+  border-color: rgba(var(--lqc-warning-rgb), 0.28);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.env-group-card--failed {
+  border-color: rgba(var(--lqc-danger-rgb), 0.3);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.env-group-card__head {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: start;
+}
+
+.env-group-card__head .ant-typography {
+  display: block;
+}
+
+.env-group-card__icon {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: var(--lqc-primary);
+  background: var(--lqc-primary-soft);
+}
+
+.env-group-card__message {
+  min-height: 44px;
+  margin: 0;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.env-group-card__next {
+  min-height: 58px;
+  padding: 9px 10px;
+  border-radius: var(--lqc-radius-control);
+  background: rgba(var(--lqc-shadow-rgb), 0.04);
+}
+
+.env-group-card .ant-btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.monitor-health-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.system-restart-task-alert {
+  margin-top: 14px;
+}
+
+.monitor-health-card {
+  min-height: 96px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-card);
+  background: var(--lqc-bg-card-muted);
+}
+
+.monitor-health-card--success {
+  border-color: var(--lqc-success-border-soft);
+  background: var(--lqc-success-soft-bg);
+}
+
+.monitor-health-card--warning {
+  border-color: var(--lqc-warning-border-soft);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.monitor-health-card--danger {
+  border-color: var(--lqc-danger-border-soft);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.recent-error-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recent-error-item {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-control);
+  background: var(--lqc-bg-card-muted);
+}
+
+.backup-timeline {
+  margin-bottom: 14px;
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-card);
+  background: var(--lqc-bg-card-muted);
+}
+
+.backup-timeline__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+}
+
+.backup-timeline__item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 18px;
+  bottom: -10px;
+  width: 1px;
+  background: var(--lqc-border);
+}
+
+.backup-timeline__dot {
+  position: relative;
+  z-index: 1;
+  width: 13px;
+  height: 13px;
+  margin-top: 5px;
+  border: 3px solid var(--lqc-info-soft-bg);
+  border-radius: 50%;
+  background: var(--lqc-primary);
+}
+
+.backup-timeline__content {
+  padding: 10px 12px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-control);
+  background: var(--lqc-bg-card);
+}
+
+.backup-timeline__head {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.backup-timeline__actions {
+  margin-top: 8px;
+}
+
+.backup-guard-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--lqc-warning-border-soft);
+  border-radius: var(--lqc-radius-card);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.backup-guard-panel__description {
+  margin: 4px 0 0;
+}
+
+.backup-guard-panel__items {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+@media (min-width: 1600px) {
+  .system-tabs .ant-table-cell {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 1280px) {
+  .system-ops-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .system-workflow,
+  .system-path-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .env-group-grid,
+  .monitor-health-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .system-workflow,
+  .system-ops-panel__checks,
+  .system-path-summary,
+  .env-group-grid,
+  .monitor-health-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .backup-guard-panel {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .backup-guard-panel__items {
+    justify-content: flex-start;
+  }
+}
+
+/* UI-IBKR-17: dark system operations console override. Visual only; system actions stay unchanged. */
+.system-page {
+  --system-bg: var(--lqc-bg-page);
+  --system-panel: var(--lqc-terminal-panel);
+  --system-panel-2: var(--lqc-terminal-panel-2);
+  --system-panel-3: var(--lqc-terminal-panel-3);
+  --system-border: var(--lqc-terminal-line-strong);
+  --system-border-strong: var(--lqc-terminal-line-strong);
+  --system-text: var(--lqc-terminal-text);
+  --system-muted: var(--lqc-terminal-muted);
+  --system-blue: var(--lqc-terminal-blue);
+  --system-blue-soft: var(--lqc-terminal-blue-soft);
+  --system-green: var(--lqc-terminal-green);
+  --system-red: var(--lqc-danger);
+  --system-orange: var(--lqc-terminal-orange);
+  min-height: calc(100vh - var(--lqc-status-height));
+  padding-bottom: 18px;
+  color: var(--system-text);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(var(--lqc-primary-rgb), 0.12), transparent 26%),
+    linear-gradient(180deg, var(--lqc-terminal-sunken) 0%, var(--system-bg) 42%, var(--lqc-bg-page) 100%);
+}
+
+.system-page .page-header-panel,
+.system-page .section-card,
+.system-page .metric-card,
+.system-page .system-ops-panel,
+.system-page .system-workflow__step,
+.system-page .system-path-summary__item,
+.system-page .system-form-block,
+.system-page .env-group-card,
+.system-page .monitor-health-card,
+.system-page .recent-error-item,
+.system-page .backup-timeline,
+.system-page .backup-timeline__content,
+.system-page .backup-guard-panel,
+.system-page .ant-alert,
+.system-page .task-progress-inline {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.system-page .page-header-panel {
+  min-height: 42px;
+  padding: 6px 8px;
+  overflow: hidden;
+  border: 0;
+  border-bottom: 1px solid var(--system-border);
+  border-radius: 0;
+  background: linear-gradient(180deg, var(--lqc-terminal-panel-2) 0%, var(--lqc-terminal-sunken) 100%);
+}
+
+.system-page .page-header-main {
+  align-items: center;
+}
+
+.system-page .page-header-panel::before {
+  background: linear-gradient(180deg, var(--system-blue), transparent);
+}
+
+.system-page .page-header-title,
+.system-page .page-header-description,
+.system-page .page-header-meta .ant-typography,
+.system-page .ant-typography,
+.system-page .section-card__title,
+.system-page .system-ops-panel__title,
+.system-page .system-workflow__content strong,
+.system-page .system-path-summary__head span,
+.system-page .system-path-summary__value {
+  color: var(--system-text) !important;
+}
+
+.system-page .page-header-title {
+  margin: 0 !important;
+  font-size: 16px !important;
+  line-height: 1.15 !important;
+}
+
+.system-page .page-header-description,
+.system-page .page-header-meta {
+  display: none;
+}
+
+.system-page .page-header-description,
+.system-page .page-header-meta .ant-typography,
+.system-page .section-card__description,
+.system-page .system-ops-panel__description,
+.system-page .system-workflow__content span,
+.system-page .system-path-summary__hint,
+.system-page .ant-typography-secondary,
+.system-page .ant-form-item-extra {
+  color: var(--system-muted) !important;
+}
+
+.system-page .system-ops-panel {
+  border-color: var(--system-border);
+  background: linear-gradient(135deg, var(--lqc-terminal-panel) 0%, var(--lqc-terminal-panel) 100%);
+}
+
+.system-page .system-ops-panel__icon {
+  color: var(--lqc-info-text);
+  border: 1px solid var(--lqc-info-border-soft);
+  border-radius: 0;
+  background: rgba(var(--lqc-primary-rgb), 0.14);
+}
+
+.system-page .system-ops-panel__check {
+  border-color: var(--system-border);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel-2);
+}
+
+.system-page .system-ops-panel__check span {
+  color: var(--system-muted);
+}
+
+.system-page .system-ops-panel__check strong {
+  color: var(--system-text);
+}
+
+.system-page .system-ops-panel__check--success {
+  border-color: var(--lqc-success-border-soft);
+  background: var(--lqc-success-soft-bg);
+}
+
+.system-page .system-ops-panel__check--info {
+  border-color: var(--lqc-info-border-soft);
+  background: var(--lqc-info-soft-bg);
+}
+
+.system-page .system-ops-panel__check--warning {
+  border-color: var(--lqc-warning-border-soft);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.system-page .system-ops-panel__check--danger {
+  border-color: var(--lqc-danger-border-soft);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.system-page .system-workflow__step {
+  border-color: var(--system-border);
+  color: var(--system-text);
+  background: var(--lqc-terminal-panel);
+}
+
+.system-page .system-workflow__step:hover,
+.system-page .system-workflow__step--active {
+  border-color: var(--system-blue);
+  background: var(--lqc-terminal-blue-soft);
+  transform: none;
+}
+
+.system-page .system-workflow__index {
+  border-radius: 0;
+  color: var(--lqc-info-text);
+  background: rgba(var(--lqc-primary-rgb), 0.16);
+}
+
+.system-page .system-workflow__step--success .system-workflow__index {
+  color: var(--lqc-success-text);
+  background: var(--lqc-success-soft-bg);
+}
+
+.system-page .system-workflow__step--warning .system-workflow__index {
+  color: var(--lqc-warning-text);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.system-page .system-workflow__step--danger .system-workflow__index {
+  color: var(--lqc-danger-text);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.system-page .system-overview {
+  margin-top: 10px;
+}
+
+.system-page .metric-card {
+  min-height: 78px;
+  border: 1px solid var(--system-border) !important;
+  background: linear-gradient(180deg, var(--lqc-terminal-panel-2) 0%, var(--lqc-terminal-panel) 100%) !important;
+}
+
+.system-page .metric-card::before {
+  width: 2px;
+}
+
+.system-page .metric-card__icon {
+  color: var(--lqc-info-text);
+  background: rgba(var(--lqc-primary-rgb), 0.14);
+}
+
+.system-page .metric-card-value,
+.system-page .metric-card-subvalue,
+.system-page .metric-card__footer {
+  color: var(--system-text) !important;
+}
+
+.system-page .metric-card__footer,
+.system-page .metric-card-subvalue {
+  color: var(--system-muted) !important;
+}
+
+.system-page .system-tabs {
+  margin-top: 12px;
+}
+
+.system-page .system-tabs > .ant-tabs-nav {
+  margin: 0 0 10px;
+  padding: 0 8px;
+  border: 1px solid var(--system-border);
+  background: var(--lqc-terminal-sunken);
+}
+
+.system-page .system-tabs > .ant-tabs-nav::before {
+  border-bottom-color: var(--system-border);
+}
+
+.system-page .system-tabs .ant-tabs-tab {
+  margin: 0;
+  padding: 10px 14px;
+  color: var(--system-muted);
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+
+.system-page .system-tabs .ant-tabs-tab + .ant-tabs-tab {
+  margin-left: 4px;
+}
+
+.system-page .system-tabs .ant-tabs-tab:hover,
+.system-page .system-tabs .ant-tabs-tab.ant-tabs-tab-active {
+  color: var(--lqc-text-inverse);
+  border-color: var(--system-border);
+  background: var(--lqc-terminal-panel-2);
+}
+
+.system-page .system-tabs .ant-tabs-tab .ant-tabs-tab-btn {
+  color: inherit !important;
+}
+
+.system-page .system-tabs .ant-tabs-ink-bar {
+  height: 2px;
+  background: var(--system-blue);
+}
+
+.system-page .section-card {
+  overflow: hidden;
+  border: 1px solid var(--system-border);
+  background: linear-gradient(180deg, var(--lqc-terminal-panel-2) 0%, var(--lqc-terminal-panel) 100%);
+}
+
+.system-page .section-card::before {
+  background: linear-gradient(180deg, rgba(var(--lqc-primary-rgb), 0.75), transparent);
+}
+
+.system-page .section-card .ant-card-head {
+  min-height: 46px;
+  border-bottom-color: var(--system-border);
+  background: var(--lqc-terminal-panel);
+}
+
+.system-page .section-card .ant-card-body {
+  background: var(--lqc-terminal-panel);
+}
+
+.system-page .system-path-summary__item,
+.system-page .system-form-block,
+.system-page .env-group-card,
+.system-page .monitor-health-card,
+.system-page .recent-error-item,
+.system-page .backup-timeline,
+.system-page .backup-timeline__content {
+  border-color: var(--system-border);
+  background: var(--lqc-terminal-panel);
+}
+
+.system-page .system-path-summary__item--success,
+.system-page .monitor-health-card--success,
+.system-page .env-group-card--success {
+  border-color: var(--lqc-success-border-soft);
+  background: var(--lqc-success-soft-bg);
+}
+
+.system-page .system-path-summary__item--warning,
+.system-page .monitor-health-card--warning,
+.system-page .env-group-card--warning {
+  border-color: var(--lqc-warning-border-soft);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.system-page .monitor-health-card--danger,
+.system-page .env-group-card--failed {
+  border-color: var(--lqc-danger-border-soft);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.system-page .env-group-card__icon {
+  border-radius: 0;
+  color: var(--lqc-info-text);
+  background: rgba(var(--lqc-primary-rgb), 0.14);
+}
+
+.system-page .env-group-card__next {
+  border: 1px solid var(--system-border);
+  border-radius: 0;
+  background: rgba(var(--lqc-surface-sunken-rgb), 0.34);
+}
+
+.system-page .env-group-card__message {
+  color: var(--lqc-text-soft);
+}
+
+.system-page .backup-guard-panel {
+  border-color: var(--lqc-warning-border-soft);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.system-page .backup-guard-panel__description {
+  color: var(--lqc-warning-text);
+}
+
+.system-page .backup-timeline__dot {
+  border-color: var(--lqc-info-border-soft);
+  border-radius: 0;
+  background: var(--system-blue);
+}
+
+.system-page .backup-timeline__item:not(:last-child)::before {
+  background: var(--system-border);
+}
+
+.system-page .toolbar {
+  margin-bottom: 6px;
+  border: 1px solid var(--system-border);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.system-page .toolbar .ant-typography,
+.system-page .data-table__quick-hint {
+  color: var(--system-muted) !important;
+}
+
+.system-page .data-table__table .ant-table {
+  border-color: var(--system-border);
+  border-radius: 0;
+  color: var(--system-text);
+  background: var(--lqc-terminal-panel);
+}
+
+.system-page .data-table__table .ant-table-container,
+.system-page .data-table__table .ant-table-content,
+.system-page .data-table__table .ant-table-body {
+  background: var(--lqc-terminal-panel);
+}
+
+.system-page .data-table__table .ant-table-thead > tr > th {
+  color: var(--lqc-text-secondary) !important;
+  border-color: var(--system-border) !important;
+  background: var(--lqc-terminal-panel-3) !important;
+  font-size: 12px;
+}
+
+.system-page .data-table__table .ant-table-tbody > tr > td {
+  color: var(--lqc-terminal-text);
+  border-color: var(--lqc-terminal-line);
+  background: var(--lqc-terminal-panel);
+}
+
+.system-page .data-table__table .ant-table-tbody > tr:nth-child(even) > td {
+  background: var(--lqc-terminal-panel-2);
+}
+
+.system-page .data-table__table .ant-table-tbody > tr:hover > td {
+  background: var(--lqc-terminal-hover) !important;
+}
+
+.system-page .data-table__table .ant-table-cell-fix-right,
+.system-page .data-table__table .ant-table-cell-fix-left {
+  background: var(--lqc-terminal-panel);
+}
+
+.system-page .data-table__table .ant-table-placeholder,
+.system-page .data-table__table .ant-table-placeholder:hover > td {
+  color: var(--system-muted) !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.system-page .data-table__table .ant-pagination {
+  padding: 6px 8px;
+  border: 1px solid var(--system-border);
+  border-top: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.system-page .ant-pagination .ant-pagination-item,
+.system-page .ant-pagination .ant-pagination-prev,
+.system-page .ant-pagination .ant-pagination-next {
+  border-color: var(--system-border-strong);
+  background: var(--lqc-terminal-panel-2);
+}
+
+.system-page .ant-pagination .ant-pagination-item a,
+.system-page .ant-pagination .ant-pagination-prev button,
+.system-page .ant-pagination .ant-pagination-next button {
+  color: var(--lqc-text-soft);
+}
+
+.system-page .ant-pagination .ant-pagination-item-active {
+  border-color: var(--system-blue);
+  background: var(--system-blue-soft);
+}
+
+.system-page .ant-form-item-label > label {
+  color: var(--lqc-text-soft) !important;
+}
+
+.system-page .ant-input,
+.system-page .ant-input-affix-wrapper,
+.system-page .ant-input-number,
+.system-page .ant-input-number-affix-wrapper,
+.system-page .ant-input-number-input,
+.system-page .ant-select-selector {
+  color: var(--system-text) !important;
+  border-color: var(--system-border-strong) !important;
+  background: var(--lqc-terminal-panel-2) !important;
+  box-shadow: none !important;
+}
+
+.system-page .ant-input::placeholder,
+.system-page .ant-select-selection-placeholder {
+  color: var(--lqc-terminal-muted) !important;
+}
+
+.system-page .ant-switch {
+  min-width: 44px;
+  height: 28px;
+  min-height: 28px;
+  background: var(--lqc-terminal-line-strong);
+}
+
+.system-page .ant-switch .ant-switch-handle {
+  width: 24px;
+  height: 24px;
+}
+
+.system-page .ant-switch .ant-switch-handle::before {
+  border-radius: 10px;
+}
+
+.system-page .ant-switch.ant-switch-checked {
+  background: var(--system-blue);
+}
+
+html[data-theme="light"] .system-page .ant-switch.ant-switch-checked {
+  background: var(--lqc-primary-soft) !important;
+  border-color: var(--lqc-info-border-soft) !important;
+}
+
+html[data-theme="light"] .system-page .ant-switch.ant-switch-disabled {
+  background: var(--lqc-control-disabled-bg) !important;
+  border-color: var(--lqc-border-soft) !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+html[data-theme="light"] .system-page .ant-switch.ant-switch-checked .ant-switch-handle::before {
+  background: var(--lqc-primary) !important;
+}
+
+.system-page .ant-alert {
+  border-color: var(--lqc-info-border-soft);
+  background: var(--lqc-info-soft-bg);
+}
+
+.system-page .ant-alert-warning {
+  border-color: var(--lqc-warning-border-soft);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.system-page .ant-alert-error {
+  border-color: var(--lqc-danger-border-soft);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.system-page .ant-alert-success {
+  border-color: var(--lqc-success-border-soft);
+  background: var(--lqc-success-soft-bg);
+}
+
+.system-page .ant-alert-message {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.system-page .ant-alert-description {
+  color: var(--lqc-text-soft) !important;
+}
+
+.system-page .ant-btn-default {
+  color: var(--lqc-text-soft);
+  border-color: var(--system-border-strong);
+  background: var(--lqc-terminal-panel-2);
+  box-shadow: none;
+}
+
+.system-page .ant-btn-default:hover {
+  color: var(--lqc-text-inverse) !important;
+  border-color: var(--system-blue) !important;
+  background: var(--lqc-terminal-hover) !important;
+}
+
+.system-page .ant-btn-primary {
+  box-shadow: none;
+}
+
+.system-page .ant-tag {
+  border-color: var(--system-border-strong);
+  color: var(--lqc-text-soft);
+  background: var(--lqc-terminal-panel-2);
+}
+
+.system-page .ant-tag-green,
+.system-page .ant-tag-success {
+  border-color: var(--lqc-success-border-soft);
+  color: var(--lqc-success-text);
+  background: var(--lqc-success-soft-bg);
+}
+
+.system-page .ant-tag-red,
+.system-page .ant-tag-error {
+  border-color: var(--lqc-danger-border-soft);
+  color: var(--lqc-danger-text);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.system-page .ant-tag-orange,
+.system-page .ant-tag-warning {
+  border-color: var(--lqc-warning-border-soft);
+  color: var(--lqc-warning-text);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.system-page .ant-tag-blue,
+.system-page .ant-tag-processing {
+  border-color: var(--lqc-info-border-soft);
+  color: var(--lqc-link-hover);
+  background: var(--lqc-info-soft-bg);
+}
+
+.system-page .task-progress-inline {
+  border: 1px solid var(--system-border);
+  background: var(--lqc-terminal-panel);
+}
+
+.system-page .task-progress-inline__detail-item {
+  border-color: var(--system-border);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel-2);
+}
+
+.system-page .ant-empty-image {
+  display: none;
+}
+
+.system-page .ant-empty-description {
+  color: var(--system-muted);
+}
+
+.system-confirm-modal .ant-modal-content {
+  color: var(--lqc-terminal-text);
+  border: 1px solid var(--lqc-terminal-line-strong);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+  box-shadow: 0 20px 60px rgba(var(--lqc-shadow-rgb), 0.45);
+}
+
+.system-confirm-modal .ant-modal-confirm-title,
+.system-confirm-modal .ant-modal-confirm-content,
+.system-confirm-modal .ant-typography {
+  color: var(--lqc-terminal-text) !important;
+}
+
+/* UI-20: align System Management to the dashboard workspace module standard. */
+.system-page {
+  min-height: auto;
+  padding: 6px;
+  gap: 6px;
+  overflow: auto;
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-bg);
+}
+
+.system-page .page-header-panel {
+  min-height: 38px;
+  padding: 4px 6px 7px;
+  border: 0;
+  border-bottom: 1px solid var(--lqc-terminal-line);
+  border-radius: 0;
+  background: transparent;
+}
+
+.system-page .page-header-panel::before {
+  display: none;
+}
+
+.system-page .page-header-title {
+  color: var(--lqc-terminal-text) !important;
+  font-size: 15px !important;
+}
+
+.system-page .system-ops-panel {
+  padding: 10px;
+  border-color: var(--lqc-terminal-line);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.system-page .system-ops-panel__check,
+.system-page .system-workflow__step,
+.system-page .system-path-summary__item,
+.system-page .system-form-block,
+.system-page .env-group-card,
+.system-page .monitor-health-card,
+.system-page .recent-error-item,
+.system-page .backup-timeline,
+.system-page .backup-timeline__content,
+.system-page .backup-guard-panel {
+  border-color: var(--lqc-terminal-line) !important;
+  border-radius: 0 !important;
+  background: var(--lqc-terminal-panel) !important;
+  box-shadow: none !important;
+}
+
+.system-page .system-overview {
+  margin-top: 6px;
+}
+
+.system-page .metric-card {
+  min-height: 64px;
+  border-color: var(--lqc-terminal-line) !important;
+  border-radius: 0 !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.system-page .metric-card.ant-card .ant-card-body {
+  padding: 8px !important;
+}
+
+.system-page .metric-card-value {
+  font-size: 15px !important;
+}
+
+.system-page .system-tabs {
+  margin-top: 6px;
+}
+
+.system-page .system-tabs > .ant-tabs-nav {
+  margin: 0 0 6px;
+  padding: 0 2px;
+  border: 0;
+  border-bottom: 1px solid var(--lqc-terminal-line);
+  background: transparent;
+}
+
+.system-page .system-tabs .ant-tabs-tab {
+  padding: 7px 10px;
+}
+
+.system-page .system-tabs .ant-tabs-tab:hover,
+.system-page .system-tabs .ant-tabs-tab.ant-tabs-tab-active {
+  border-color: transparent;
+  background: var(--lqc-terminal-panel-2);
+}
+
+.system-page .section-card {
+  border-color: var(--lqc-terminal-line) !important;
+  border-radius: 0 !important;
+  background: var(--lqc-terminal-panel) !important;
+  box-shadow: none !important;
+}
+
+.system-page .section-card::before {
+  display: none;
+}
+
+.system-page .section-card .ant-card-head {
+  min-height: 32px !important;
+  padding-inline: 8px;
+  border-bottom-color: var(--lqc-terminal-line) !important;
+  background: var(--lqc-terminal-panel-2) !important;
+}
+
+.system-page .section-card .ant-card-head-title,
+.system-page .section-card .ant-card-extra {
+  padding: 6px 0;
+}
+
+.system-page .section-card .ant-card-body {
+  padding: 8px !important;
+}
+
+.system-page .data-table__table .ant-table {
+  border-color: var(--lqc-terminal-line);
+  border-radius: 0;
+}
+
+.system-page .data-table__table .ant-table-thead > tr > th,
+.system-page .data-table__table .ant-table-tbody > tr > td {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  vertical-align: middle;
+}
+
+.system-page .data-table__table .ant-table-thead > tr > th {
+  color: var(--lqc-terminal-muted) !important;
+  white-space: nowrap;
+}
+
+.system-page .data-table__table .ant-table-cell {
+  line-height: 1.35;
+}
+
+/* UI-IBKR-36: system management deep areas use the same workstation density as Dashboard/Trading. */
+.system-page .system-form-block {
+  padding: 10px;
+}
+
+.system-page .system-form-block > .ant-typography {
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.system-page .system-form-actions {
+  margin-top: 10px;
+}
+
+.system-page .ant-form-item {
+  margin-bottom: 10px;
+}
+
+.system-page .ant-form-item-label {
+  padding-bottom: 3px;
+}
+
+.system-page .ant-form-item-label > label {
+  height: 20px;
+  font-size: 12px;
+}
+
+.system-page .ant-input,
+.system-page .ant-input-number,
+.system-page .ant-input-number-input,
+.system-page .ant-select-selector {
+  height: 28px !important;
+  min-height: 28px !important;
+  line-height: 28px !important;
+  font-size: 12px !important;
+}
+
+.system-page .ant-input-number-input {
+  padding: 0 8px !important;
+}
+
+.system-page .ant-select-selection-item,
+.system-page .ant-select-selection-placeholder {
+  line-height: 26px !important;
+}
+
+.system-page .ant-input-search .ant-input-group-addon {
+  width: 40px !important;
+}
+
+/* UI-QA-20260521: System page search/path inputs use nested Ant wrappers; keep all states on the terminal baseline. */
+.system-page .ant-input-affix-wrapper,
+.system-page .ant-input-affix-wrapper-status-success,
+.system-page .ant-input-affix-wrapper-status-warning,
+.system-page .ant-input-affix-wrapper-status-error,
+.system-page .ant-input-affix-wrapper.ant-input-status-success,
+.system-page .ant-input-affix-wrapper.ant-input-status-warning,
+.system-page .ant-input-affix-wrapper.ant-input-status-error,
+.system-page .ant-input-number-affix-wrapper,
+.system-page .ant-picker,
+.system-page .ant-select-selector {
+  height: 28px !important;
+  min-height: 28px !important;
+  border-color: var(--lqc-terminal-line-strong) !important;
+  border-radius: 0 !important;
+  color: var(--lqc-terminal-text) !important;
+  background: var(--lqc-terminal-panel) !important;
+  box-shadow: none !important;
+}
+
+.system-page .ant-input,
+.system-page .ant-input-status-success,
+.system-page .ant-input-status-warning,
+.system-page .ant-input-status-error,
+.system-page .ant-input-group,
+.system-page .ant-input-wrapper {
+  border-color: var(--lqc-terminal-line-strong) !important;
+  outline-color: var(--lqc-terminal-line-strong) !important;
+  box-shadow: none !important;
+}
+
+.system-page .ant-input-affix-wrapper:hover,
+.system-page .ant-input-affix-wrapper-focused,
+.system-page .ant-input-affix-wrapper.ant-input-status-success:hover,
+.system-page .ant-input-affix-wrapper.ant-input-status-warning:hover,
+.system-page .ant-input-affix-wrapper.ant-input-status-error:hover,
+.system-page .ant-picker:hover,
+.system-page .ant-picker-focused,
+.system-page .ant-select-selector:hover,
+.system-page .ant-select-focused .ant-select-selector {
+  border-color: var(--lqc-terminal-blue) !important;
+  box-shadow: inset 0 0 0 1px rgba(var(--lqc-primary-rgb), 0.28) !important;
+}
+
+.system-page .ant-input-search {
+  height: 30px !important;
+  border: 1px solid var(--lqc-terminal-line-strong) !important;
+  outline-color: var(--lqc-terminal-line-strong) !important;
+  border-radius: 0 !important;
+  background: var(--lqc-terminal-panel) !important;
+  overflow: hidden;
+  box-shadow: none !important;
+}
+
+.system-page .ant-input-search:hover,
+.system-page .ant-input-search:focus-within {
+  border-color: var(--lqc-terminal-blue) !important;
+  box-shadow: inset 0 0 0 1px rgba(var(--lqc-primary-rgb), 0.28) !important;
+}
+
+.system-page .ant-input-search .ant-input-wrapper,
+.system-page .ant-input-search .ant-input-group {
+  height: 100% !important;
+  display: flex !important;
+  align-items: stretch !important;
+  background: transparent !important;
+}
+
+.system-page .ant-input-search .ant-input-affix-wrapper,
+.system-page .ant-input-search .ant-input-affix-wrapper-status-success,
+.system-page .ant-input-search .ant-input-affix-wrapper-status-warning,
+.system-page .ant-input-search .ant-input-affix-wrapper-status-error,
+.system-page .ant-input-search .ant-input-affix-wrapper.ant-input-status-success,
+.system-page .ant-input-search .ant-input-affix-wrapper.ant-input-status-warning,
+.system-page .ant-input-search .ant-input-affix-wrapper.ant-input-status-error {
+  height: 28px !important;
+  min-height: 28px !important;
+  padding: 0 8px !important;
+  border: 0 !important;
+  border-color: transparent !important;
+  outline-color: var(--lqc-terminal-line-strong) !important;
+  border-radius: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.system-page .ant-input-search .ant-input,
+.system-page .ant-input-search .ant-input-status-success,
+.system-page .ant-input-search .ant-input-status-warning,
+.system-page .ant-input-search .ant-input-status-error {
+  height: 28px !important;
+  min-height: 28px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-color: transparent !important;
+  outline-color: var(--lqc-terminal-line-strong) !important;
+  line-height: 28px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.system-page .ant-input-search .ant-input-group-addon {
+  width: 34px !important;
+  height: 100% !important;
+  border: 0 !important;
+  border-left: 1px solid var(--lqc-terminal-line) !important;
+  background: var(--lqc-terminal-panel-2) !important;
+}
+
+.system-page .ant-input-search .ant-input-search-button {
+  width: 34px !important;
+  min-width: 34px !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  color: var(--lqc-text-soft) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.system-page .system-path-summary {
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.system-page .system-path-summary__item {
+  padding: 9px 10px;
+}
+
+.system-page .system-path-summary__head {
+  margin-bottom: 6px;
+}
+
+.system-page .system-path-summary__value,
+.system-page .system-path-summary__hint {
+  font-size: 11px;
+}
+
+.system-page .env-group-grid,
+.system-page .monitor-health-grid {
+  gap: 8px;
+}
+
+.system-page .env-group-card {
+  min-height: 168px;
+  padding: 10px;
+  gap: 8px;
+}
+
+.system-page .env-group-card__head {
+  grid-template-columns: 28px minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+.system-page .env-group-card__icon {
+  width: 28px;
+  height: 28px;
+}
+
+.system-page .env-group-card__message {
+  min-height: 38px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.system-page .env-group-card__next {
+  min-height: 48px;
+  padding: 7px 8px;
+}
+
+.system-page .monitor-health-card {
+  min-height: 74px;
+  padding: 9px 10px;
+}
+
+.system-page .backup-guard-panel {
+  padding: 10px 12px;
+}
+
+.system-page .backup-guard-panel__description {
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.system-page .backup-timeline {
+  margin-bottom: 8px;
+  padding: 8px;
+  gap: 8px;
+}
+
+.system-page .backup-timeline__content {
+  padding: 8px 10px;
+}
+
+.system-page .backup-timeline__actions {
+  margin-top: 6px;
+}
+
+.system-page .recent-error-list {
+  gap: 6px;
+}
+
+.system-page .recent-error-item {
+  padding: 8px 10px;
+}
+
+.system-page .data-table__quick-controls {
+  margin-top: 0;
+}
+
+/* Device density follow-up: basic settings should behave like a compact terminal configuration workbench. */
+.system-page .system-settings-workbench {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.72fr) minmax(300px, 0.62fr);
+  gap: var(--lqc-module-grid-gap, 8px);
+  align-items: stretch;
+  min-height: 0;
+}
+
+.system-page .system-form-block--paths,
+.system-page .system-form-block--account,
+.system-page .system-form-block--boundary,
+.system-page .system-form-block--evidence {
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+.system-page .system-setting-grid > .ant-col {
+  display: flex;
+}
+
+.system-page .system-setting-grid .system-form-block {
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+.system-page .system-setting-checklist {
+  display: grid;
+  gap: 6px;
+}
+
+.system-page .system-setting-checklist div {
+  min-height: 34px;
+  padding: 6px 8px;
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  border: 1px solid rgba(var(--lqc-line-strong-rgb), 0.92);
+  background: rgba(var(--lqc-shadow-rgb), 0.38);
+}
+
+html[data-theme="light"] .system-page .system-setting-checklist div {
+  border-color: var(--lqc-border-soft);
+  background: var(--lqc-bg-card-muted);
+}
+
+.system-page .system-setting-checklist span,
+.system-page .system-setting-checklist strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.system-page .system-setting-checklist span {
+  color: var(--lqc-terminal-muted);
+  font-size: 12px;
+}
+
+html[data-theme="light"] .system-page .system-setting-checklist span {
+  color: var(--lqc-text-secondary);
+}
+
+.system-page .system-setting-checklist strong {
+  color: var(--lqc-terminal-text);
+  font-size: 12px;
+}
+
+html[data-theme="light"] .system-page .system-setting-checklist strong {
+  color: var(--lqc-text-primary);
+}
+
+.system-page .system-path-input-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 8px;
+}
+
+.system-page .system-path-input-grid .ant-form-item,
+.system-page .system-account-grid .ant-form-item {
+  margin-bottom: 0;
+}
+
+.system-page .system-account-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 136px 136px;
+  gap: 8px;
+  align-items: start;
+}
+
+.system-page .system-account-grid__account {
+  min-width: 0;
+}
+
+.system-page .system-form-actions {
+  width: 100%;
+  padding-top: 8px;
+  border-top: 1px solid var(--lqc-terminal-line);
+}
+
+.system-page .system-form-actions.ant-space {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px !important;
+}
+
+.system-page .system-form-actions > .ant-space-item {
+  flex: 0 0 auto;
+}
+
+.system-page .system-config-workbench-card .ant-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.system-page .system-config-workbench-card .ant-form {
+  display: flex;
+  min-height: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.system-page .system-config-workbench-card .system-setting-grid {
+  flex: 1 1 auto;
+  align-items: stretch;
+  min-height: 0;
+}
+
+.system-page .system-config-workbench-card .system-setting-grid > .ant-col {
+  min-height: 0;
+}
+
+.system-page .system-config-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--lqc-terminal-line);
+}
+
+.system-page .system-config-evidence-grid > div {
+  min-width: 0;
+  min-height: 48px;
+  padding: 7px 8px;
+  display: grid;
+  align-content: center;
+  gap: 4px;
+  border: 1px solid rgba(var(--lqc-line-strong-rgb), 0.92);
+  background: rgba(var(--lqc-surface-sunken-rgb), 0.58);
+}
+
+.system-page .system-config-evidence-grid span,
+.system-page .system-config-evidence-grid strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.system-page .system-config-evidence-grid span {
+  color: var(--lqc-terminal-muted);
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.system-page .system-config-evidence-grid strong {
+  color: var(--lqc-terminal-text);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+@media (max-width: 1600px) {
+  .system-page .system-path-input-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1180px) {
+  .system-page .system-settings-workbench {
+    grid-template-columns: 1fr;
+  }
+
+  .system-page .system-path-input-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .system-page .system-path-input-grid,
+  .system-page .system-account-grid,
+  .system-page .system-config-evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .system-page .system-form-actions.ant-space {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1180px) {
+  .system-page .system-config-evidence-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1799px) and (min-height: 900px) {
+  .system-page .system-config-workbench-card--trade .ant-card-body,
+  .system-page .system-config-workbench-card--strategy .ant-card-body {
+    min-height: 510px;
+  }
+
+  .system-page .system-setting-grid--trade,
+  .system-page .system-setting-grid--strategy {
+    min-height: clamp(620px, calc(100vh - var(--lqc-status-height, 40px) - 300px), 700px);
+    align-content: stretch;
+  }
+}
+
+@media (min-width: 1800px) {
+  .system-page .system-config-workbench-card .ant-card-body {
+    min-height: clamp(620px, calc(100vh - var(--lqc-status-height, 40px) - 270px), 940px);
+  }
+
+  .system-page .system-settings-workbench,
+  .system-page .system-setting-grid--trade,
+  .system-page .system-setting-grid--strategy {
+    min-height: clamp(560px, calc(100vh - var(--lqc-status-height, 40px) - 400px), 780px);
+  }
+
+  .system-page .system-config-evidence-grid > div {
+    min-height: 58px;
+  }
+}
+
+/* UI-QHD-FILL-20260526:
+   27-inch 2560x1440 work areas had a small remaining floor gap in the trade
+   and strategy settings tabs. Stretch only the settings workbench contracts,
+   preserving the MacBook compact layout and the 4K-specific rules below. */
+@media (min-width: 2200px) and (max-width: 2799px) and (min-height: 1100px) {
+  .system-page .system-config-workbench-card .ant-card-body {
+    min-height: clamp(630px, calc(100vh - var(--lqc-status-height, 40px) - 260px), 950px);
+  }
+
+  .system-page .system-settings-workbench,
+  .system-page .system-setting-grid--trade,
+  .system-page .system-setting-grid--strategy {
+    min-height: clamp(570px, calc(100vh - var(--lqc-status-height, 40px) - 390px), 790px);
+  }
+}
+
+@media (min-width: 2800px) {
+  .system-page .system-config-workbench-card .ant-card-body {
+    min-height: clamp(960px, calc(100vh - var(--lqc-status-height, 40px) - 300px), 1240px);
+  }
+
+  .system-page .system-settings-workbench {
+    min-height: clamp(900px, calc(100vh - var(--lqc-status-height, 40px) - 430px), 1060px);
+  }
+
+  .system-page .system-setting-grid--trade,
+  .system-page .system-setting-grid--strategy {
+    min-height: clamp(900px, calc(100vh - var(--lqc-status-height, 40px) - 430px), 1080px);
+  }
+}
+
+@media (min-width: 1800px) {
+  .system-page .system-settings-workbench {
+    grid-template-columns: minmax(0, 1.36fr) minmax(420px, 0.72fr) minmax(340px, 0.64fr);
+  }
+
+  .system-page .system-path-input-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 2800px) {
+  .system-page .system-settings-workbench {
+    grid-template-columns: minmax(0, 1.52fr) minmax(460px, 0.68fr) minmax(380px, 0.6fr);
+  }
+}
+
+/* Device-density final pass: the page-level grid controls vertical spacing.
+   Remove per-block top offsets so System Management follows the same compact
+   rhythm as Dashboard, Data Center, Backtest and Trading. */
+.system-page .system-overview,
+.system-page .system-tabs {
+  margin-top: 0 !important;
+}
+
+.system-page .data-table__quick-hint {
+  margin-top: 0;
+  color: var(--lqc-terminal-muted) !important;
+}
+
+.system-page .data-table__table .ant-table-cell .table-action-group {
+  min-width: 0;
+  justify-content: flex-end;
+}
+
+.system-page .data-table__table .ant-table-cell .table-action-group .ant-btn {
+  min-width: 56px;
+  white-space: nowrap;
+}
+
+.system-page .system-audit-cell-text,
+.system-page .system-audit-cell-code {
+  display: -webkit-box;
+  width: 100%;
+  overflow: hidden;
+  min-width: 0;
+  max-height: 38px;
+  color: inherit;
+  line-height: 1.48;
+  word-break: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.system-page .system-audit-cell-code {
+  font-family: var(--lqc-font-number);
+  font-variant-numeric: tabular-nums;
+  word-break: break-all;
+}
+
+.system-page .system-env-table .data-table__table .ant-table-cell,
+.system-page .system-logs-table .data-table__table .ant-table-cell,
+.system-page .system-startup-table .data-table__table .ant-table-cell,
+.system-page .system-backups-table .data-table__table .ant-table-cell,
+.system-page .system-operations-table .data-table__table .ant-table-cell {
+  vertical-align: top;
+}
+
+.system-page .system-env-table .data-table__table .ant-table-cell .table-action-group,
+.system-page .system-logs-table .data-table__table .ant-table-cell .table-action-group,
+.system-page .system-startup-table .data-table__table .ant-table-cell .table-action-group,
+.system-page .system-backups-table .data-table__table .ant-table-cell .table-action-group,
+.system-page .system-operations-table .data-table__table .ant-table-cell .table-action-group {
+  min-width: 92px;
+  justify-content: flex-end;
+}
+
+.system-page :is(
+  .system-env-table,
+  .system-logs-table,
+  .system-startup-table,
+  .system-backups-table,
+  .system-operations-table
+) .data-table-col--action {
+  min-width: 90px;
+  max-width: 168px;
+  text-align: right;
+}
+
+.system-page .system-logs-table .data-table__table .ant-table-cell,
+.system-page .system-operations-table .data-table__table .ant-table-cell,
+.system-page .system-env-table .data-table__table .ant-table-cell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.system-page .data-table__table .ant-table-cell-fix-left,
+.system-page .data-table__table .ant-table-cell-fix-right {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.system-page .data-table__table .ant-table-tbody > tr:hover > .ant-table-cell-fix-left,
+.system-page .data-table__table .ant-table-tbody > tr:hover > .ant-table-cell-fix-right {
+  background: var(--lqc-terminal-active) !important;
+}
+
+.system-page .data-table__table .ant-table-sticky-holder {
+  background: var(--lqc-terminal-panel-2) !important;
+}
+
+.system-page .data-table__table .ant-table-sticky-scroll {
+  border-top: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-scrollbar-track) !important;
+}
+
+.system-page .data-table__table .ant-table-sticky-scroll-bar {
+  background: var(--lqc-scrollbar-thumb) !important;
+}
+
+.system-page .data-table__table .ant-table-body {
+  scrollbar-color: var(--lqc-scrollbar-thumb) var(--lqc-scrollbar-track);
+}
+
+.system-page .data-table__table .ant-table-body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.system-page .data-table__table .ant-table-body::-webkit-scrollbar-track {
+  background: var(--lqc-scrollbar-track);
+}
+
+.system-page .data-table__table .ant-table-body::-webkit-scrollbar-thumb {
+  border: 2px solid var(--lqc-scrollbar-border);
+  border-radius: 999px;
+  background: var(--lqc-scrollbar-thumb);
+}
+
+.system-page .data-table__table .ant-table-tbody > tr.ant-table-placeholder > td {
+  height: 122px !important;
+}
+
+.system-page .ant-pagination {
+  margin-bottom: 0 !important;
+}
+
+.system-page .data-table__table .ant-table-pagination.ant-pagination {
+  min-height: 36px;
+  margin: 0 !important;
+  padding: 5px 8px !important;
+  border: 1px solid var(--lqc-terminal-line);
+  border-top: 0;
+  background: var(--lqc-terminal-sunken) !important;
+}
+
+.system-page .data-table__table .ant-pagination-options .ant-select-selector {
+  height: 28px !important;
+  min-height: 28px !important;
+  color: var(--lqc-terminal-text) !important;
+  border-color: var(--lqc-terminal-line-strong) !important;
+  border-radius: 0 !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.system-page .system-env-table .data-table__table .ant-table-thead > tr > th,
+.system-page .system-logs-table .data-table__table .ant-table-thead > tr > th,
+.system-page .system-startup-table .data-table__table .ant-table-thead > tr > th,
+.system-page .system-backups-table .data-table__table .ant-table-thead > tr > th,
+.system-page .system-operations-table .data-table__table .ant-table-thead > tr > th {
+  line-height: 1.25;
+}
+
+.system-page .system-env-table .data-table__table,
+.system-page .system-logs-table .data-table__table,
+.system-page .system-startup-table .data-table__table,
+.system-page .system-backups-table .data-table__table,
+.system-page .system-operations-table .data-table__table {
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.system-page .system-env-table .data-table__table .ant-table,
+.system-page .system-logs-table .data-table__table .ant-table,
+.system-page .system-startup-table .data-table__table .ant-table,
+.system-page .system-backups-table .data-table__table .ant-table,
+.system-page .system-operations-table .data-table__table .ant-table {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+@media (min-width: 2400px) {
+  .system-page .system-env-table .data-table__table .ant-table {
+    min-height: clamp(520px, calc(100vh - var(--lqc-status-height, 40px) - 860px), 720px);
+  }
+}
+
+@media (min-width: 2800px) and (min-height: 1600px) {
+  .system-page .system-env-table .data-table__table .ant-table {
+    min-height: clamp(640px, calc(100vh - var(--lqc-status-height, 40px) - 790px), 900px);
+  }
+}
+
+.system-page .system-env-table .data-table__table .ant-table-tbody > tr > td,
+.system-page .system-logs-table .data-table__table .ant-table-tbody > tr > td,
+.system-page .system-startup-table .data-table__table .ant-table-tbody > tr > td,
+.system-page .system-backups-table .data-table__table .ant-table-tbody > tr > td,
+.system-page .system-operations-table .data-table__table .ant-table-tbody > tr > td {
+  height: 38px;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+
+.system-page .system-env-table .data-table__table .ant-table-tbody > tr:nth-child(even) > td,
+.system-page .system-logs-table .data-table__table .ant-table-tbody > tr:nth-child(even) > td,
+.system-page .system-startup-table .data-table__table .ant-table-tbody > tr:nth-child(even) > td,
+.system-page .system-backups-table .data-table__table .ant-table-tbody > tr:nth-child(even) > td,
+.system-page .system-operations-table .data-table__table .ant-table-tbody > tr:nth-child(even) > td {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.system-page .system-env-table .data-table__table .ant-table-tbody > tr:hover > td,
+.system-page .system-logs-table .data-table__table .ant-table-tbody > tr:hover > td,
+.system-page .system-startup-table .data-table__table .ant-table-tbody > tr:hover > td,
+.system-page .system-backups-table .data-table__table .ant-table-tbody > tr:hover > td,
+.system-page .system-operations-table .data-table__table .ant-table-tbody > tr:hover > td {
+  background: var(--lqc-terminal-active) !important;
+}
+
+.system-page .system-env-table .data-table__table .ant-table-cell-fix-right,
+.system-page .system-logs-table .data-table__table .ant-table-cell-fix-right,
+.system-page .system-startup-table .data-table__table .ant-table-cell-fix-right,
+.system-page .system-backups-table .data-table__table .ant-table-cell-fix-right,
+.system-page .system-operations-table .data-table__table .ant-table-cell-fix-right {
+  box-shadow: -1px 0 0 var(--lqc-terminal-line) !important;
+}
+
+.system-page .system-env-table .data-table__table .ant-pagination-item,
+.system-page .system-logs-table .data-table__table .ant-pagination-item,
+.system-page .system-startup-table .data-table__table .ant-pagination-item,
+.system-page .system-backups-table .data-table__table .ant-pagination-item,
+.system-page .system-operations-table .data-table__table .ant-pagination-item {
+  border-color: var(--lqc-terminal-line-strong) !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.system-page .system-env-table .data-table__table .ant-pagination-item-active,
+.system-page .system-logs-table .data-table__table .ant-pagination-item-active,
+.system-page .system-startup-table .data-table__table .ant-pagination-item-active,
+.system-page .system-backups-table .data-table__table .ant-pagination-item-active,
+.system-page .system-operations-table .data-table__table .ant-pagination-item-active {
+  border-color: var(--lqc-terminal-blue) !important;
+  background: var(--lqc-terminal-blue) !important;
+}
+
+.system-page .system-env-table .data-table__table .ant-pagination-prev .ant-pagination-item-link,
+.system-page .system-env-table .data-table__table .ant-pagination-next .ant-pagination-item-link,
+.system-page .system-logs-table .data-table__table .ant-pagination-prev .ant-pagination-item-link,
+.system-page .system-logs-table .data-table__table .ant-pagination-next .ant-pagination-item-link,
+.system-page .system-startup-table .data-table__table .ant-pagination-prev .ant-pagination-item-link,
+.system-page .system-startup-table .data-table__table .ant-pagination-next .ant-pagination-item-link,
+.system-page .system-backups-table .data-table__table .ant-pagination-prev .ant-pagination-item-link,
+.system-page .system-backups-table .data-table__table .ant-pagination-next .ant-pagination-item-link,
+.system-page .system-operations-table .data-table__table .ant-pagination-prev .ant-pagination-item-link,
+.system-page .system-operations-table .data-table__table .ant-pagination-next .ant-pagination-item-link {
+  border-color: var(--lqc-terminal-line-strong) !important;
+  color: var(--lqc-terminal-muted) !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.system-page .system-env-table .data-table__table .ant-select-dropdown,
+.system-page .system-logs-table .data-table__table .ant-select-dropdown,
+.system-page .system-startup-table .data-table__table .ant-select-dropdown,
+.system-page .system-backups-table .data-table__table .ant-select-dropdown,
+.system-page .system-operations-table .data-table__table .ant-select-dropdown {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.system-page .system-audit-cell-text:hover,
+.system-page .system-audit-cell-code:hover {
+  color: var(--lqc-terminal-text) !important;
+}
+
+/* Device-density audit pass: system logs and operations should behave like full-height audit workbenches on 27-inch displays. */
+.system-page .system-audit-workbench-card .ant-card-body {
+  display: grid;
+  gap: 8px;
+}
+
+.system-page .system-audit-summary-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-line);
+}
+
+.system-page .system-audit-summary-strip > div {
+  min-width: 0;
+  min-height: 52px;
+  padding: 8px 10px;
+  display: grid;
+  gap: 3px;
+  align-content: center;
+  background: var(--lqc-terminal-panel);
+}
+
+.system-page .system-audit-summary-strip span {
+  overflow: hidden;
+  color: var(--lqc-terminal-muted);
+  font-size: 11px;
+  line-height: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.system-page .system-audit-summary-strip strong {
+  overflow: hidden;
+  color: var(--lqc-terminal-text);
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 1281px) {
+  .system-page .system-audit-workbench-card .ant-card-body {
+    height: clamp(640px, calc(100vh - var(--lqc-status-height, 40px) - 270px), 1110px);
+    min-height: 0;
+    overflow: hidden;
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+
+  .system-page .system-logs-table,
+  .system-page .system-operations-table {
+    min-height: 0;
+    display: grid !important;
+    grid-template-rows: auto auto minmax(0, 1fr);
+    overflow: hidden;
+  }
+
+  .system-page .system-logs-table .data-table__table,
+  .system-page .system-operations-table .data-table__table {
+    min-height: 0 !important;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .system-page .system-logs-table .data-table__table .ant-table,
+  .system-page .system-operations-table .data-table__table .ant-table {
+    min-height: 0 !important;
+  }
+}
+
+@media (min-width: 2800px) {
+  .system-page .system-audit-workbench-card .ant-card-body {
+    height: clamp(980px, calc(100vh - var(--lqc-status-height, 40px) - 310px), 1270px);
+  }
+
+  .system-page .system-logs-table .data-table__table,
+  .system-page .system-operations-table .data-table__table {
+    min-height: 0 !important;
+  }
+
+  .system-page .system-logs-table .data-table__table .ant-table,
+  .system-page .system-operations-table .data-table__table .ant-table {
+    min-height: 0 !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .system-page .system-audit-summary-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .system-page .system-audit-summary-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+.system-confirm-modal.ant-modal-confirm {
+  width: min(var(--lqc-modal-confirm-width, 680px), calc(100vw - 48px)) !important;
+}
+
+.system-confirm-modal .ant-modal-confirm-content {
+  max-height: min(64vh, 620px);
+  overflow: auto;
+}
+
+/* UI-DEEP-RERUN-CLOSEOUT-20260525:
+   In the 1512x758 Mac working area, audit pages should show a compact
+   diagnostic sample instead of stretching under the bottom status bar. */
+@media (max-width: 1600px) and (max-height: 900px) {
+  .system-page .system-audit-workbench-card .ant-card-body {
+    height: 568px !important;
+    min-height: 568px !important;
+    gap: 4px;
+    overflow: hidden;
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  .system-page .system-audit-summary-strip {
+    display: none;
+  }
+
+  .system-page .system-audit-summary-strip > div {
+    min-height: 38px;
+    padding: 5px 8px;
+    gap: 1px;
+  }
+
+  .system-page .system-audit-summary-strip strong {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .system-page .system-logs-table,
+  .system-page .system-operations-table {
+    height: 100%;
+    min-height: 0;
+    grid-template-rows: auto auto minmax(0, 1fr);
+  }
+
+  .system-page .system-logs-table .data-table__table,
+  .system-page .system-operations-table .data-table__table {
+    height: 100%;
+    min-height: 0 !important;
+    overflow: hidden;
+  }
+
+  .system-page .system-logs-table .data-table__table .ant-table-tbody > tr > td,
+  .system-page .system-operations-table .data-table__table .ant-table-tbody > tr > td {
+    height: 30px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+}
+
+.system-confirm-modal .risk-confirm-content__details .ant-descriptions-item-label {
+  width: var(--lqc-modal-label-width, 112px);
+}
+
+.system-confirm-modal .risk-confirm-content__list {
+  line-height: 1.5;
+}
+
+@media (max-width: 1600px) and (max-height: 740px) {
+  .system-page :is(.ant-btn, .ant-btn-sm, .ant-select-selector, .ant-input, .ant-input-affix-wrapper, .ant-switch) {
+    min-height: 30px !important;
+    height: 30px !important;
+    line-height: 28px !important;
+  }
+
+  .system-page .ant-switch {
+    min-width: 44px !important;
+  }
+
+  .system-page a:has(.ant-btn) {
+    min-height: 30px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .system-page .system-ops-panel {
+    min-height: 40px !important;
+    max-height: 42px !important;
+    padding: 5px 8px !important;
+    overflow: hidden !important;
+    grid-template-columns: minmax(0, 0.52fr) minmax(480px, 1fr) !important;
+  }
+
+  .system-page .system-ops-panel__description,
+  .system-page .system-ops-panel__icon {
+    display: none !important;
+  }
+
+  .system-page .system-ops-panel__checks {
+    gap: 4px !important;
+  }
+
+  .system-page .system-ops-panel__check {
+    min-height: 28px !important;
+    height: 28px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 6px !important;
+    padding: 3px 6px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-ops-panel {
+    height: 40px !important;
+    min-height: 40px !important;
+    max-height: 40px !important;
+    padding: 5px 8px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-ops-panel__check span,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-ops-panel__check strong {
+    display: inline-block !important;
+    margin: 0 !important;
+    line-height: 16px !important;
+  }
+
+  .system-page .system-workflow {
+    min-height: 40px !important;
+    max-height: 42px !important;
+    overflow: hidden !important;
+    gap: 4px !important;
+  }
+
+  .system-page .system-workflow__step {
+    min-height: 32px !important;
+    padding: 4px 6px !important;
+  }
+
+  .system-page .system-workflow__content span {
+    display: none !important;
+  }
+
+  .system-page .data-table__table .ant-table-placeholder,
+  .system-page .data-table__table .ant-table-placeholder:hover > td,
+  .system-page .data-table__table .ant-table-tbody > tr.ant-table-placeholder > td {
+    height: 48px !important;
+    min-height: 40px !important;
+    max-height: 48px !important;
+    padding: 0 !important;
+  }
+
+  .system-page .empty-guide.empty-guide {
+    height: 40px !important;
+    min-height: 40px !important;
+    max-height: 48px !important;
+    margin: 0 !important;
+    padding: 4px 8px !important;
+    overflow: hidden !important;
+  }
+}
+
+html[data-theme="light"] body .app-shell .system-page .ant-switch.ant-switch-checked,
+html[data-theme="light"] body .app-shell .system-page .ant-switch.ant-switch-checked:hover,
+html[data-theme="light"] body .app-shell .system-page .ant-switch.ant-switch-checked:focus {
+  background: var(--lqc-primary-soft) !important;
+  border-color: var(--lqc-info-border-soft) !important;
+}
+
+html[data-theme="light"] body .app-shell .system-page .ant-switch.ant-switch-disabled,
+html[data-theme="light"] body .app-shell .system-page .ant-switch.ant-switch-disabled:hover {
+  background: var(--lqc-control-disabled-bg) !important;
+  border-color: var(--lqc-border-soft) !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+html[data-theme="light"] body .app-shell .system-page .ant-switch.ant-switch-checked .ant-switch-handle::before {
+  background: var(--lqc-primary) !important;
+}
+
+/* UI-THEME-CLOSEOUT-20260529:
+   Keep settings-page pending states aligned with the active theme even though
+   this page stylesheet is loaded after the global theme guard. */
+html[data-theme] body .app-shell .system-page :is(
+  button.ant-btn[disabled],
+  button.ant-btn.ant-btn-disabled,
+  button.ant-btn.ant-btn-loading
+) {
+  color: var(--lqc-control-disabled-text) !important;
+  background: var(--lqc-control-disabled-bg) !important;
+  border-color: var(--lqc-border-soft) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+html[data-theme] body .app-shell .system-page :is(
+  button.ant-btn[disabled],
+  button.ant-btn.ant-btn-disabled,
+  button.ant-btn.ant-btn-loading
+) :is(span:not(.anticon), svg, .anticon) {
+  color: var(--lqc-control-disabled-text) !important;
+}
+
+html[data-theme] body .app-shell .system-page button.ant-btn-primary:not(:disabled):not([disabled]):not(.ant-btn-disabled):not(.ant-btn-loading) {
+  color: var(--lqc-text-inverse) !important;
+  background: var(--lqc-action-primary-bg) !important;
+  border-color: var(--lqc-action-primary-bg) !important;
+}
+
+html[data-theme] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page :is(
+  button.ant-btn.ant-btn-primary[disabled],
+  button.ant-btn.ant-btn-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-primary.ant-btn-loading,
+  button.ant-btn.ant-btn-color-primary[disabled],
+  button.ant-btn.ant-btn-color-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-color-primary.ant-btn-loading
+) {
+  color: var(--lqc-control-disabled-text) !important;
+  background: var(--lqc-control-disabled-bg) !important;
+  border-color: var(--lqc-border-soft) !important;
+}
+
+html[data-theme] body .app-shell.app-shell .system-page.system-page :is(
+  button.ant-btn.ant-btn-primary[disabled],
+  button.ant-btn.ant-btn-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-primary.ant-btn-loading,
+  button.ant-btn.ant-btn-color-primary[disabled],
+  button.ant-btn.ant-btn-color-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-color-primary.ant-btn-loading
+) {
+  color: var(--lqc-control-disabled-text) !important;
+  background: var(--lqc-control-disabled-bg) !important;
+  background-color: var(--lqc-control-disabled-bg) !important;
+  background-image: none !important;
+  border-color: var(--lqc-border-soft) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+html[data-theme] body .app-shell.app-shell .system-page.system-page :is(
+  button.ant-btn.ant-btn-primary[disabled],
+  button.ant-btn.ant-btn-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-primary.ant-btn-loading,
+  button.ant-btn.ant-btn-color-primary[disabled],
+  button.ant-btn.ant-btn-color-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-color-primary.ant-btn-loading
+) :is(span:not(.anticon), svg, .anticon) {
+  color: var(--lqc-control-disabled-text) !important;
+}
+
+html[data-theme] body .app-shell.app-shell .system-page.system-page button.ant-btn.ant-btn-variant-solid:is([disabled], .ant-btn-disabled, .ant-btn-loading) {
+  color: var(--lqc-control-disabled-text) !important;
+  background: var(--lqc-control-disabled-bg) !important;
+  background-color: var(--lqc-control-disabled-bg) !important;
+  background-image: none !important;
+  border-color: var(--lqc-border-soft) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+/* UI-MACBOOK14-SHORT-VIEWPORT-GUARD-20260529:
+   Backup and audit pages combine guard copy, timeline rows and data tables.
+   On the 14-inch Chrome-safe viewport the timeline must become a compact
+   reference strip so table actions and pagers remain usable above the footer. */
+@media (min-width: 1281px) and (max-width: 1600px) and (max-height: 680px) {
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .backup-guard-panel {
+    min-height: 34px !important;
+    max-height: 38px !important;
+    padding: 5px 8px !important;
+    overflow: hidden !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .backup-guard-panel__description {
+    display: none !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .backup-guard-panel__items {
+    gap: 4px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .backup-timeline {
+    max-height: 92px !important;
+    margin-bottom: 6px !important;
+    padding: 6px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+    overflow: auto !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .backup-timeline__item {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0 !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .backup-timeline__dot,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .backup-timeline__item::before {
+    display: none !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .backup-timeline__content {
+    grid-column: 1 / -1 !important;
+    min-height: 36px !important;
+    padding: 5px 6px !important;
+    min-width: 0 !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .backup-timeline__head {
+    gap: 4px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .backup-timeline__content > .ant-typography-secondary {
+    display: none !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .backup-timeline__actions {
+    margin-top: 3px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-backups-table .data-table__table .ant-table-tbody > tr > td {
+    height: 34px !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-backups-table .data-table__table .ant-table {
+    min-height: 0 !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-backups-table .data-table__table .ant-table-container {
+    max-height: 140px !important;
+    overflow: auto !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-backups-table .data-table__table .ant-table-pagination.ant-pagination {
+    min-height: 32px !important;
+    padding: 3px 8px !important;
+    margin-bottom: 6px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-restart-task-alert {
+    margin-top: 4px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-restart-task-alert .ant-alert-description {
+    display: none !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .monitor-health-grid {
+    margin-top: 5px !important;
+    gap: 4px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .monitor-health-card {
+    min-height: 38px !important;
+    padding: 4px 6px !important;
+    gap: 1px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .monitor-health-card .ant-typography-secondary:last-child {
+    display: none !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-monitor-task-table .toolbar {
+    min-height: 34px !important;
+    height: 34px !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    overflow: hidden !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-monitor-task-table .toolbar__copy,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-monitor-task-table .data-table__quick-stack,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-monitor-task-table .filter-bar {
+    min-height: 28px !important;
+    max-height: 30px !important;
+  }
+}
+
+/* UI-MACBOOK14-SYSTEM-FORM-CLOSEOUT-20260529:
+   System Management mixes path forms, workflow steps and audit tables. In the
+   short MacBook Chrome viewport, keep forms compact and let tables own the
+   remaining height instead of clipping bottom buttons or top step cards. */
+@media (min-width: 1281px) and (max-width: 1600px) and (max-height: 680px) {
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page {
+    gap: 5px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-overview .metric-card.ant-card .ant-card-body {
+    min-height: 40px !important;
+    padding: 4px 7px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-workflow {
+    min-height: 34px !important;
+    max-height: 36px !important;
+    gap: 1px !important;
+    overflow: hidden !important;
+    border: 1px solid var(--lqc-terminal-line) !important;
+    background: var(--lqc-terminal-line) !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-workflow__step {
+    min-height: 34px !important;
+    padding: 4px 6px !important;
+    gap: 5px !important;
+    border: 0 !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-workflow__index {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 10px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-tabs > .ant-tabs-nav {
+    min-height: 32px !important;
+    margin-bottom: 6px !important;
+    padding: 0 6px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-tabs .ant-tabs-tab {
+    min-height: 30px !important;
+    padding: 6px 8px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-path-summary {
+    gap: 4px !important;
+    margin-bottom: 5px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-path-summary__item {
+    min-height: 44px !important;
+    padding: 5px 6px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-path-summary__head {
+    margin-bottom: 3px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-path-summary__hint {
+    display: none !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-form-block {
+    min-height: 0 !important;
+    padding: 7px 8px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-form-block > .ant-typography {
+    margin-bottom: 6px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-form-block .ant-form-item {
+    margin-bottom: 8px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-form-actions {
+    margin-top: 8px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-setting-grid--trade,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-setting-grid--strategy,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .system-settings-workbench {
+    min-height: 0 !important;
+    align-content: start !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .data-table__header,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .toolbar {
+    min-height: 32px !important;
+    padding: 4px 6px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.system-page.system-page .data-table__table .ant-table-pagination.ant-pagination {
+    min-height: 32px !important;
+    padding: 3px 6px !important;
+    margin-bottom: 8px !important;
+  }
+}

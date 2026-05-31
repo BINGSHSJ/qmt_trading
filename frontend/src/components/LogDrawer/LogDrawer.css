@@ -1,0 +1,42 @@
+.log-drawer .ant-drawer-header {
+  border-color: var(--lqc-terminal-line);
+  background: var(--lqc-terminal-panel-2);
+}
+
+.log-drawer .ant-drawer-body {
+  background: var(--lqc-terminal-sunken);
+}
+
+.log-drawer__content {
+  width: 100%;
+}
+
+.log-drawer__section {
+  padding: 8px;
+  border: 1px solid var(--lqc-terminal-line);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+  box-shadow: none;
+}
+
+.log-drawer__section-head {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.log-drawer__message {
+  margin: 8px 0 0 !important;
+  color: var(--lqc-terminal-text);
+}
+
+.log-drawer__technical {
+  max-height: 260px;
+  margin: 10px 0 0 !important;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+
+.log-drawer__descriptions .ant-descriptions-item-label {
+  width: 108px;
+  color: var(--lqc-terminal-muted);
+}

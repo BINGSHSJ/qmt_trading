@@ -1,0 +1,1851 @@
+.strategy-overview .ant-col {
+  display: flex;
+}
+
+.strategy-overview .metric-card {
+  width: 100%;
+}
+
+.strategy-tabs .ant-tabs-tab {
+  font-weight: 600;
+}
+
+.strategy-tabs .ant-btn {
+  white-space: nowrap;
+}
+
+.strategy-ai-alert {
+  border-radius: var(--lqc-radius-card);
+}
+
+.strategy-context-row {
+  min-height: 58px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-control);
+  background: var(--lqc-bg-card-muted);
+}
+
+.strategy-workbench .section-card {
+  height: 100%;
+}
+
+.strategy-file-rail {
+  max-height: 560px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 4px;
+}
+
+.strategy-file-item {
+  width: 100%;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-control);
+  background: var(--lqc-bg-card);
+  cursor: pointer;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+.strategy-file-item:hover {
+  border-color: rgba(var(--lqc-primary-rgb), 0.45);
+  box-shadow: 0 8px 18px rgba(var(--lqc-shadow-rgb), 0.06);
+}
+
+.strategy-file-item:focus-visible {
+  outline: 2px solid rgba(var(--lqc-primary-rgb), 0.42);
+  outline-offset: 2px;
+}
+
+.strategy-file-item--active {
+  border-color: var(--lqc-primary);
+  background: var(--lqc-info-soft-bg);
+  box-shadow: inset 3px 0 0 var(--lqc-primary);
+}
+
+.strategy-file-item__name {
+  font-weight: 700;
+  color: var(--lqc-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.strategy-file-item__meta {
+  color: var(--lqc-text-secondary);
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.strategy-file-item__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.strategy-editor-shell {
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-control);
+  overflow: hidden;
+  background: var(--lqc-bg-card);
+}
+
+.strategy-editor-skeleton {
+  min-height: 520px;
+  padding: 16px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-control);
+  background: var(--lqc-bg-card-muted);
+}
+
+.strategy-editor-skeleton__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.strategy-editor-terminal {
+  border-top: 1px solid var(--lqc-border-soft);
+  background: var(--lqc-text-primary);
+  color: var(--lqc-terminal-text);
+}
+
+.strategy-editor-terminal__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(var(--lqc-muted-rgb), 0.22);
+}
+
+.strategy-editor-terminal__head .ant-typography {
+  color: var(--lqc-terminal-text);
+}
+
+.strategy-editor-terminal__body {
+  min-height: 58px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--lqc-font-code, "JetBrains Mono", Consolas, monospace);
+  font-size: 12px;
+}
+
+.strategy-editor-terminal__body .ant-typography {
+  color: var(--lqc-text-soft);
+}
+
+.strategy-editor-terminal__body .ant-btn-link {
+  flex: 0 0 auto;
+  padding-right: 0;
+  color: var(--lqc-info-text);
+}
+
+@media (min-width: 1600px) {
+  .strategy-tabs .ant-table-cell {
+    white-space: nowrap;
+  }
+}
+
+/* UI-IBKR-16: dark strategy workstation override. Visual only; strategy interfaces stay untouched. */
+.strategy-page {
+  --strategy-bg: var(--lqc-bg-page);
+  --strategy-panel: var(--lqc-terminal-panel);
+  --strategy-panel-2: var(--lqc-terminal-panel-2);
+  --strategy-panel-3: var(--lqc-terminal-panel-3);
+  --strategy-border: var(--lqc-terminal-line-strong);
+  --strategy-border-strong: var(--lqc-terminal-line-strong);
+  --strategy-text: var(--lqc-terminal-text);
+  --strategy-muted: var(--lqc-terminal-muted);
+  --strategy-blue: var(--lqc-terminal-blue);
+  --strategy-blue-soft: var(--lqc-terminal-blue-soft);
+  --strategy-green: var(--lqc-terminal-green);
+  --strategy-red: var(--lqc-danger);
+  --strategy-orange: var(--lqc-terminal-orange);
+  --strategy-purple: var(--lqc-accent-violet);
+  min-height: calc(100vh - var(--lqc-status-height));
+  padding-bottom: 18px;
+  color: var(--strategy-text);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(var(--lqc-primary-rgb), 0.13), transparent 26%),
+    linear-gradient(180deg, var(--lqc-terminal-sunken) 0%, var(--strategy-bg) 42%, var(--lqc-bg-page) 100%);
+}
+
+.strategy-page .page-header-panel,
+.strategy-page .section-card,
+.strategy-page .metric-card,
+.strategy-page .ant-alert,
+.strategy-page .strategy-editor-shell,
+.strategy-page .strategy-editor-skeleton,
+.strategy-page .strategy-context-row,
+.strategy-page .strategy-file-item {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.strategy-page .page-header-panel {
+  min-height: 42px;
+  padding: 6px 8px;
+  overflow: hidden;
+  border: 0;
+  border-bottom: 1px solid var(--strategy-border);
+  border-radius: 0;
+  background: linear-gradient(180deg, var(--lqc-terminal-panel-2) 0%, var(--lqc-terminal-sunken) 100%);
+}
+
+.strategy-page .page-header-main {
+  align-items: center;
+}
+
+.strategy-page .page-header-panel::before {
+  background: linear-gradient(180deg, var(--strategy-blue), transparent);
+}
+
+.strategy-page .page-header-title,
+.strategy-page .page-header-description,
+.strategy-page .page-header-meta .ant-typography,
+.strategy-page .ant-typography,
+.strategy-page .section-card__title {
+  color: var(--strategy-text) !important;
+}
+
+.strategy-page .page-header-title {
+  margin: 0 !important;
+  font-size: 16px !important;
+  line-height: 1.15 !important;
+}
+
+.strategy-page .page-header-description,
+.strategy-page .page-header-meta {
+  display: none;
+}
+
+.strategy-page .page-header-description,
+.strategy-page .page-header-meta .ant-typography,
+.strategy-page .section-card__description,
+.strategy-page .ant-typography-secondary {
+  color: var(--strategy-muted) !important;
+}
+
+.strategy-page .page-header-actions__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.strategy-page .page-header-actions__status .ant-tag {
+  margin: 0;
+}
+
+.strategy-page .strategy-overview {
+  margin-top: 10px;
+}
+
+.strategy-page .metric-card {
+  min-height: 78px;
+  border: 1px solid var(--strategy-border) !important;
+  background: linear-gradient(180deg, var(--lqc-terminal-panel-2) 0%, var(--lqc-terminal-panel) 100%) !important;
+}
+
+.strategy-page .metric-card::before {
+  width: 2px;
+}
+
+.strategy-page .metric-card__icon {
+  color: var(--lqc-info-text);
+  background: rgba(var(--lqc-primary-rgb), 0.14);
+}
+
+.strategy-page .metric-card-value,
+.strategy-page .metric-card-subvalue,
+.strategy-page .metric-card__footer {
+  color: var(--strategy-text) !important;
+}
+
+.strategy-page .metric-card__footer,
+.strategy-page .metric-card-subvalue {
+  color: var(--strategy-muted) !important;
+}
+
+.strategy-page .task-progress-inline {
+  border: 1px solid var(--strategy-border);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .task-progress-inline__detail-item {
+  border-color: var(--strategy-border);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel-2);
+}
+
+.strategy-page .strategy-ai-alert {
+  margin-top: 10px;
+  border-color: var(--lqc-warning-border-soft);
+  color: var(--strategy-text);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.strategy-page .strategy-ai-alert .ant-alert-message {
+  color: var(--lqc-warning-soft-bg) !important;
+}
+
+.strategy-page .strategy-ai-alert .ant-alert-description {
+  color: var(--lqc-warning-text) !important;
+}
+
+.strategy-page .strategy-tabs {
+  margin-top: 12px;
+}
+
+.strategy-page .strategy-tabs > .ant-tabs-nav {
+  margin: 0 0 10px;
+  padding: 0 8px;
+  border: 1px solid var(--strategy-border);
+  background: var(--lqc-terminal-sunken);
+}
+
+.strategy-page .strategy-tabs > .ant-tabs-nav::before {
+  border-bottom-color: var(--strategy-border);
+}
+
+.strategy-page .strategy-tabs .ant-tabs-tab {
+  margin: 0;
+  padding: 10px 14px;
+  color: var(--strategy-muted);
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+
+.strategy-page .strategy-tabs .ant-tabs-tab + .ant-tabs-tab {
+  margin-left: 4px;
+}
+
+.strategy-page .strategy-tabs .ant-tabs-tab:hover,
+.strategy-page .strategy-tabs .ant-tabs-tab.ant-tabs-tab-active {
+  color: var(--lqc-text-inverse);
+  background: var(--lqc-terminal-panel-2);
+  border-color: var(--strategy-border);
+}
+
+.strategy-page .strategy-tabs .ant-tabs-tab .ant-tabs-tab-btn {
+  color: inherit !important;
+}
+
+.strategy-page .strategy-tabs .ant-tabs-ink-bar {
+  height: 2px;
+  background: var(--strategy-blue);
+}
+
+.strategy-page .strategy-file-actions {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.strategy-page .strategy-files-table .ant-table-tbody > tr > td:nth-child(2),
+.strategy-page .strategy-files-table .ant-table-tbody > tr > td:nth-child(3) {
+  white-space: normal;
+}
+
+.strategy-page .strategy-file-name-cell {
+  display: block;
+  max-width: 100%;
+  color: inherit !important;
+  line-height: 1.35;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.strategy-page .strategy-file-code-cell {
+  display: block;
+  max-width: 100%;
+  color: var(--terminal-text-muted) !important;
+  font-family: var(--app-font-mono);
+  font-size: 12px;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.strategy-page .strategy-files-table .ant-table-tbody > tr > td:last-child {
+  padding-right: 14px !important;
+}
+
+.strategy-page .section-card {
+  overflow: hidden;
+  border: 1px solid var(--strategy-border);
+  background: linear-gradient(180deg, var(--lqc-terminal-panel-2) 0%, var(--lqc-terminal-panel) 100%);
+}
+
+.strategy-page .section-card::before {
+  background: linear-gradient(180deg, rgba(var(--lqc-primary-rgb), 0.75), transparent);
+}
+
+.strategy-page .section-card .ant-card-head {
+  min-height: 46px;
+  border-bottom-color: var(--strategy-border);
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .section-card .ant-card-body {
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .toolbar {
+  margin-bottom: 6px;
+  border: 1px solid var(--strategy-border);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .toolbar .ant-typography,
+.strategy-page .data-table__quick-hint {
+  color: var(--strategy-muted) !important;
+}
+
+.strategy-page .data-table__table .ant-table {
+  border-color: var(--strategy-border);
+  border-radius: 0;
+  color: var(--strategy-text);
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .data-table__table .ant-table-container,
+.strategy-page .data-table__table .ant-table-content,
+.strategy-page .data-table__table .ant-table-body {
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .data-table__table .ant-table-thead > tr > th {
+  color: var(--lqc-text-secondary) !important;
+  border-color: var(--strategy-border) !important;
+  background: var(--lqc-terminal-panel-3) !important;
+  font-size: 12px;
+}
+
+.strategy-page .data-table__table .ant-table-tbody > tr > td {
+  color: var(--lqc-terminal-text);
+  border-color: var(--lqc-terminal-line);
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .data-table__table .ant-table-tbody > tr:nth-child(even) > td {
+  background: var(--lqc-terminal-panel-2);
+}
+
+.strategy-page .data-table__table .ant-table-tbody > tr:hover > td {
+  background: var(--lqc-terminal-hover) !important;
+}
+
+.strategy-page .data-table__table .ant-table-cell-fix-right,
+.strategy-page .data-table__table .ant-table-cell-fix-left {
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .data-table__table .ant-table-placeholder,
+.strategy-page .data-table__table .ant-table-placeholder:hover > td {
+  color: var(--strategy-muted) !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.strategy-page .data-table__table .ant-pagination {
+  padding: 6px 8px;
+  border: 1px solid var(--strategy-border);
+  border-top: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .ant-pagination .ant-pagination-item,
+.strategy-page .ant-pagination .ant-pagination-prev,
+.strategy-page .ant-pagination .ant-pagination-next {
+  border-color: var(--strategy-border-strong);
+  background: var(--lqc-terminal-panel-2);
+}
+
+.strategy-page .ant-pagination .ant-pagination-item a,
+.strategy-page .ant-pagination .ant-pagination-prev button,
+.strategy-page .ant-pagination .ant-pagination-next button {
+  color: var(--lqc-text-soft);
+}
+
+.strategy-page .ant-pagination .ant-pagination-item-active {
+  border-color: var(--strategy-blue);
+  background: var(--strategy-blue-soft);
+}
+
+.strategy-page .ant-btn-default,
+.strategy-page .ant-input,
+.strategy-page .ant-input-affix-wrapper,
+.strategy-page .ant-input-number,
+.strategy-page .ant-select-selector {
+  color: var(--strategy-text) !important;
+  border-color: var(--strategy-border-strong) !important;
+  background: var(--lqc-terminal-panel-2) !important;
+  box-shadow: none !important;
+}
+
+.strategy-page .ant-input::placeholder,
+.strategy-page .ant-select-selection-placeholder {
+  color: var(--lqc-terminal-muted) !important;
+}
+
+.strategy-page .ant-btn-default:hover {
+  color: var(--lqc-text-inverse) !important;
+  border-color: var(--strategy-blue) !important;
+  background: var(--lqc-terminal-hover) !important;
+}
+
+.strategy-page .ant-btn-primary {
+  box-shadow: none;
+}
+
+.strategy-page .ant-btn-link {
+  color: var(--lqc-link-hover);
+}
+
+.strategy-page .ant-tag {
+  border-color: var(--strategy-border-strong);
+  color: var(--lqc-text-soft);
+  background: var(--lqc-terminal-panel-2);
+}
+
+.strategy-page .ant-tag-green,
+.strategy-page .ant-tag-success {
+  border-color: var(--lqc-success-border-soft);
+  color: var(--lqc-success-text);
+  background: var(--lqc-success-soft-bg);
+}
+
+.strategy-page .ant-tag-red,
+.strategy-page .ant-tag-error {
+  border-color: var(--lqc-danger-border-soft);
+  color: var(--lqc-danger-text);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.strategy-page .ant-tag-orange,
+.strategy-page .ant-tag-warning {
+  border-color: var(--lqc-warning-border-soft);
+  color: var(--lqc-warning-text);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.strategy-page .ant-tag-blue,
+.strategy-page .ant-tag-processing {
+  border-color: var(--lqc-info-border-soft);
+  color: var(--lqc-link-hover);
+  background: var(--lqc-info-soft-bg);
+}
+
+.strategy-page .strategy-workbench {
+  min-height: 640px;
+}
+
+.strategy-page .strategy-workbench.ant-row {
+  width: 100%;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.strategy-page .strategy-workbench.ant-row > .ant-col {
+  padding-right: 4px !important;
+  padding-left: 4px !important;
+}
+
+.strategy-page .strategy-file-rail {
+  max-height: 610px;
+  gap: 6px;
+  padding-right: 2px;
+  scrollbar-color: var(--lqc-scrollbar-thumb) var(--lqc-scrollbar-track);
+}
+
+.strategy-page .strategy-file-item {
+  border-color: var(--strategy-border);
+  color: var(--strategy-text);
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .strategy-file-item:hover {
+  border-color: rgba(var(--lqc-primary-rgb), 0.7);
+  background: var(--lqc-terminal-panel-2);
+  box-shadow: none;
+}
+
+.strategy-page .strategy-file-item--active {
+  border-color: var(--strategy-blue);
+  background: var(--lqc-terminal-blue-soft);
+  box-shadow: inset 2px 0 0 var(--strategy-blue);
+}
+
+.strategy-page .strategy-file-item__name {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--lqc-terminal-text);
+  font-size: 13px;
+  line-height: 1.35;
+  word-break: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.strategy-page .strategy-file-item__meta,
+.strategy-page .strategy-file-item__foot .ant-typography {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--strategy-muted) !important;
+}
+
+.strategy-page .strategy-editor-shell {
+  border-color: var(--strategy-border);
+  background: var(--lqc-bg-page);
+}
+
+.strategy-page .strategy-editor-shell .monaco-editor,
+.strategy-page .strategy-editor-shell .monaco-editor-background,
+.strategy-page .strategy-editor-shell .monaco-editor .margin {
+  background-color: var(--lqc-bg-page) !important;
+}
+
+.strategy-version-code-panel {
+  display: grid;
+  gap: 8px;
+}
+
+.strategy-version-code-panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+}
+
+.strategy-version-code-panel__head .ant-typography-secondary {
+  max-width: 360px;
+  overflow: hidden;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.strategy-version-code-panel .monaco-editor,
+.strategy-version-code-panel .monaco-editor-background,
+.strategy-version-code-panel .monaco-editor .margin {
+  background-color: var(--lqc-bg-page) !important;
+}
+
+.strategy-page .strategy-editor-skeleton {
+  min-height: 520px;
+  border-color: var(--strategy-border);
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .strategy-editor-terminal {
+  border-top-color: var(--strategy-border);
+  background: var(--lqc-bg-page);
+}
+
+.strategy-page .strategy-editor-terminal__head {
+  border-bottom-color: var(--strategy-border);
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .strategy-editor-terminal__body {
+  color: var(--lqc-text-soft);
+  background: var(--lqc-bg-page);
+}
+
+.strategy-page .strategy-context-row {
+  min-height: 54px;
+  border-color: var(--strategy-border);
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .ant-alert {
+  border-color: var(--lqc-info-border-soft);
+  background: var(--lqc-info-soft-bg);
+}
+
+.strategy-page .ant-alert-message {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.strategy-page .ant-alert-description {
+  color: var(--lqc-text-soft) !important;
+}
+
+.strategy-page .ant-alert-info {
+  border-color: var(--lqc-info-border-soft);
+  background: var(--lqc-info-soft-bg);
+}
+
+.strategy-page .signal-reason {
+  color: var(--strategy-text);
+}
+
+.strategy-page .signal-reason:hover span {
+  color: var(--lqc-link-hover);
+}
+
+.strategy-page .ant-empty-image {
+  display: none;
+}
+
+.strategy-page .ant-empty-description {
+  color: var(--strategy-muted);
+}
+
+.strategy-page .empty-guide,
+.strategy-page .empty-guide .ant-typography {
+  color: var(--strategy-muted) !important;
+}
+
+.strategy-page .ant-select-dropdown {
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-create-modal .ant-modal-content,
+.strategy-create-modal .ant-modal-header {
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-create-modal .ant-modal-content {
+  border: 1px solid var(--lqc-terminal-line-strong);
+  border-radius: 0;
+  box-shadow: 0 20px 60px rgba(var(--lqc-shadow-rgb), 0.45);
+}
+
+.strategy-create-modal .ant-modal-header {
+  border-bottom: 1px solid var(--lqc-terminal-line-strong);
+  border-radius: 0;
+}
+
+.strategy-create-modal .ant-modal-title,
+.strategy-create-modal .ant-form-item-label > label {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.strategy-create-modal .ant-modal-close {
+  color: var(--lqc-terminal-muted);
+}
+
+.strategy-create-modal .ant-input {
+  color: var(--lqc-terminal-text);
+  border-color: var(--lqc-terminal-line-strong);
+  background: var(--lqc-terminal-panel-2);
+}
+
+.strategy-create-modal .ant-input::placeholder {
+  color: var(--lqc-terminal-muted);
+}
+
+.strategy-confirm-modal .ant-modal-content {
+  color: var(--lqc-terminal-text);
+  border: 1px solid var(--lqc-terminal-line-strong);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+  box-shadow: 0 20px 60px rgba(var(--lqc-shadow-rgb), 0.45);
+}
+
+.strategy-confirm-modal .ant-modal-confirm-title,
+.strategy-confirm-modal .ant-modal-confirm-content,
+.strategy-confirm-modal .ant-typography {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.strategy-confirm-modal .risk-confirm-content {
+  color: var(--lqc-terminal-text);
+}
+
+@media (max-width: 1280px) {
+  .strategy-page .strategy-workbench {
+    min-height: auto;
+  }
+
+  .strategy-page .strategy-file-rail {
+    max-height: 360px;
+  }
+}
+
+/* UI-20: align Strategy Dev to the dashboard workspace module standard. */
+.strategy-page {
+  min-height: auto;
+  padding: 6px;
+  gap: 6px;
+  overflow: auto;
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-bg);
+}
+
+.strategy-page .page-header-panel {
+  min-height: 38px;
+  padding: 4px 6px 7px;
+  border: 0;
+  border-bottom: 1px solid var(--lqc-terminal-line);
+  border-radius: 0;
+  background: transparent;
+}
+
+.strategy-page .page-header-panel::before {
+  display: none;
+}
+
+.strategy-page .page-header-title {
+  color: var(--lqc-terminal-text) !important;
+  font-size: 15px !important;
+}
+
+.strategy-page .strategy-overview {
+  margin-top: 0;
+}
+
+.strategy-page .metric-card {
+  min-height: 64px;
+  border-color: var(--lqc-terminal-line) !important;
+  border-radius: 0 !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.strategy-page .metric-card.ant-card .ant-card-body {
+  padding: 8px !important;
+}
+
+.strategy-page .metric-card-value {
+  font-size: 15px !important;
+}
+
+.strategy-page .strategy-tabs {
+  margin-top: 6px;
+}
+
+.strategy-page .strategy-tabs > .ant-tabs-nav {
+  margin: 0 0 6px;
+  padding: 0 2px;
+  border: 0;
+  border-bottom: 1px solid var(--lqc-terminal-line);
+  background: transparent;
+}
+
+.strategy-page .strategy-tabs .ant-tabs-tab {
+  padding: 7px 10px;
+}
+
+.strategy-page .section-card {
+  border-color: var(--lqc-terminal-line);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.strategy-page .section-card::before {
+  display: none;
+}
+
+.strategy-page .section-card .ant-card-head {
+  min-height: 32px;
+  padding-inline: 8px;
+  border-bottom-color: var(--lqc-terminal-line);
+  background: var(--lqc-terminal-panel-2);
+}
+
+.strategy-page .section-card .ant-card-head-title,
+.strategy-page .section-card .ant-card-extra {
+  padding: 6px 0;
+}
+
+.strategy-page .section-card .ant-card-body {
+  padding: 8px !important;
+}
+
+.strategy-page .section-card__title {
+  font-size: 12px;
+}
+
+.strategy-page .toolbar {
+  margin-bottom: 6px;
+  padding: 6px 8px;
+  border-color: var(--lqc-terminal-line);
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .data-table__table .ant-table {
+  border-color: var(--lqc-terminal-line);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .data-table__table .ant-table-thead > tr > th,
+.strategy-page .data-table__table .ant-table-tbody > tr > td {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  vertical-align: middle;
+}
+
+.strategy-page .data-table__table .ant-table-thead > tr > th {
+  color: var(--lqc-terminal-muted) !important;
+  white-space: nowrap;
+}
+
+.strategy-page .data-table__table .ant-table-cell {
+  line-height: 1.35;
+}
+
+.strategy-page .data-table__table .ant-table-cell-fix-left,
+.strategy-page .data-table__table .ant-table-cell-fix-right {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.strategy-page .data-table__table .ant-table-tbody > tr:hover > .ant-table-cell-fix-left,
+.strategy-page .data-table__table .ant-table-tbody > tr:hover > .ant-table-cell-fix-right {
+  background: var(--lqc-terminal-active) !important;
+}
+
+.strategy-page .data-table__table .ant-table-sticky-holder {
+  background: var(--lqc-terminal-panel-2) !important;
+}
+
+.strategy-page .data-table__table .ant-table-sticky-scroll {
+  border-top: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-scrollbar-track) !important;
+}
+
+.strategy-page .data-table__table .ant-table-sticky-scroll-bar {
+  background: var(--lqc-scrollbar-thumb) !important;
+}
+
+.strategy-page .data-table__table .ant-table-cell .table-action-group {
+  min-width: 0;
+  justify-content: flex-end;
+}
+
+.strategy-page .data-table__table .ant-table-cell .table-action-group .ant-btn {
+  min-width: 56px;
+  white-space: nowrap;
+}
+
+/* QA follow-up: strategy development table and file rail column density. */
+.strategy-page .strategy-audit-cell-text,
+.strategy-page .signal-audit-cell-text {
+  display: -webkit-box;
+  overflow: hidden;
+  min-width: 0;
+  max-width: 100%;
+  max-height: 38px;
+  color: var(--lqc-terminal-text) !important;
+  line-height: 1.42;
+  white-space: normal;
+  word-break: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.strategy-page .strategy-audit-cell-code {
+  display: block;
+  overflow: hidden;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--lqc-terminal-muted) !important;
+  font-family: var(--lqc-font-code), var(--lqc-font-number), Consolas, monospace;
+  font-size: 11px;
+  line-height: 1.38;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.strategy-page .strategy-run-snapshot {
+  width: 100%;
+  min-width: 0;
+}
+
+.strategy-page .strategy-run-snapshot__file,
+.strategy-page .strategy-run-snapshot__hash {
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  color: var(--lqc-terminal-muted) !important;
+  font-family: var(--lqc-font-code), var(--lqc-font-number), Consolas, monospace;
+  font-size: 11px;
+  line-height: 1.32;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.strategy-page .strategy-run-snapshot__hash {
+  color: var(--lqc-terminal-blue-soft) !important;
+}
+
+.strategy-page .data-table--strategy-files .ant-table-cell,
+.strategy-page .data-table--strategy-runs .ant-table-cell,
+.strategy-page .data-table--strategy-signals .ant-table-cell,
+.strategy-page .data-table--strategy-versions .ant-table-cell {
+  vertical-align: top;
+}
+
+.strategy-page .data-table--strategy-files .ant-table-cell:nth-child(1),
+.strategy-page .data-table--strategy-files .ant-table-cell:nth-child(4),
+.strategy-page .data-table--strategy-files .ant-table-cell:nth-child(6),
+.strategy-page .data-table--strategy-files .ant-table-cell:nth-child(7),
+.strategy-page .data-table--strategy-files .ant-table-cell:nth-child(8),
+.strategy-page .data-table--strategy-runs .ant-table-cell:nth-child(1),
+.strategy-page .data-table--strategy-runs .ant-table-cell:nth-child(2),
+.strategy-page .data-table--strategy-runs .ant-table-cell:nth-child(4),
+.strategy-page .data-table--strategy-runs .ant-table-cell:nth-child(5),
+.strategy-page .data-table--strategy-runs .ant-table-cell:nth-child(6),
+.strategy-page .data-table--strategy-signals .ant-table-cell:nth-child(1),
+.strategy-page .data-table--strategy-signals .ant-table-cell:nth-child(5),
+.strategy-page .data-table--strategy-signals .ant-table-cell:nth-child(6),
+.strategy-page .data-table--strategy-versions .ant-table-cell:nth-child(1),
+.strategy-page .data-table--strategy-versions .ant-table-cell:nth-child(2),
+.strategy-page .data-table--strategy-versions .ant-table-cell:nth-child(4) {
+  font-family: var(--lqc-font-number);
+  white-space: nowrap;
+}
+
+.strategy-page .data-table--strategy-files .ant-table-cell:nth-child(2) .strategy-audit-cell-text,
+.strategy-page .data-table--strategy-files .ant-table-cell:nth-child(3) .strategy-audit-cell-code,
+.strategy-page .data-table--strategy-runs .ant-table-cell:nth-child(7) .strategy-audit-cell-text,
+.strategy-page .data-table--strategy-signals .ant-table-cell:nth-child(2) .signal-audit-cell-text,
+.strategy-page .data-table--strategy-signals .ant-table-cell:nth-child(3) .signal-audit-cell-text,
+.strategy-page .data-table--strategy-versions .ant-table-cell:nth-child(3) .strategy-audit-cell-text,
+.strategy-page .data-table--strategy-versions .ant-table-cell:nth-child(4) .strategy-audit-cell-text {
+  min-height: 32px;
+}
+
+.strategy-page .data-table--strategy-files .ant-table-cell-fix-left,
+.strategy-page .data-table--strategy-runs .ant-table-cell-fix-left,
+.strategy-page .data-table--strategy-signals .ant-table-cell-fix-left,
+.strategy-page .data-table--strategy-versions .ant-table-cell-fix-left {
+  box-shadow: 1px 0 0 var(--lqc-terminal-line) !important;
+}
+
+.strategy-page .data-table--strategy-files .ant-table-cell-fix-right,
+.strategy-page .data-table--strategy-runs .ant-table-cell-fix-right,
+.strategy-page .data-table--strategy-signals .ant-table-cell-fix-right,
+.strategy-page .data-table--strategy-versions .ant-table-cell-fix-right {
+  box-shadow: -1px 0 0 var(--lqc-terminal-line) !important;
+}
+
+.strategy-page .strategy-signals-table .data-table__table .ant-table-cell .table-action-group,
+.strategy-page .strategy-runs-table .data-table__table .ant-table-cell .table-action-group,
+.strategy-page .strategy-versions-table .data-table__table .ant-table-cell .table-action-group,
+.strategy-page .strategy-files-table .data-table__table .ant-table-cell .table-action-group {
+  min-width: 132px;
+  justify-content: flex-end;
+}
+
+.strategy-page :is(
+  .data-table--strategy-files,
+  .data-table--strategy-runs,
+  .data-table--strategy-signals,
+  .data-table--strategy-versions
+) .data-table-col--action {
+  width: 168px !important;
+  min-width: 112px;
+  max-width: 168px;
+  text-align: right;
+}
+
+/* QA final pass: strategy editor workstation shell and side rails. */
+.strategy-page .strategy-file-card,
+.strategy-page .strategy-editor-card,
+.strategy-page .strategy-context-card {
+  height: 100%;
+  border-color: var(--lqc-terminal-line) !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.strategy-page .strategy-file-card .ant-card-body,
+.strategy-page .strategy-context-card .ant-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.strategy-page .strategy-file-rail {
+  max-height: min(610px, calc(100vh - 306px));
+  padding: 4px;
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-sunken);
+}
+
+.strategy-page .strategy-file-rail::-webkit-scrollbar {
+  width: 8px;
+}
+
+.strategy-page .strategy-file-rail::-webkit-scrollbar-track {
+  background: var(--lqc-scrollbar-track);
+}
+
+.strategy-page .strategy-file-rail::-webkit-scrollbar-thumb {
+  border: 2px solid var(--lqc-scrollbar-border);
+  border-radius: 0;
+  background: var(--lqc-scrollbar-thumb);
+}
+
+.strategy-page .strategy-file-item {
+  min-height: 74px;
+  padding: 7px 8px;
+  border-radius: 0;
+}
+
+.strategy-page .strategy-file-item--active {
+  background:
+    linear-gradient(90deg, rgba(var(--lqc-primary-rgb), 0.22), rgba(var(--lqc-primary-rgb), 0.04)),
+    var(--lqc-terminal-sunken);
+}
+
+.strategy-page .strategy-editor-shell {
+  display: flex;
+  min-height: 640px;
+  flex-direction: column;
+  border-color: var(--lqc-terminal-line) !important;
+  background: var(--lqc-bg-page) !important;
+}
+
+.strategy-page .strategy-editor-toolbar {
+  min-height: 32px;
+  padding: 5px 8px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+  gap: 1px;
+  border-bottom: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-line);
+}
+
+.strategy-page .strategy-editor-toolbar span {
+  min-width: 0;
+  min-height: 24px;
+  padding: 3px 7px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  overflow: hidden;
+  color: var(--lqc-terminal-text);
+  font-family: var(--lqc-font-number);
+  font-size: 11px;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .strategy-editor-toolbar b {
+  flex: none;
+  color: var(--lqc-terminal-muted);
+  font-weight: 600;
+}
+
+.strategy-page .strategy-editor-toolbar__guard {
+  border-left: 2px solid var(--lqc-terminal-green);
+  color: var(--lqc-success-text) !important;
+  background: var(--lqc-success-soft-bg) !important;
+}
+
+.strategy-page .strategy-editor-shell .monaco-editor {
+  flex: 1 1 auto;
+}
+
+.strategy-page .strategy-editor-terminal {
+  flex: none;
+}
+
+.strategy-page .strategy-editor-terminal__head {
+  min-height: 30px;
+  padding: 5px 8px;
+}
+
+.strategy-page .strategy-editor-terminal__body {
+  min-height: 46px;
+  padding: 7px 8px;
+}
+
+.strategy-page .strategy-context-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-line);
+}
+
+.strategy-page .strategy-context-row {
+  min-height: 48px;
+  padding: 7px 8px;
+  gap: 3px;
+  border: 0;
+  border-left: 2px solid var(--lqc-terminal-blue);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .strategy-context-row .ant-typography-secondary {
+  color: var(--lqc-terminal-muted) !important;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.strategy-page .strategy-context-row .ant-typography:not(.ant-typography-secondary) {
+  font-family: var(--lqc-font-number);
+  font-size: 12px;
+}
+
+.strategy-page .strategy-boundary-alert {
+  border-left: 2px solid var(--lqc-terminal-blue);
+  border-radius: 0;
+  background: var(--lqc-info-soft-bg);
+}
+
+.strategy-page .strategy-context-card .ant-btn {
+  min-height: 28px;
+  border-radius: 0;
+}
+
+/* UI-MACBOOK14-SHORT-VIEWPORT-GUARD-20260529:
+   Strategy run rows include snapshot metadata. On short MacBook Chrome
+   work areas, show the useful row identity and keep deeper hash detail inside
+   the drawer so the table does not become oversized. */
+@media (min-width: 1281px) and (max-width: 1600px) and (max-height: 680px) {
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.strategy-page.strategy-page .data-table--strategy-runs .ant-table-tbody > tr > td {
+    height: 38px !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.strategy-page.strategy-page .data-table--strategy-runs .strategy-run-snapshot {
+    gap: 0 !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.strategy-page.strategy-page .data-table--strategy-runs .strategy-run-snapshot > .ant-typography-secondary,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.strategy-page.strategy-page .data-table--strategy-runs .strategy-run-snapshot__hash {
+    display: none !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.strategy-page.strategy-page .data-table--strategy-runs .strategy-run-snapshot__file {
+    max-width: 100% !important;
+    font-size: 10px !important;
+    line-height: 13px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.strategy-page.strategy-page .data-table--strategy-runs .data-table__table .ant-table-container {
+    max-height: 292px !important;
+    overflow: auto !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.strategy-page.strategy-page .data-table--strategy-runs .ant-table-pagination.ant-pagination {
+    min-height: 30px !important;
+    padding: 2px 6px !important;
+  }
+}
+
+@media (max-width: 1280px) {
+  .strategy-page .strategy-editor-toolbar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .strategy-page .strategy-editor-toolbar__guard {
+    grid-column: 1 / -1;
+  }
+
+  .strategy-page .strategy-editor-shell {
+    min-height: 560px;
+  }
+}
+
+.strategy-page .data-table--strategy-files .ant-table-thead > tr > th,
+.strategy-page .data-table--strategy-runs .ant-table-thead > tr > th,
+.strategy-page .data-table--strategy-signals .ant-table-thead > tr > th,
+.strategy-page .data-table--strategy-versions .ant-table-thead > tr > th {
+  line-height: 1.25;
+}
+
+.strategy-page .ant-pagination {
+  margin-bottom: 0 !important;
+}
+
+.strategy-page .data-table__table .ant-table-pagination.ant-pagination {
+  min-height: 36px;
+  margin: 0 !important;
+  padding: 5px 8px !important;
+  border: 1px solid var(--lqc-terminal-line);
+  border-top: 0;
+  background: var(--lqc-terminal-sunken) !important;
+}
+
+.strategy-page .data-table__table .ant-pagination-options .ant-select-selector {
+  height: 28px !important;
+  min-height: 28px !important;
+  color: var(--lqc-terminal-text) !important;
+  border-color: var(--lqc-terminal-line-strong) !important;
+  border-radius: 0 !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+/* Device density follow-up: make the strategy file tab a table + inspector workspace, not a low-data empty shell. */
+.strategy-page .strategy-file-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(276px, 328px);
+  gap: var(--lqc-module-grid-gap, 8px);
+  align-items: start;
+}
+
+.strategy-page .strategy-file-layout__table {
+  min-width: 0;
+}
+
+.strategy-page .strategy-file-layout__rail {
+  min-width: 0;
+  min-height: 268px;
+  padding: 8px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 8px;
+  border: 1px solid var(--lqc-terminal-line);
+  background:
+    linear-gradient(180deg, rgba(var(--lqc-primary-rgb), 0.08), transparent 42%),
+    var(--lqc-terminal-sunken);
+}
+
+.strategy-page .strategy-workflow-head {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  padding: 0 2px 6px;
+  border-bottom: 1px solid var(--lqc-terminal-line);
+}
+
+.strategy-page .strategy-workflow-head__eyebrow {
+  color: var(--lqc-info-text) !important;
+  font-family: var(--lqc-font-code), var(--lqc-font-number), Consolas, monospace;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.08em;
+}
+
+.strategy-page .strategy-workflow-head__title {
+  color: var(--lqc-terminal-text) !important;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.strategy-page .strategy-workflow-head__desc {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--lqc-terminal-muted) !important;
+  font-size: 11px;
+  line-height: 1.4;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.strategy-page .strategy-workflow-list {
+  min-height: 0;
+  display: grid;
+  gap: 1px;
+  align-content: start;
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-line);
+}
+
+.strategy-page .strategy-workflow-step {
+  min-height: 46px;
+  padding: 7px 8px;
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+  background: var(--lqc-terminal-panel);
+}
+
+.strategy-page .strategy-workflow-step__index {
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lqc-link-hover);
+  font-family: var(--lqc-font-number);
+  font-size: 11px;
+  font-weight: 800;
+  border: 1px solid var(--lqc-info-border-soft);
+  background: var(--lqc-info-soft-bg);
+}
+
+.strategy-page .strategy-workflow-step__body {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.strategy-page .strategy-workflow-step__body .ant-typography {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.strategy-page .strategy-workflow-step__body .ant-typography-secondary {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--lqc-terminal-muted) !important;
+  font-size: 11px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.strategy-page .strategy-workflow-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.strategy-page .strategy-workflow-actions .ant-btn {
+  width: 100%;
+  min-width: 0;
+  padding-inline: 6px;
+}
+
+@media (min-width: 1281px) {
+  .strategy-page .strategy-file-layout__table {
+    min-height: clamp(720px, calc(100vh - var(--lqc-status-height, 40px) - 166px), 1160px);
+  }
+
+  .strategy-page .data-table--strategy-files .data-table__table .ant-table {
+    min-height: clamp(600px, calc(100vh - var(--lqc-status-height, 40px) - 252px), 1020px);
+  }
+
+  .strategy-page .data-table--strategy-runs .data-table__table .ant-table,
+  .strategy-page .data-table--strategy-signals .data-table__table .ant-table,
+  .strategy-page .data-table--strategy-versions .data-table__table .ant-table {
+    min-height: clamp(700px, calc(100vh - var(--lqc-status-height, 40px) - 188px), 1120px);
+  }
+}
+
+@media (max-width: 1280px) {
+  .strategy-page .strategy-file-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .strategy-page .strategy-file-layout__rail {
+    min-height: 0;
+    grid-template-rows: auto auto;
+  }
+
+  .strategy-page .strategy-workflow-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1600px) and (max-height: 900px) {
+  .strategy-page .strategy-file-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .strategy-page .strategy-file-layout__table {
+    min-height: 0;
+  }
+
+  .strategy-page .strategy-file-layout__rail {
+    min-height: 0;
+    grid-template-rows: auto auto;
+  }
+
+  .strategy-page .strategy-workflow-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .strategy-page .strategy-workflow-list,
+  .strategy-page .strategy-workflow-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* UI-CLOSEOUT-STRATEGY-RAIL-20260525:
+   14-inch browser-safe work areas still have enough horizontal room for an
+   inspector rail. Keep it as a compact right rail instead of stretching it into
+   a full-width block that breaks the quant workstation rhythm. */
+@media (min-width: 1281px) and (max-width: 1600px) and (max-height: 900px) {
+  .strategy-page .strategy-file-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 328px) !important;
+    align-items: start !important;
+  }
+
+  .strategy-page .strategy-file-layout__rail {
+    width: 100%;
+    max-width: 328px;
+    max-height: 336px;
+    min-height: 0;
+    overflow: auto;
+  }
+
+  .strategy-page .strategy-workflow-head__desc {
+    -webkit-line-clamp: 1;
+  }
+
+  .strategy-page .strategy-workflow-list {
+    grid-template-columns: 1fr;
+  }
+
+  .strategy-page .strategy-workflow-step {
+    min-height: 34px;
+    padding: 5px 7px;
+  }
+
+  .strategy-page .strategy-workflow-step__body .ant-typography-secondary {
+    display: none;
+  }
+
+  .strategy-page .strategy-workflow-actions {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
+.strategy-editor-shell,
+.strategy-editor-skeleton,
+.strategy-file-item,
+.strategy-context-row {
+  border-color: var(--lqc-terminal-line) !important;
+  border-radius: 0 !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+/* Device density: the code editor tab must behave like a workstation surface on
+   27" screens while staying compact on a 14" Mac viewport. */
+@media (min-width: 1281px) {
+  .strategy-page .strategy-workbench {
+    height: clamp(620px, calc(100vh - var(--lqc-status-height, 40px) - 194px), 1095px);
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .strategy-page .strategy-workbench.ant-row > .ant-col {
+    display: flex;
+    min-width: 0;
+    height: 100%;
+    min-height: 0 !important;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  .strategy-page .strategy-file-card,
+  .strategy-page .strategy-editor-card,
+  .strategy-page .strategy-context-card {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+  .strategy-page .strategy-file-card .ant-card-body,
+  .strategy-page .strategy-editor-card .ant-card-body,
+  .strategy-page .strategy-context-card .ant-card-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .strategy-page .strategy-file-card > .ant-card-body > .ant-space,
+  .strategy-page .strategy-context-card > .ant-card-body > .ant-space {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .strategy-page .strategy-file-card > .ant-card-body > .ant-space > .ant-space-item,
+  .strategy-page .strategy-context-card > .ant-card-body > .ant-space > .ant-space-item {
+    flex: 0 0 auto;
+    min-height: 0;
+  }
+
+  .strategy-page .strategy-file-card > .ant-card-body > .ant-space > .ant-space-item:has(.strategy-file-rail),
+  .strategy-page .strategy-context-card > .ant-card-body > .ant-space > .ant-space-item:has(.strategy-context-grid) {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .strategy-page .strategy-file-rail {
+    flex: 1 1 auto;
+    height: 100%;
+    min-height: 0;
+    max-height: 100%;
+    overflow: auto;
+  }
+
+  .strategy-page .strategy-editor-shell,
+  .strategy-page .strategy-editor-skeleton {
+    flex: 1 1 auto;
+    height: 100%;
+    min-height: 0;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  .strategy-page .strategy-editor-shell,
+  .strategy-page .strategy-editor-skeleton {
+    max-height: min(100%, 900px);
+  }
+
+  .strategy-page .strategy-editor-card .empty-guide {
+    margin: auto;
+  }
+}
+
+@media (min-width: 1601px) and (max-width: 2799px) {
+  .strategy-page .strategy-workbench {
+    height: clamp(1120px, calc(100vh - var(--lqc-status-height, 40px) - 170px), 1180px);
+  }
+}
+
+@media (min-width: 2800px) {
+  .strategy-page .strategy-file-layout__table {
+    min-height: clamp(1060px, calc(100vh - var(--lqc-status-height, 40px) - 96px), 1480px);
+  }
+
+  .strategy-page .data-table--strategy-files .data-table__table .ant-table {
+    min-height: clamp(940px, calc(100vh - var(--lqc-status-height, 40px) - 190px), 1320px);
+  }
+
+  .strategy-page .data-table--strategy-runs .data-table__table .ant-table,
+  .strategy-page .data-table--strategy-signals .data-table__table .ant-table,
+  .strategy-page .data-table--strategy-versions .data-table__table .ant-table {
+    min-height: clamp(1040px, calc(100vh - var(--lqc-status-height, 40px) - 132px), 1400px);
+  }
+
+  .strategy-page .strategy-workbench {
+    height: clamp(1428px, calc(100vh - var(--lqc-status-height, 40px) - 220px), 1488px);
+  }
+
+  .strategy-page .strategy-editor-shell,
+  .strategy-page .strategy-editor-skeleton {
+    height: 100%;
+    min-height: 0;
+    max-height: min(100%, 1120px);
+  }
+}
+
+/* Device-density final pass: module-page already owns the vertical rhythm.
+   Keep strategy modules on that rhythm instead of adding local top margins. */
+.strategy-page .strategy-ai-alert,
+.strategy-page .strategy-tabs {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 1600px) and (max-height: 740px) {
+  .strategy-page :is(.ant-btn, .ant-btn-sm, .ant-select-selector, .ant-input, .ant-input-affix-wrapper, .ant-switch) {
+    min-height: 30px !important;
+    height: 30px !important;
+    line-height: 28px !important;
+  }
+
+  .strategy-page .ant-switch {
+    min-width: 44px !important;
+  }
+
+  .strategy-page a:has(.ant-btn) {
+    min-height: 30px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .strategy-page .strategy-ai-alert {
+    min-height: 34px !important;
+    max-height: 42px !important;
+    padding: 5px 8px !important;
+    overflow: hidden !important;
+  }
+
+  .strategy-page .strategy-ai-alert .ant-alert-description {
+    display: none !important;
+  }
+
+  .strategy-page .data-table__table .ant-table-placeholder,
+  .strategy-page .data-table__table .ant-table-placeholder:hover > td,
+  .strategy-page .data-table__table .ant-table-tbody > tr.ant-table-placeholder > td {
+    height: 48px !important;
+    min-height: 40px !important;
+    max-height: 48px !important;
+    padding: 0 !important;
+  }
+
+  .strategy-page .empty-guide.empty-guide {
+    height: 40px !important;
+    min-height: 40px !important;
+    max-height: 48px !important;
+    margin: 0 !important;
+    padding: 4px 8px !important;
+    overflow: hidden !important;
+  }
+
+  .strategy-page .strategy-editor-card .empty-guide.empty-guide {
+    margin: auto !important;
+  }
+}
+
+/* UI-CLOSEOUT-COLUMNS-20260525:
+   The strategy file list is a dense workstation table. Keep the right action
+   rail compact so it does not eat into filename and strategy-name columns. */
+.strategy-page .data-table--strategy-files .data-table__table :is(th, td).data-table-col--action,
+.strategy-page .strategy-files-table .data-table__table :is(th, td).data-table-col--action {
+  width: 112px !important;
+  min-width: 96px !important;
+  max-width: 128px !important;
+}
+
+.strategy-page .data-table__table .ant-table-pagination.ant-pagination :is(
+  .ant-pagination-item,
+  .ant-pagination-prev,
+  .ant-pagination-next,
+  .ant-pagination-jump-prev,
+  .ant-pagination-jump-next,
+  .ant-pagination-item-link,
+  .ant-select-selector,
+  .ant-pagination-options-quick-jumper input
+) {
+  height: 30px !important;
+  min-height: 30px !important;
+  line-height: 28px !important;
+}
+
+.strategy-page .data-table__table :is(.table-action-group .ant-btn, .task-action-group--inline .ant-btn, td .ant-btn.ant-btn-sm) {
+  height: 28px !important;
+  min-height: 28px !important;
+  max-height: 30px !important;
+  line-height: 26px !important;
+  padding-block: 0 !important;
+}
+/* UI-THEME-CLOSEOUT-20260529:
+   Page CSS can load after global theme guards. Keep disabled/loading primary
+   controls neutral in both light and dark themes. */
+html[data-theme] body .app-shell.app-shell .strategy-page.strategy-page :is(
+  button.ant-btn.ant-btn-primary[disabled],
+  button.ant-btn.ant-btn-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-primary.ant-btn-loading,
+  button.ant-btn.ant-btn-color-primary[disabled],
+  button.ant-btn.ant-btn-color-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-color-primary.ant-btn-loading
+) {
+  color: var(--lqc-control-disabled-text) !important;
+  background: var(--lqc-control-disabled-bg) !important;
+  background-color: var(--lqc-control-disabled-bg) !important;
+  background-image: none !important;
+  border-color: var(--lqc-border-soft) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+html[data-theme] body .app-shell.app-shell .strategy-page.strategy-page :is(
+  button.ant-btn.ant-btn-primary[disabled],
+  button.ant-btn.ant-btn-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-primary.ant-btn-loading,
+  button.ant-btn.ant-btn-color-primary[disabled],
+  button.ant-btn.ant-btn-color-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-color-primary.ant-btn-loading
+) :is(span:not(.anticon), svg, .anticon) {
+  color: var(--lqc-control-disabled-text) !important;
+}
+
+html[data-theme] body .app-shell.app-shell .strategy-page.strategy-page button.ant-btn.ant-btn-variant-solid:is([disabled], .ant-btn-disabled, .ant-btn-loading) {
+  color: var(--lqc-control-disabled-text) !important;
+  background: var(--lqc-control-disabled-bg) !important;
+  background-color: var(--lqc-control-disabled-bg) !important;
+  background-image: none !important;
+  border-color: var(--lqc-border-soft) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+/* UI-MACBOOK14-MONACO-IME-GUARD-20260529:
+   Monaco keeps an auxiliary IME textarea above the code surface. It should not
+   be a visible workstation control or participate in obstruction checks. */
+.strategy-page .strategy-editor-shell .monaco-editor textarea.ime-text-area {
+  width: 1px !important;
+  min-width: 1px !important;
+  max-width: 1px !important;
+  height: 1px !important;
+  min-height: 1px !important;
+  max-height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* UI-MACBOOK14-SHORT-VIEWPORT-GUARD-20260529:
+   Real Chrome on a 14-inch MacBook leaves about 571px for the scroll body.
+   Strategy file rows and run-record tables must not leave half-visible rows
+   against the top status strip or bottom status rail. */
+@media (min-width: 1281px) and (max-width: 1600px) and (max-height: 680px) {
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.strategy-page.strategy-page .strategy-file-rail {
+    box-sizing: border-box !important;
+    max-height: 322px !important;
+    padding-bottom: 8px !important;
+    scroll-padding-bottom: 8px !important;
+    overflow: auto !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.strategy-page.strategy-page .strategy-file-item {
+    min-height: 58px !important;
+    padding: 5px 6px !important;
+    gap: 4px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.strategy-page.strategy-page .strategy-file-item__meta,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.strategy-page.strategy-page .strategy-file-item__desc {
+    display: none !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.strategy-page.strategy-page :is(
+    .data-table--strategy-runs,
+    .data-table--strategy-signals,
+    .data-table--strategy-versions
+  ) .data-table__table .ant-table {
+    min-height: 0 !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.strategy-page.strategy-page :is(
+    .data-table--strategy-runs,
+    .data-table--strategy-signals,
+    .data-table--strategy-versions
+  ) .data-table__table .ant-table-container {
+    max-height: 292px !important;
+    overflow: auto !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.strategy-page.strategy-page :is(
+    .data-table--strategy-runs,
+    .data-table--strategy-signals,
+    .data-table--strategy-versions
+  ) .ant-table-pagination.ant-pagination {
+    min-height: 28px !important;
+    padding: 1px 6px !important;
+    margin-top: 3px !important;
+    margin-bottom: 6px !important;
+  }
+}

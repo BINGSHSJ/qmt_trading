@@ -1,0 +1,2781 @@
+.trading-page {
+  gap: 16px;
+}
+
+.trading-guard-rail {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.trading-guard-rail__item {
+  min-height: 68px;
+  padding: 11px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-card);
+  background: var(--lqc-bg-card);
+  box-shadow: var(--lqc-shadow-card);
+}
+
+.trading-guard-rail__item .ant-typography {
+  margin: 0;
+}
+
+.trading-guard-rail__item--success {
+  border-color: rgba(var(--lqc-success-rgb), 0.22);
+  background: var(--lqc-success-soft-bg);
+}
+
+.trading-guard-rail__item--info {
+  border-color: rgba(var(--lqc-primary-rgb), 0.22);
+  background: var(--lqc-bg-card-muted);
+}
+
+.trading-guard-rail__item--danger {
+  border-color: rgba(var(--lqc-danger-rgb), 0.24);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.trading-overview .ant-col {
+  display: flex;
+}
+
+.trading-overview .metric-card {
+  width: 100%;
+}
+
+.trading-tabs .ant-tabs-tab {
+  font-weight: 600;
+}
+
+.trading-checklist {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--lqc-border);
+  border-radius: 10px;
+  background: var(--lqc-bg-card-muted);
+}
+
+.trading-checklist__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 26px;
+}
+
+.trading-checklist__item span:first-child {
+  color: var(--lqc-text-secondary);
+  font-size: 13px;
+}
+
+.order-ticket {
+  position: relative;
+  overflow: hidden;
+  padding: 16px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: var(--lqc-radius-card);
+  background: var(--lqc-bg-card);
+}
+
+.order-ticket--readonly {
+  border-color: rgba(var(--lqc-warning-rgb), 0.45);
+}
+
+.order-ticket__readonly-mask {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  border: 1px solid rgba(var(--lqc-warning-rgb), 0.42);
+  border-radius: 0;
+  color: var(--lqc-warning-text);
+  background: rgba(var(--lqc-surface-muted-rgb), 0.94);
+  font-size: 12px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.order-ticket::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--lqc-profit-a);
+}
+
+.order-ticket--sell::before {
+  background: var(--lqc-loss-a);
+}
+
+.order-ticket__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.order-ticket__eyebrow {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--lqc-text-muted);
+  font-size: 12px;
+}
+
+.order-ticket__title {
+  margin: 0 !important;
+}
+
+.order-ticket .ant-segmented {
+  width: 100%;
+  padding: 3px;
+  background: var(--lqc-bg-card-muted);
+}
+
+.order-ticket .ant-segmented-item-selected {
+  color: var(--lqc-text-inverse);
+  background: var(--lqc-profit-a);
+}
+
+.order-ticket--sell .ant-segmented-item-selected {
+  background: var(--lqc-loss-a);
+}
+
+.order-ticket__amount {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 11px;
+  border: 1px solid var(--lqc-border);
+  border-radius: 6px;
+  background: var(--lqc-bg-card-muted);
+}
+
+.order-ticket__summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 4px 0 14px;
+}
+
+.order-ticket__summary span {
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: 8px;
+  background: var(--lqc-bg-card-muted);
+  color: var(--lqc-text-secondary);
+  font-size: 12px;
+}
+
+.order-ticket__summary strong {
+  display: block;
+  overflow: hidden;
+  margin-top: 2px;
+  color: var(--lqc-text-primary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.order-ticket__actions {
+  padding-top: 4px;
+}
+
+.trading-reason-button {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--lqc-text-primary);
+  cursor: pointer;
+  text-align: left;
+}
+
+.trading-reason-button:hover span {
+  color: var(--lqc-primary);
+}
+
+.trading-reason-button span {
+  display: -webkit-box;
+  overflow: hidden;
+  max-height: 40px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.order-lifecycle {
+  margin-bottom: 14px;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(92px, 1fr));
+  gap: 8px;
+}
+
+.order-lifecycle__step {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid var(--lqc-border);
+  border-radius: 10px;
+  color: var(--lqc-text-secondary);
+  background: var(--lqc-bg-card-muted);
+  font-size: 12px;
+}
+
+.order-lifecycle__step span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.order-lifecycle__step strong {
+  min-width: 22px;
+  color: var(--lqc-text-primary);
+  text-align: right;
+}
+
+.order-lifecycle__step--info {
+  border-color: var(--lqc-info-border-soft);
+  background: var(--lqc-info-soft-bg);
+}
+
+.order-lifecycle__step--warning {
+  border-color: var(--lqc-warning-border-soft);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.order-lifecycle__step--success {
+  border-color: var(--lqc-success-border-soft);
+  background: var(--lqc-success-soft-bg);
+}
+
+.order-lifecycle__step--danger {
+  border-color: var(--lqc-danger-border-soft);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.order-lifecycle-note {
+  margin: -4px 0 14px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(var(--lqc-primary-rgb), 0.18);
+  border-radius: var(--lqc-radius-control);
+  background: var(--lqc-bg-card-muted);
+}
+
+.order-lifecycle-note .ant-typography {
+  margin: 0;
+}
+
+@media (min-width: 1600px) {
+  .trading-tabs .ant-table-cell {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 1280px) {
+  .order-lifecycle {
+    grid-template-columns: repeat(4, minmax(112px, 1fr));
+  }
+
+  .trading-guard-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .order-ticket__summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .order-lifecycle {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .order-lifecycle-note {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .order-ticket__summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* IBKR Desktop style pass: make the trading workspace feel like a compact desktop terminal. */
+.trading-page {
+  gap: 8px;
+}
+
+.trading-page .page-header-panel {
+  padding: 4px 2px;
+  border-color: transparent;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.trading-page .page-header-panel::before {
+  display: none;
+}
+
+.trading-page .page-header-title {
+  font-size: 15px !important;
+  line-height: 28px !important;
+}
+
+.trading-page .page-header-description,
+.trading-page .page-header-meta {
+  display: none;
+}
+
+.trading-page .page-header-main {
+  align-items: center;
+}
+
+.trading-page .page-header-actions {
+  max-width: 76%;
+}
+
+.trading-page .page-header-actions .ant-btn,
+.trading-page .page-header-actions .ant-tag,
+.trading-page .page-header-actions .data-freshness-tag {
+  height: 28px;
+  min-height: 28px;
+  font-size: 12px;
+}
+
+.trading-page .command-panel {
+  min-height: 74px;
+  padding: 7px 9px;
+  grid-template-columns: minmax(280px, 0.56fr) minmax(560px, 1.44fr);
+  gap: 8px;
+  border-color: rgba(var(--lqc-highlight-rgb), 0.08);
+  border-radius: 8px;
+  background: var(--lqc-terminal-panel);
+  box-shadow: none;
+}
+
+.trading-page .command-panel::after {
+  display: none;
+}
+
+.trading-page .command-panel__copy {
+  justify-content: flex-start;
+}
+
+.trading-page .command-panel__eyebrow {
+  color: var(--lqc-info-text) !important;
+  font-size: 10px;
+}
+
+.trading-page .command-panel__title {
+  margin: 1px 0 2px !important;
+  font-size: 15px !important;
+}
+
+.trading-page .command-panel__description {
+  display: -webkit-box;
+  overflow: hidden;
+  max-width: none;
+  color: var(--lqc-text-secondary) !important;
+  font-size: 12px;
+  line-height: 1.3;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.trading-page .command-panel__actions {
+  display: none;
+}
+
+.trading-page .command-panel__items {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  gap: 6px;
+}
+
+.trading-page .command-panel__item {
+  min-height: 42px;
+  padding: 6px 7px;
+  gap: 2px;
+  border-radius: 6px;
+  background: rgba(var(--lqc-highlight-rgb), 0.045);
+  backdrop-filter: none;
+}
+
+.trading-page .command-panel__item-label,
+.trading-page .command-panel__item-helper {
+  font-size: 10px;
+}
+
+.trading-page .command-panel__item-value {
+  font-size: 14px;
+}
+
+.trading-guard-rail {
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: 8px;
+  background: var(--lqc-border-soft);
+}
+
+.trading-guard-rail__item {
+  min-height: 48px;
+  padding: 7px 10px;
+  gap: 3px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.trading-guard-rail__item .ant-typography {
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.trading-overview .metric-card {
+  border-radius: 8px !important;
+  box-shadow: none;
+}
+
+.trading-overview .metric-card .ant-card-body {
+  min-height: 62px;
+  padding: 8px 10px;
+}
+
+.trading-overview .metric-card-value {
+  margin-top: 4px !important;
+  font-size: 15px !important;
+}
+
+.trading-overview .metric-card__icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+}
+
+.trading-page .workbench-nav {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: 8px;
+  background: var(--lqc-border-soft);
+}
+
+.trading-page .workbench-nav__item {
+  min-height: 44px;
+  padding: 7px 8px;
+  gap: 7px;
+  border: 0;
+  border-radius: 0;
+  background: var(--lqc-bg-card);
+  box-shadow: none;
+}
+
+.trading-page .workbench-nav__item::before {
+  width: 0;
+}
+
+.trading-page .workbench-nav__item--active {
+  background: var(--lqc-info-soft-bg);
+  box-shadow: inset 0 -2px 0 var(--lqc-info);
+}
+
+.trading-page .workbench-nav__index {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.trading-page .workbench-nav__copy {
+  gap: 1px;
+}
+
+.trading-page .workbench-nav__copy strong {
+  font-size: 12px;
+}
+
+.trading-page .workbench-nav__copy span {
+  font-size: 10px;
+}
+
+.trading-page .workbench-nav__badge {
+  display: none;
+}
+
+.trading-page .section-card.ant-card {
+  border-radius: 8px !important;
+  box-shadow: none;
+}
+
+.trading-page .section-card .ant-card-head {
+  min-height: 38px !important;
+}
+
+.trading-page .section-card .ant-card-body {
+  padding: 9px 10px;
+}
+
+.order-ticket {
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.order-ticket__head {
+  margin-bottom: 10px;
+}
+
+.order-ticket__title {
+  font-size: 16px !important;
+}
+
+.order-ticket__summary {
+  margin: 2px 0 10px;
+}
+
+.order-lifecycle {
+  margin-bottom: 8px;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--lqc-border-soft);
+  border-radius: 8px;
+  background: var(--lqc-border-soft);
+}
+
+.order-lifecycle__step {
+  padding: 7px 9px;
+  border: 0;
+  border-radius: 0;
+}
+
+.order-lifecycle-note {
+  margin: 0 0 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.trading-tabs {
+  padding-top: 0;
+}
+
+.trading-tabs .ant-tabs-nav {
+  margin-bottom: 8px;
+}
+
+.trading-tabs .ant-tabs-tab {
+  padding: 6px 10px;
+}
+
+@media (max-width: 1280px) {
+  .trading-page .command-panel,
+  .trading-page .workbench-nav {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* UI-IBKR-15: full dark order workstation override. Keep all trading semantics untouched. */
+.trading-page {
+  --trade-bg: var(--lqc-bg-page);
+  --trade-panel: var(--lqc-terminal-panel);
+  --trade-panel-2: var(--lqc-terminal-panel-2);
+  --trade-panel-3: var(--lqc-terminal-panel-2);
+  --trade-border: var(--lqc-terminal-line);
+  --trade-border-strong: var(--lqc-terminal-line-strong);
+  --trade-text: var(--lqc-terminal-text);
+  --trade-muted: var(--lqc-terminal-muted);
+  --trade-blue: var(--lqc-terminal-blue);
+  --trade-blue-soft: var(--lqc-terminal-blue-soft);
+  --trade-red: var(--lqc-terminal-red);
+  --trade-green: var(--lqc-terminal-green);
+  --trade-orange: var(--lqc-terminal-orange);
+  color: var(--trade-text);
+  background: var(--trade-bg);
+}
+
+.trading-page .page-header-panel {
+  min-height: 42px;
+  padding: 6px 8px;
+  border: 0;
+  border-bottom: 1px solid var(--trade-border);
+  border-radius: 0;
+}
+
+.trading-page .page-header-title {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.trading-page .page-header-actions .ant-btn-default,
+.trading-page .page-header-actions .data-freshness-tag {
+  color: var(--lqc-text-soft);
+  border-color: var(--trade-border-strong);
+  background: var(--lqc-terminal-panel-2);
+  box-shadow: none;
+}
+
+.trading-page .page-header-actions .data-freshness-tag {
+  color: var(--lqc-link-hover);
+  border-color: var(--lqc-info-border-soft);
+  background: var(--lqc-info-soft-bg);
+}
+
+.trading-page .command-panel {
+  min-height: 106px;
+  padding: 10px 12px;
+  grid-template-columns: minmax(320px, 0.72fr) minmax(560px, 1.28fr);
+  border: 1px solid var(--lqc-terminal-line-strong);
+  border-radius: 0;
+  background:
+    linear-gradient(90deg, rgba(var(--lqc-danger-rgb), 0.08), transparent 28%),
+    linear-gradient(135deg, rgba(var(--lqc-page-rgb), 0.98), rgba(var(--lqc-surface-rgb), 0.98)),
+    var(--lqc-terminal-sunken);
+  box-shadow: none;
+}
+
+.trading-page .command-panel__actions {
+  display: flex;
+  margin-top: 8px;
+}
+
+.trading-page .command-panel__description {
+  -webkit-line-clamp: 2;
+}
+
+.trading-page .command-panel__items {
+  grid-template-columns: repeat(5, minmax(112px, 1fr));
+  gap: 6px;
+}
+
+.trading-page .command-panel__item {
+  min-height: 70px;
+  padding: 9px 10px;
+  border-radius: 0;
+  background: rgba(var(--lqc-highlight-rgb), 0.045);
+}
+
+.trading-page .command-panel__item-value {
+  color: var(--lqc-terminal-text);
+  font-size: 15px;
+}
+
+.trading-guard-rail {
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--trade-border);
+  border-radius: 0;
+  background: var(--trade-border);
+}
+
+.trading-guard-rail__item {
+  min-height: 50px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 0;
+  color: var(--trade-text);
+  background: var(--trade-panel);
+}
+
+.trading-guard-rail__item--success {
+  background: var(--lqc-success-soft-bg);
+}
+
+.trading-guard-rail__item--info {
+  background: var(--lqc-info-soft-bg);
+}
+
+.trading-guard-rail__item--danger {
+  background: var(--lqc-danger-soft-bg);
+}
+
+.trading-guard-rail__item .ant-typography {
+  color: var(--lqc-terminal-text);
+}
+
+.trading-guard-rail__item .ant-typography-secondary {
+  color: var(--trade-muted) !important;
+}
+
+.trading-page .metric-card.ant-card {
+  border: 1px solid var(--trade-border) !important;
+  border-radius: 0 !important;
+  color: var(--trade-text);
+  background: var(--trade-panel-2) !important;
+  box-shadow: none !important;
+}
+
+.trading-page .metric-card.ant-card .ant-card-body {
+  min-height: 70px;
+  padding: 10px 12px !important;
+}
+
+.trading-page .metric-card::before {
+  width: 2px;
+}
+
+.trading-page .metric-card-label,
+.trading-page .metric-card-subvalue,
+.trading-page .metric-card__footer {
+  color: var(--trade-muted) !important;
+}
+
+.trading-page .metric-card-value {
+  margin: 4px 0 0 !important;
+  color: var(--lqc-terminal-text) !important;
+  font-family: var(--lqc-font-number);
+  font-size: 16px !important;
+  line-height: 1.15 !important;
+}
+
+.trading-page .metric-card--blue .metric-card-value,
+.trading-page .metric-card--default .metric-card-value {
+  color: var(--lqc-link-hover) !important;
+}
+
+.trading-page .metric-card--green .metric-card-value {
+  color: var(--trade-green) !important;
+}
+
+.trading-page .metric-card--red .metric-card-value {
+  color: var(--trade-red) !important;
+}
+
+.trading-page .metric-card--orange .metric-card-value {
+  color: var(--trade-orange) !important;
+}
+
+.trading-page .metric-card__icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  color: var(--lqc-link-hover);
+  background: var(--trade-blue-soft);
+}
+
+.trading-page .workbench-nav {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--trade-border);
+  border-radius: 0;
+  background: var(--trade-border);
+}
+
+.trading-page .workbench-nav__item {
+  min-height: 48px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 0;
+  color: var(--trade-text);
+  background: var(--trade-panel);
+  box-shadow: none;
+}
+
+.trading-page .workbench-nav__item:hover,
+.trading-page .workbench-nav__item--active {
+  background: var(--lqc-terminal-panel-2);
+  box-shadow: inset 0 -2px 0 var(--trade-blue);
+}
+
+.trading-page .workbench-nav__index {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  color: var(--lqc-link-hover);
+  background: var(--trade-blue-soft);
+}
+
+.trading-page .workbench-nav__copy strong {
+  color: var(--lqc-terminal-text);
+}
+
+.trading-page .workbench-nav__copy span {
+  color: var(--trade-muted);
+}
+
+.trading-page .trading-tabs > .ant-tabs-nav {
+  margin: 0 0 8px;
+  border-bottom: 1px solid var(--trade-border);
+}
+
+.trading-page .trading-tabs .ant-tabs-tab {
+  color: var(--trade-muted);
+}
+
+.trading-page .trading-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--lqc-terminal-text);
+}
+
+.trading-page .section-card.ant-card {
+  border: 1px solid var(--trade-border) !important;
+  border-radius: 0 !important;
+  color: var(--trade-text);
+  background: var(--trade-panel) !important;
+  box-shadow: none !important;
+}
+
+.trading-page .section-card .ant-card-head {
+  min-height: 42px !important;
+  border-color: var(--trade-border) !important;
+  background: var(--lqc-terminal-panel);
+}
+
+.trading-page .section-card .ant-card-body {
+  padding: 10px !important;
+  background: transparent;
+}
+
+.trading-page .section-card__title {
+  color: var(--lqc-terminal-text);
+  font-size: 13px;
+}
+
+.trading-page .section-card__description,
+.trading-page .ant-typography-secondary {
+  color: var(--trade-muted) !important;
+}
+
+.order-ticket {
+  padding: 12px;
+  border-color: var(--trade-border);
+  border-radius: 0;
+  color: var(--trade-text);
+  background: var(--trade-panel-2);
+}
+
+.order-ticket::before {
+  width: 2px;
+  background: var(--trade-red);
+}
+
+.order-ticket--sell::before {
+  background: var(--trade-green);
+}
+
+.order-ticket__eyebrow {
+  color: var(--trade-muted);
+}
+
+.order-ticket__title {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.order-ticket .ant-segmented {
+  background: var(--lqc-terminal-panel);
+}
+
+.order-ticket .ant-segmented-item {
+  color: var(--lqc-text-soft);
+}
+
+.order-ticket .ant-segmented-item-selected {
+  color: var(--lqc-text-inverse);
+  background: var(--trade-red);
+}
+
+.order-ticket--sell .ant-segmented-item-selected {
+  background: var(--trade-green);
+}
+
+.order-ticket__amount,
+.order-ticket__summary span,
+.trading-checklist,
+.trading-checklist__item {
+  border-color: var(--trade-border);
+  border-radius: 0;
+  color: var(--trade-text);
+  background: var(--lqc-terminal-panel);
+}
+
+.order-ticket__summary strong,
+.trading-checklist__item .ant-typography {
+  color: var(--lqc-terminal-text);
+}
+
+.trading-checklist__item span:first-child {
+  color: var(--trade-muted);
+}
+
+.trading-page .ant-input,
+.trading-page .ant-input-affix-wrapper,
+.trading-page .ant-input-number,
+.trading-page .ant-input-number-input,
+.trading-page .ant-select-selector {
+  color: var(--trade-text) !important;
+  border-color: var(--trade-border-strong) !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.trading-page .ant-form-item-label > label {
+  color: var(--lqc-text-soft) !important;
+  font-size: 12px;
+}
+
+.trading-page .ant-alert {
+  border-radius: 0;
+  background: var(--lqc-terminal-panel-2);
+}
+
+.trading-page .ant-alert-warning {
+  border-color: var(--lqc-warning-border-soft);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.trading-page .ant-alert-info {
+  border-color: var(--lqc-info-border-soft);
+  background: var(--lqc-info-soft-bg);
+}
+
+.trading-page .ant-alert-success {
+  border-color: var(--lqc-success-border-soft);
+  background: var(--lqc-success-soft-bg);
+}
+
+.trading-page .ant-alert-error {
+  border-color: var(--lqc-danger-border-soft);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.trading-page .ant-alert-message {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.trading-page .ant-alert-description {
+  color: var(--lqc-text-soft) !important;
+}
+
+.order-lifecycle {
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--trade-border);
+  border-radius: 0;
+  background: var(--trade-border);
+}
+
+.order-lifecycle__step {
+  border: 0;
+  border-radius: 0;
+  color: var(--trade-muted);
+  background: var(--trade-panel-2);
+}
+
+.order-lifecycle__step strong {
+  color: var(--lqc-terminal-text);
+}
+
+.order-lifecycle__step--info {
+  background: var(--lqc-info-soft-bg);
+}
+
+.order-lifecycle__step--warning {
+  background: var(--lqc-warning-soft-bg);
+}
+
+.order-lifecycle__step--success {
+  background: var(--lqc-success-soft-bg);
+}
+
+.order-lifecycle__step--danger {
+  background: var(--lqc-danger-soft-bg);
+}
+
+.order-lifecycle-note {
+  border-color: var(--lqc-info-border-soft);
+  border-radius: 0;
+  color: var(--trade-text);
+  background: var(--lqc-info-soft-bg);
+}
+
+.trading-page .toolbar {
+  margin-bottom: 6px;
+  padding: 6px 8px;
+  border: 1px solid var(--trade-border);
+  border-radius: 0;
+  color: var(--trade-text);
+  background: var(--lqc-terminal-panel);
+}
+
+.trading-page .filter-bar {
+  gap: 6px;
+}
+
+.trading-page .data-table__table .ant-table {
+  border-color: var(--trade-border);
+  border-radius: 0;
+  color: var(--trade-text);
+  background: var(--lqc-terminal-panel);
+}
+
+.trading-page .data-table__table .ant-table-container,
+.trading-page .data-table__table .ant-table-content,
+.trading-page .data-table__table .ant-table-body {
+  background: var(--lqc-terminal-panel);
+}
+
+.trading-page .data-table__table .ant-table-thead > tr > th {
+  color: var(--lqc-terminal-muted) !important;
+  border-color: var(--trade-border) !important;
+  background: var(--lqc-terminal-panel-3) !important;
+  font-size: 12px;
+}
+
+.trading-page .data-table__table .ant-table-tbody > tr > td {
+  color: var(--lqc-terminal-text);
+  border-color: var(--lqc-terminal-line);
+  background: var(--lqc-terminal-panel);
+}
+
+.trading-page .data-table__table .ant-table-tbody > tr:nth-child(even) > td {
+  background: var(--lqc-terminal-panel-2);
+}
+
+.trading-page .data-table__table .ant-table-tbody > tr:hover > td {
+  background: var(--lqc-terminal-hover) !important;
+}
+
+.trading-page .data-table__table .ant-table-placeholder,
+.trading-page .data-table__table .ant-table-placeholder:hover > td {
+  color: var(--trade-muted) !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.trading-page .data-table__table .ant-table-cell-fix-right,
+.trading-page .data-table__table .ant-table-cell-fix-left {
+  background: var(--lqc-terminal-panel);
+}
+
+.trading-page .data-table__table .ant-pagination {
+  border-color: var(--trade-border);
+}
+
+.trading-page .ant-pagination .ant-pagination-item,
+.trading-page .ant-pagination .ant-pagination-prev,
+.trading-page .ant-pagination .ant-pagination-next {
+  border-color: var(--trade-border-strong);
+  background: var(--lqc-terminal-panel-2);
+}
+
+.trading-page .ant-pagination .ant-pagination-item a,
+.trading-page .ant-pagination .ant-pagination-prev button,
+.trading-page .ant-pagination .ant-pagination-next button {
+  color: var(--lqc-text-soft);
+}
+
+.trading-page .ant-pagination .ant-pagination-item-active {
+  border-color: var(--trade-blue);
+  background: var(--lqc-info-soft-bg);
+}
+
+.trading-page .ant-pagination .ant-pagination-item-active a {
+  color: var(--lqc-link-hover);
+}
+
+.trading-page .ant-select-dropdown,
+.trading-page .ant-picker-dropdown {
+  background: var(--lqc-terminal-panel);
+}
+
+.trading-page .data-table__quick-controls .ant-input-search-button {
+  color: var(--lqc-text-soft) !important;
+  border-color: var(--trade-border-strong) !important;
+  background: var(--lqc-terminal-panel-2) !important;
+}
+
+.trading-page .ant-btn-default {
+  color: var(--lqc-text-soft);
+  border-color: var(--trade-border-strong);
+  background: var(--lqc-terminal-panel-2);
+  box-shadow: none;
+}
+
+.trading-page .ant-btn-default:hover {
+  color: var(--lqc-text-inverse) !important;
+  border-color: var(--trade-blue) !important;
+  background: var(--lqc-terminal-hover) !important;
+}
+
+.trading-page .ant-btn-primary {
+  box-shadow: none;
+}
+
+.trading-page .ant-tag {
+  border-color: var(--trade-border-strong);
+  color: var(--lqc-text-soft);
+  background: var(--lqc-terminal-panel-2);
+}
+
+.trading-page .ant-tag-success,
+.trading-page .ant-tag-green {
+  border-color: var(--lqc-success-border-soft);
+  color: var(--lqc-success-text);
+  background: var(--lqc-success-soft-bg);
+}
+
+.trading-page .ant-tag-error,
+.trading-page .ant-tag-red {
+  border-color: var(--lqc-danger-border-soft);
+  color: var(--lqc-danger-text);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.trading-page .ant-tag-warning,
+.trading-page .ant-tag-orange {
+  border-color: var(--lqc-warning-border-soft);
+  color: var(--lqc-warning-text);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.trading-page .ant-tag-processing,
+.trading-page .ant-tag-blue {
+  border-color: var(--lqc-info-border-soft);
+  color: var(--lqc-link-hover);
+  background: var(--lqc-info-soft-bg);
+}
+
+.trading-page .ant-empty-image {
+  display: none;
+}
+
+/* UI-20: align Trading Execution to the dashboard workspace module standard. */
+.trading-page {
+  padding: 6px;
+  gap: 6px;
+  overflow: auto;
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-bg);
+}
+
+.trading-page .page-header-panel {
+  min-height: 38px;
+  padding: 4px 6px 7px;
+  border: 0;
+  border-bottom: 1px solid var(--lqc-terminal-line);
+  border-radius: 0;
+  background: transparent;
+}
+
+.trading-page .page-header-title {
+  color: var(--lqc-terminal-text) !important;
+  font-size: 15px !important;
+}
+
+.trading-page .command-panel {
+  min-height: 86px;
+  padding: 8px;
+  gap: 8px;
+  border-color: var(--lqc-terminal-line);
+  background:
+    linear-gradient(90deg, rgba(var(--lqc-danger-rgb), 0.07), transparent 38%),
+    var(--lqc-terminal-panel);
+}
+
+.trading-page .command-panel__title {
+  font-size: 15px !important;
+}
+
+.trading-page .command-panel__items {
+  grid-template-columns: repeat(auto-fit, minmax(108px, 1fr));
+}
+
+.trading-page .command-panel__item {
+  min-height: 60px;
+  padding: 7px 8px;
+  border-color: rgba(var(--lqc-muted-rgb), 0.16);
+  background: rgba(var(--lqc-highlight-rgb), 0.04);
+}
+
+.trading-page .command-panel__item-value {
+  font-size: 14px;
+}
+
+.trading-guard-rail,
+.trading-page .workbench-nav {
+  gap: 0;
+  border-color: var(--lqc-terminal-line);
+  background: var(--lqc-terminal-line);
+}
+
+.trading-guard-rail__item,
+.trading-page .workbench-nav__item {
+  min-height: 42px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.trading-page .workbench-nav__item:hover,
+.trading-page .workbench-nav__item--active {
+  background: var(--lqc-terminal-panel-3);
+  box-shadow: inset 0 -2px 0 var(--lqc-terminal-blue);
+}
+
+.trading-page .workbench-nav__index {
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+}
+
+.trading-page .trading-tabs > .ant-tabs-nav {
+  margin: 0 0 6px;
+  border-bottom-color: var(--lqc-terminal-line);
+}
+
+.trading-page .trading-tabs .ant-tabs-tab {
+  padding: 7px 10px;
+}
+
+.trading-page .section-card.ant-card,
+.trading-page .metric-card.ant-card,
+.order-ticket {
+  padding: 9px;
+  border-color: var(--lqc-terminal-line) !important;
+  border-radius: 0 !important;
+  background: var(--lqc-terminal-panel) !important;
+  box-shadow: none !important;
+}
+
+.order-ticket .ant-form-item {
+  margin-bottom: 8px;
+}
+
+.order-ticket .ant-form-item-label {
+  padding-bottom: 3px;
+}
+
+.order-ticket__head {
+  margin-bottom: 8px;
+}
+
+.order-ticket__summary span {
+  padding: 6px 8px;
+}
+
+.trading-page .section-card .ant-card-head,
+.trading-page .metric-card .ant-card-head {
+  min-height: 32px !important;
+  padding-inline: 8px;
+  border-bottom-color: var(--lqc-terminal-line) !important;
+  background: var(--lqc-terminal-panel-2) !important;
+}
+
+.trading-page .section-card .ant-card-head-title,
+.trading-page .section-card .ant-card-extra {
+  padding: 6px 0;
+}
+
+.trading-page .section-card .ant-card-body,
+.trading-page .metric-card .ant-card-body {
+  padding: 8px !important;
+}
+
+.trading-page .data-table__table .ant-table {
+  border-color: var(--lqc-terminal-line);
+  border-radius: 0;
+}
+
+.trading-page .data-table__table .ant-table-thead > tr > th,
+.trading-page .data-table__table .ant-table-tbody > tr > td {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+/* UI-IBKR-35: keep trading workbench dense at common remote-desktop widths. */
+.trading-page .command-panel {
+  min-height: 76px;
+  grid-template-columns: minmax(280px, 0.62fr) minmax(440px, 1.38fr);
+}
+
+.trading-page .command-panel__item {
+  min-height: 38px;
+  padding: 5px 6px;
+}
+
+.trading-page .command-panel__description {
+  display: none;
+}
+
+.trading-page .command-panel__actions {
+  display: none;
+}
+
+.trading-page .command-panel__items {
+  grid-template-columns: repeat(5, minmax(82px, 1fr));
+}
+
+.trading-guard-rail {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.trading-guard-rail__item {
+  min-height: 38px;
+  padding: 5px 8px;
+}
+
+.trading-overview .ant-row,
+.trading-overview {
+  margin-top: 0;
+}
+
+.trading-page .metric-card.ant-card .ant-card-body {
+  min-height: 54px;
+  padding: 7px 9px !important;
+}
+
+.trading-page .metric-card-value {
+  font-size: 14px !important;
+}
+
+.trading-page .workbench-nav__item {
+  min-height: 38px;
+  padding: 5px 8px;
+}
+
+.trading-page .workbench-nav__index {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1280px) {
+  .trading-page .command-panel {
+    grid-template-columns: minmax(260px, 0.7fr) minmax(420px, 1.3fr);
+  }
+
+  .trading-guard-rail {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .trading-page .workbench-nav {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .trading-page .command-panel__items {
+    grid-template-columns: repeat(5, minmax(86px, 1fr));
+  }
+}
+
+@media (max-width: 1360px) {
+  .trading-overview {
+    display: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .trading-page .command-panel,
+  .trading-guard-rail,
+  .trading-page .workbench-nav {
+    grid-template-columns: 1fr;
+  }
+}
+
+.trading-page .toolbar {
+  min-height: 42px;
+  margin-bottom: 5px;
+  padding: 5px 7px;
+  align-items: center;
+}
+
+.trading-page .toolbar__copy {
+  gap: 0 !important;
+}
+
+.trading-page .toolbar__actions {
+  gap: 5px !important;
+}
+
+.trading-page .data-table__quick-stack {
+  gap: 0 !important;
+}
+
+.trading-page .data-table__quick-controls {
+  margin-top: 0;
+}
+
+.trading-page .data-table__quick-hint {
+  display: none;
+}
+
+.trading-page .filter-bar {
+  gap: 5px;
+  justify-content: flex-start;
+}
+
+.trading-page .section-card .ant-card-body {
+  padding: 6px !important;
+}
+
+.order-lifecycle {
+  margin-bottom: 5px;
+}
+
+.order-lifecycle__step {
+  min-height: 30px;
+  padding: 4px 6px;
+}
+
+.order-lifecycle-note {
+  margin-bottom: 5px;
+  padding: 5px 7px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  line-height: 1.25;
+}
+
+.order-lifecycle-note .ant-typography {
+  font-size: 11px;
+}
+
+/* UI-IBKR-40: trading table/drawer polish, no trading semantics changed. */
+.trading-page .data-table__table .ant-table-cell-fix-left,
+.trading-page .data-table__table .ant-table-cell-fix-right {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.trading-page .data-table__table .ant-table-tbody > tr:nth-child(even) > .ant-table-cell-fix-left,
+.trading-page .data-table__table .ant-table-tbody > tr:nth-child(even) > .ant-table-cell-fix-right {
+  background: var(--lqc-terminal-panel-2) !important;
+}
+
+.trading-page .data-table__table .ant-table-tbody > tr:hover > .ant-table-cell-fix-left,
+.trading-page .data-table__table .ant-table-tbody > tr:hover > .ant-table-cell-fix-right {
+  background: var(--lqc-terminal-hover) !important;
+}
+
+.trading-page .data-table__table .ant-table-sticky-holder {
+  background: var(--lqc-terminal-panel-3) !important;
+}
+
+.trading-page .data-table__table .ant-table-cell .table-action-group {
+  min-width: 92px;
+  justify-content: flex-end;
+}
+
+.trading-page .data-table__table .ant-table-cell .table-action-group .ant-btn {
+  min-width: 56px;
+  white-space: nowrap;
+}
+
+/* QA follow-up: trading execution table column density. */
+.trading-page .trading-audit-cell-text {
+  display: -webkit-box;
+  overflow: hidden;
+  max-width: 100%;
+  color: var(--lqc-terminal-text) !important;
+  line-height: 1.42;
+  white-space: normal;
+  word-break: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.trading-page .data-table--trading-signals .ant-table-cell,
+.trading-page .data-table--trading-positions .ant-table-cell,
+.trading-page .data-table--trading-orders .ant-table-cell,
+.trading-page .data-table--trading-trades .ant-table-cell,
+.trading-page .data-table--trading-logs .ant-table-cell {
+  vertical-align: top;
+}
+
+.trading-page .data-table--trading-signals .ant-table-cell:nth-child(1),
+.trading-page .data-table--trading-signals .ant-table-cell:nth-child(5),
+.trading-page .data-table--trading-signals .ant-table-cell:nth-child(6),
+.trading-page .data-table--trading-positions .ant-table-cell:nth-child(1),
+.trading-page .data-table--trading-positions .ant-table-cell:nth-child(3),
+.trading-page .data-table--trading-positions .ant-table-cell:nth-child(4),
+.trading-page .data-table--trading-positions .ant-table-cell:nth-child(5),
+.trading-page .data-table--trading-positions .ant-table-cell:nth-child(6),
+.trading-page .data-table--trading-positions .ant-table-cell:nth-child(7),
+.trading-page .data-table--trading-positions .ant-table-cell:nth-child(8),
+.trading-page .data-table--trading-orders .ant-table-cell:nth-child(1),
+.trading-page .data-table--trading-orders .ant-table-cell:nth-child(2),
+.trading-page .data-table--trading-orders .ant-table-cell:nth-child(3),
+.trading-page .data-table--trading-orders .ant-table-cell:nth-child(6),
+.trading-page .data-table--trading-orders .ant-table-cell:nth-child(7),
+.trading-page .data-table--trading-orders .ant-table-cell:nth-child(8),
+.trading-page .data-table--trading-orders .ant-table-cell:nth-child(11),
+.trading-page .data-table--trading-trades .ant-table-cell:nth-child(1),
+.trading-page .data-table--trading-trades .ant-table-cell:nth-child(2),
+.trading-page .data-table--trading-trades .ant-table-cell:nth-child(3),
+.trading-page .data-table--trading-trades .ant-table-cell:nth-child(6),
+.trading-page .data-table--trading-trades .ant-table-cell:nth-child(7),
+.trading-page .data-table--trading-trades .ant-table-cell:nth-child(8),
+.trading-page .data-table--trading-trades .ant-table-cell:nth-child(9),
+.trading-page .data-table--trading-logs .ant-table-cell:nth-child(1),
+.trading-page .data-table--trading-logs .ant-table-cell:nth-child(2) {
+  font-family: var(--lqc-font-number);
+  white-space: nowrap;
+}
+
+.trading-page .data-table--trading-signals .ant-table-cell:nth-child(2) .trading-audit-cell-text,
+.trading-page .data-table--trading-signals .ant-table-cell:nth-child(3) .trading-audit-cell-text,
+.trading-page .data-table--trading-positions .ant-table-cell:nth-child(2) .trading-audit-cell-text,
+.trading-page .data-table--trading-orders .ant-table-cell:nth-child(4) .trading-audit-cell-text,
+.trading-page .data-table--trading-orders .ant-table-cell:nth-child(12) .trading-audit-cell-text,
+.trading-page .data-table--trading-trades .ant-table-cell:nth-child(4) .trading-audit-cell-text,
+.trading-page .data-table--trading-trades .ant-table-cell:nth-child(11) .trading-audit-cell-text,
+.trading-page .data-table--trading-logs .ant-table-cell:nth-child(4) .trading-audit-cell-text,
+.trading-page .data-table--trading-logs .ant-table-cell:nth-child(5) .trading-audit-cell-text {
+  min-height: 32px;
+}
+
+.trading-page .data-table--trading-signals .ant-table-cell-fix-left,
+.trading-page .data-table--trading-positions .ant-table-cell-fix-left,
+.trading-page .data-table--trading-orders .ant-table-cell-fix-left,
+.trading-page .data-table--trading-trades .ant-table-cell-fix-left,
+.trading-page .data-table--trading-logs .ant-table-cell-fix-left {
+  box-shadow: 1px 0 0 var(--lqc-terminal-line) !important;
+}
+
+.trading-page .data-table--trading-signals .ant-table-cell-fix-right,
+.trading-page .data-table--trading-positions .ant-table-cell-fix-right,
+.trading-page .data-table--trading-orders .ant-table-cell-fix-right,
+.trading-page .data-table--trading-trades .ant-table-cell-fix-right,
+.trading-page .data-table--trading-logs .ant-table-cell-fix-right {
+  box-shadow: -1px 0 0 var(--lqc-terminal-line) !important;
+}
+
+.trading-page .data-table--trading-signals .ant-btn-sm,
+.trading-page .data-table--trading-positions .ant-btn-sm,
+.trading-page .data-table--trading-orders .ant-btn-sm,
+.trading-page .data-table--trading-trades .ant-btn-sm,
+.trading-page .data-table--trading-logs .ant-btn-sm {
+  min-width: 56px;
+  white-space: nowrap;
+}
+
+.trading-page .data-table--trading-signals .table-action-group,
+.trading-page .data-table--trading-positions .table-action-group,
+.trading-page .data-table--trading-orders .table-action-group,
+.trading-page .data-table--trading-trades .table-action-group,
+.trading-page .data-table--trading-logs .table-action-group {
+  min-width: 112px;
+}
+
+.trading-page .data-table--trading-signals .ant-table-thead > tr > th,
+.trading-page .data-table--trading-positions .ant-table-thead > tr > th,
+.trading-page .data-table--trading-orders .ant-table-thead > tr > th,
+.trading-page .data-table--trading-trades .ant-table-thead > tr > th,
+.trading-page .data-table--trading-logs .ant-table-thead > tr > th {
+  line-height: 1.25;
+}
+
+.trading-page .ant-input,
+.trading-page .ant-input-affix-wrapper,
+.trading-page .ant-input-number,
+.trading-page .ant-select-selector {
+  height: 28px !important;
+  min-height: 28px !important;
+  font-size: 12px !important;
+}
+
+.trading-page .ant-input,
+.trading-page .ant-input-number-input {
+  line-height: 28px !important;
+}
+
+.trading-page .ant-input-number-input {
+  height: 28px !important;
+  padding: 0 8px !important;
+}
+
+.trading-page .ant-select-selection-item,
+.trading-page .ant-select-selection-placeholder {
+  line-height: 26px !important;
+}
+
+.trading-page .ant-pagination {
+  margin-bottom: 0 !important;
+}
+
+.trading-confirm-modal.ant-modal-confirm {
+  width: min(var(--lqc-modal-confirm-width), calc(100vw - 48px)) !important;
+}
+
+.trading-confirm-modal .ant-modal-content {
+  border: 1px solid var(--lqc-terminal-line);
+  border-radius: 0;
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-panel);
+  box-shadow: 0 24px 60px rgba(var(--lqc-shadow-rgb), 0.42);
+}
+
+.trading-confirm-modal .ant-modal-confirm-title,
+.trading-confirm-modal .ant-modal-confirm-content,
+.trading-confirm-modal .ant-typography {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.trading-confirm-modal .ant-modal-confirm-content {
+  max-height: var(--lqc-modal-content-max-height);
+  overflow: auto;
+}
+
+.trading-confirm-modal .risk-confirm-content__details .ant-descriptions-item-label {
+  width: 112px;
+}
+
+/* QA right-panel pass: order ticket and confirmation-side details match the terminal inspector standard. */
+.trading-page .order-ticket {
+  border-left: 2px solid var(--trade-red) !important;
+}
+
+.trading-page .order-ticket--sell {
+  border-left-color: var(--trade-green) !important;
+}
+
+.trading-page .order-ticket--readonly {
+  border-left-color: var(--lqc-terminal-orange) !important;
+}
+
+.trading-page .order-ticket::before {
+  display: none;
+}
+
+.trading-page .order-ticket__head {
+  min-height: 34px;
+  margin: -9px -9px 8px;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-panel-2);
+}
+
+.trading-page .order-ticket__eyebrow {
+  margin-bottom: 1px;
+  color: var(--lqc-terminal-muted) !important;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.trading-page .order-ticket__title {
+  color: var(--lqc-terminal-text) !important;
+  font-size: 14px !important;
+  line-height: 18px !important;
+}
+
+.trading-page .order-ticket__summary {
+  gap: 1px;
+  margin: 2px 0 8px;
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-line);
+}
+
+.trading-page .order-ticket__summary span {
+  min-height: 42px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.trading-page .order-ticket__summary strong {
+  font-family: var(--lqc-font-number);
+  font-size: 12px;
+}
+
+.trading-page .order-ticket__amount {
+  min-height: 28px;
+  border-radius: 0;
+}
+
+.trading-page .order-ticket__actions {
+  padding-top: 0;
+}
+
+/* QA final pass: deep trading tables must not fall back to default AntD light chrome. */
+.trading-page .data-table--trading-signals .data-table__table,
+.trading-page .data-table--trading-positions .data-table__table,
+.trading-page .data-table--trading-orders .data-table__table,
+.trading-page .data-table--trading-trades .data-table__table,
+.trading-page .data-table--trading-logs .data-table__table {
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.trading-page .data-table--trading-signals .ant-table,
+.trading-page .data-table--trading-positions .ant-table,
+.trading-page .data-table--trading-orders .ant-table,
+.trading-page .data-table--trading-trades .ant-table,
+.trading-page .data-table--trading-logs .ant-table,
+.trading-page .data-table--trading-signals .ant-table-container,
+.trading-page .data-table--trading-positions .ant-table-container,
+.trading-page .data-table--trading-orders .ant-table-container,
+.trading-page .data-table--trading-trades .ant-table-container,
+.trading-page .data-table--trading-logs .ant-table-container,
+.trading-page .data-table--trading-signals .ant-table-content,
+.trading-page .data-table--trading-positions .ant-table-content,
+.trading-page .data-table--trading-orders .ant-table-content,
+.trading-page .data-table--trading-trades .ant-table-content,
+.trading-page .data-table--trading-logs .ant-table-content {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.trading-page .data-table--trading-signals .ant-table-tbody > tr > td,
+.trading-page .data-table--trading-positions .ant-table-tbody > tr > td,
+.trading-page .data-table--trading-orders .ant-table-tbody > tr > td,
+.trading-page .data-table--trading-trades .ant-table-tbody > tr > td,
+.trading-page .data-table--trading-logs .ant-table-tbody > tr > td {
+  height: 38px;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.trading-page .data-table--trading-signals .ant-table-tbody > tr:nth-child(even) > td,
+.trading-page .data-table--trading-positions .ant-table-tbody > tr:nth-child(even) > td,
+.trading-page .data-table--trading-orders .ant-table-tbody > tr:nth-child(even) > td,
+.trading-page .data-table--trading-trades .ant-table-tbody > tr:nth-child(even) > td,
+.trading-page .data-table--trading-logs .ant-table-tbody > tr:nth-child(even) > td {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.trading-page .data-table--trading-signals .ant-table-tbody > tr:hover > td,
+.trading-page .data-table--trading-positions .ant-table-tbody > tr:hover > td,
+.trading-page .data-table--trading-orders .ant-table-tbody > tr:hover > td,
+.trading-page .data-table--trading-trades .ant-table-tbody > tr:hover > td,
+.trading-page .data-table--trading-logs .ant-table-tbody > tr:hover > td {
+  background: var(--lqc-terminal-active) !important;
+}
+
+.trading-page .data-table--trading-signals .ant-table-placeholder > td,
+.trading-page .data-table--trading-positions .ant-table-placeholder > td,
+.trading-page .data-table--trading-orders .ant-table-placeholder > td,
+.trading-page .data-table--trading-trades .ant-table-placeholder > td,
+.trading-page .data-table--trading-logs .ant-table-placeholder > td {
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.trading-page .data-table--trading-signals .ant-table-sticky-scroll,
+.trading-page .data-table--trading-positions .ant-table-sticky-scroll,
+.trading-page .data-table--trading-orders .ant-table-sticky-scroll,
+.trading-page .data-table--trading-trades .ant-table-sticky-scroll,
+.trading-page .data-table--trading-logs .ant-table-sticky-scroll {
+  height: 8px !important;
+  background: var(--lqc-scrollbar-track) !important;
+}
+
+.trading-page .data-table--trading-signals .ant-table-sticky-scroll-bar,
+.trading-page .data-table--trading-positions .ant-table-sticky-scroll-bar,
+.trading-page .data-table--trading-orders .ant-table-sticky-scroll-bar,
+.trading-page .data-table--trading-trades .ant-table-sticky-scroll-bar,
+.trading-page .data-table--trading-logs .ant-table-sticky-scroll-bar {
+  height: 8px !important;
+  border-radius: 999px;
+  background: var(--lqc-scrollbar-thumb) !important;
+}
+
+.trading-page .data-table--trading-signals .ant-table-pagination.ant-pagination,
+.trading-page .data-table--trading-positions .ant-table-pagination.ant-pagination,
+.trading-page .data-table--trading-orders .ant-table-pagination.ant-pagination,
+.trading-page .data-table--trading-trades .ant-table-pagination.ant-pagination,
+.trading-page .data-table--trading-logs .ant-table-pagination.ant-pagination {
+  margin: 8px 0 0 !important;
+  padding-top: 8px;
+  border-top: 1px solid var(--lqc-terminal-line);
+}
+
+.trading-page .data-table--trading-signals .ant-pagination-item,
+.trading-page .data-table--trading-positions .ant-pagination-item,
+.trading-page .data-table--trading-orders .ant-pagination-item,
+.trading-page .data-table--trading-trades .ant-pagination-item,
+.trading-page .data-table--trading-logs .ant-pagination-item,
+.trading-page .data-table--trading-signals .ant-pagination-prev .ant-pagination-item-link,
+.trading-page .data-table--trading-positions .ant-pagination-prev .ant-pagination-item-link,
+.trading-page .data-table--trading-orders .ant-pagination-prev .ant-pagination-item-link,
+.trading-page .data-table--trading-trades .ant-pagination-prev .ant-pagination-item-link,
+.trading-page .data-table--trading-logs .ant-pagination-prev .ant-pagination-item-link,
+.trading-page .data-table--trading-signals .ant-pagination-next .ant-pagination-item-link,
+.trading-page .data-table--trading-positions .ant-pagination-next .ant-pagination-item-link,
+.trading-page .data-table--trading-orders .ant-pagination-next .ant-pagination-item-link,
+.trading-page .data-table--trading-trades .ant-pagination-next .ant-pagination-item-link,
+.trading-page .data-table--trading-logs .ant-pagination-next .ant-pagination-item-link {
+  border-color: var(--lqc-terminal-line-strong) !important;
+  color: var(--lqc-terminal-text) !important;
+  background: var(--lqc-terminal-panel) !important;
+}
+
+.trading-page .data-table--trading-signals .ant-pagination-item-active,
+.trading-page .data-table--trading-positions .ant-pagination-item-active,
+.trading-page .data-table--trading-orders .ant-pagination-item-active,
+.trading-page .data-table--trading-trades .ant-pagination-item-active,
+.trading-page .data-table--trading-logs .ant-pagination-item-active {
+  border-color: var(--lqc-action-primary-bg) !important;
+  background: var(--lqc-info-soft-bg) !important;
+}
+
+/* Device density: trading record tables are primary terminal surfaces on
+   large screens, so they should not collapse into a short strip above a
+   blank lower half. */
+@media (min-width: 1281px) {
+  .trading-page .trading-signal-layout__table {
+    min-height: clamp(640px, calc(100vh - var(--lqc-status-height, 40px) - 332px), 900px);
+  }
+
+  .trading-page .data-table--trading-signals .data-table__table .ant-table,
+  .trading-page .data-table--trading-positions .data-table__table .ant-table,
+  .trading-page .data-table--trading-orders .data-table__table .ant-table,
+  .trading-page .data-table--trading-trades .data-table__table .ant-table,
+  .trading-page .data-table--trading-logs .data-table__table .ant-table {
+    min-height: clamp(620px, calc(100vh - var(--lqc-status-height, 40px) - 340px), 860px);
+  }
+}
+
+@media (min-width: 2800px) and (min-height: 1600px) {
+  .trading-page .trading-signal-layout__table {
+    min-height: clamp(900px, calc(100vh - var(--lqc-status-height, 40px) - 332px), 1080px);
+  }
+
+  .trading-page .data-table--trading-signals .data-table__table .ant-table,
+  .trading-page .data-table--trading-positions .data-table__table .ant-table,
+  .trading-page .data-table--trading-orders .data-table__table .ant-table,
+  .trading-page .data-table--trading-trades .data-table__table .ant-table,
+  .trading-page .data-table--trading-logs .data-table__table .ant-table {
+    min-height: clamp(860px, calc(100vh - var(--lqc-status-height, 40px) - 340px), 1040px);
+  }
+}
+
+/* Device density follow-up: signal order list uses a table + safety guard workspace. */
+.trading-page .trading-signal-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(292px, 344px);
+  gap: var(--lqc-module-grid-gap, 8px);
+  align-items: start;
+}
+
+.trading-page .trading-signal-layout__table {
+  min-width: 0;
+}
+
+.trading-page .trading-signal-layout__rail {
+  min-width: 0;
+  min-height: 268px;
+  padding: 7px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 7px;
+  border: 1px solid var(--lqc-terminal-line);
+  background:
+    linear-gradient(180deg, rgba(var(--lqc-danger-rgb), 0.08), transparent 42%),
+    var(--lqc-terminal-sunken);
+}
+
+.trading-page .trading-signal-flow-head {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  padding: 0 2px 5px;
+  border-bottom: 1px solid var(--lqc-terminal-line);
+}
+
+.trading-page .trading-signal-flow-head__eyebrow {
+  color: var(--lqc-danger-text) !important;
+  font-family: var(--lqc-font-code), var(--lqc-font-number), Consolas, monospace;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.08em;
+}
+
+.trading-page .trading-signal-flow-head__title {
+  color: var(--lqc-terminal-text) !important;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.trading-page .trading-signal-flow-head__desc {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--lqc-terminal-muted) !important;
+  font-size: 11px;
+  line-height: 1.4;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.trading-page .trading-signal-flow-list {
+  min-height: 0;
+  display: grid;
+  gap: 1px;
+  align-content: start;
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-line);
+}
+
+.trading-page .trading-signal-flow-step {
+  min-height: 44px;
+  padding: 6px 8px;
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+  background: var(--lqc-terminal-panel);
+}
+
+.trading-page .trading-signal-flow-step__icon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lqc-danger-text);
+  border: 1px solid var(--lqc-danger-border-soft);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.trading-page .trading-signal-flow-step__body {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.trading-page .trading-signal-flow-step__body .ant-typography {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.trading-page .trading-signal-flow-step__body .ant-typography-secondary {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--lqc-terminal-muted) !important;
+  font-size: 11px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.trading-page .trading-signal-flow-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.trading-page .trading-signal-flow-actions .ant-btn,
+.trading-page .trading-signal-flow-actions a {
+  width: 100%;
+  min-width: 0;
+}
+
+.trading-page .trading-signal-flow-actions .ant-btn {
+  padding-inline: 6px;
+}
+
+@media (max-width: 1280px) {
+  .trading-page .trading-signal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .trading-page .trading-signal-layout__rail {
+    min-height: 0;
+    grid-template-rows: auto auto;
+  }
+
+  .trading-page .trading-signal-flow-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1600px) and (max-height: 900px) {
+  .trading-page .trading-signal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .trading-page .trading-signal-layout__rail {
+    min-height: 0;
+    grid-template-rows: auto auto;
+  }
+
+  .trading-page .trading-signal-flow-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* UI-IA-CLOSEOUT-20260525:
+   Trading is a terminal workflow. Keep the safety state visible, but remove
+   repeated explanatory copy from the first screen so order tables and tickets
+   do not get pushed below the fold. */
+@media (max-width: 1600px) and (max-height: 900px) {
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .page-header-panel {
+    min-height: 34px !important;
+    padding: 3px 8px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .command-panel.command-panel {
+    min-height: 34px !important;
+    max-height: 36px !important;
+    height: 36px !important;
+    padding: 3px 7px !important;
+    display: grid !important;
+    align-items: center !important;
+    overflow: hidden !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .command-panel__copy {
+    min-width: 0 !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .command-panel__eyebrow,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .command-panel__description,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .command-panel__actions,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .command-panel__items,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .command-panel__item-helper {
+    display: none !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .command-panel__title {
+    margin: 0 !important;
+    overflow: hidden !important;
+    font-size: 13px !important;
+    line-height: 18px !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-guard-rail {
+    min-height: 32px !important;
+    max-height: 34px !important;
+    display: grid !important;
+    overflow: hidden !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-guard-rail__item {
+    min-height: 32px !important;
+    padding: 4px 7px !important;
+    align-content: center !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-guard-rail__item .ant-typography:first-child {
+    font-size: 12px !important;
+    line-height: 16px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-guard-rail__item .ant-typography-secondary {
+    display: none !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-overview {
+    margin: 0 !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-overview .ant-col {
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-overview .metric-card.ant-card {
+    max-height: 48px !important;
+    min-height: 48px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-overview .metric-card.ant-card .ant-card-body {
+    height: 48px !important;
+    min-height: 48px !important;
+    padding: 4px 7px !important;
+    overflow: hidden !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-overview .metric-card-label {
+    font-size: 10px !important;
+    line-height: 13px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-overview .metric-card-value {
+    font-size: 13px !important;
+    line-height: 16px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-overview .metric-card-subvalue,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-overview .metric-card__icon {
+    display: none !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .workbench-nav__item {
+    min-height: 32px !important;
+    padding: 4px 7px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .workbench-nav__item-description {
+    display: none !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-tabs > .ant-tabs-nav {
+    min-height: 30px !important;
+    margin-bottom: 3px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-tabs .ant-tabs-tab {
+    min-height: 30px !important;
+    padding: 4px 8px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-signal-layout__table,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-manual-workbench {
+    min-height: calc(100vh - var(--lqc-status-height, 40px) - var(--lqc-shell-bottom-height, 24px) - 270px) !important;
+  }
+}
+
+@media (min-width: 2400px) {
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-signal-layout__table,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-manual-workbench {
+    min-height: 560px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .trading-page .trading-signal-flow-list,
+  .trading-page .trading-signal-flow-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Device density follow-up: manual trading panel is a real workstation,
+   not a shallow form strip. Keep semantics untouched and fill large screens
+   with verification surfaces the user needs before/after submitting. */
+.trading-page .trading-manual-workbench {
+  display: grid;
+  gap: 8px;
+}
+
+.trading-page .trading-manual-workbench__grid {
+  align-items: stretch;
+}
+
+.trading-page .trading-manual-workbench__grid > .ant-col {
+  display: flex;
+}
+
+.trading-page .trading-manual-workbench__grid > .ant-col > .section-card {
+  width: 100%;
+}
+
+.trading-page .trading-submit-trace {
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-line);
+}
+
+.trading-page .trading-submit-trace__item {
+  min-height: 58px;
+  padding: 7px 8px;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  column-gap: 8px;
+  row-gap: 2px;
+  align-items: start;
+  background: var(--lqc-terminal-panel);
+}
+
+.trading-page .trading-submit-trace__item span {
+  width: 24px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lqc-link-hover);
+  border: 1px solid var(--lqc-info-border-soft);
+  background: var(--lqc-info-soft-bg);
+  font-family: var(--lqc-font-number);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.trading-page .trading-submit-trace__item strong {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--lqc-terminal-text);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.trading-page .trading-submit-trace__item em {
+  min-width: 0;
+  grid-column: 2;
+  color: var(--lqc-terminal-muted);
+  font-size: 11px;
+  font-style: normal;
+  line-height: 1.35;
+}
+
+.trading-page .trading-panel-lifecycle {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(92px, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-line);
+}
+
+.trading-page .trading-panel-lifecycle .order-lifecycle__step {
+  min-height: 42px;
+  padding: 6px 8px;
+}
+
+.trading-page .trading-panel-boundary {
+  min-height: 42px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-line);
+}
+
+.trading-page .trading-panel-boundary span {
+  min-width: 0;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  color: var(--lqc-terminal-muted);
+  background: var(--lqc-terminal-panel);
+  font-size: 12px;
+}
+
+@media (min-width: 1281px) {
+  .trading-page .trading-manual-workbench {
+    min-height: clamp(560px, calc(100vh - var(--lqc-status-height, 40px) - 520px), 860px);
+  }
+
+  .trading-page .trading-manual-workbench__grid > .ant-col > .section-card > .ant-card-body {
+    min-height: 410px;
+  }
+}
+
+@media (min-width: 2400px) {
+  .trading-page .trading-manual-workbench {
+    min-height: clamp(740px, calc(100vh - var(--lqc-status-height, 40px) - 500px), 980px);
+  }
+
+  .trading-page .trading-manual-workbench__grid > .ant-col > .section-card > .ant-card-body {
+    min-height: 500px;
+  }
+
+  .trading-page .trading-submit-trace__item {
+    min-height: 66px;
+  }
+}
+
+@media (min-width: 2800px) and (min-height: 1600px) {
+  .trading-page .trading-manual-workbench {
+    min-height: clamp(1040px, calc(100vh - var(--lqc-status-height, 40px) - 390px), 1220px);
+  }
+
+  .trading-page .trading-manual-workbench__grid > .ant-col > .section-card > .ant-card-body {
+    min-height: 620px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .trading-page .trading-panel-lifecycle {
+    grid-template-columns: repeat(4, minmax(112px, 1fr));
+  }
+
+  .trading-page .trading-panel-boundary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .trading-page .trading-panel-lifecycle,
+  .trading-page .trading-panel-boundary {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* UI-DEEP-RERUN-CLOSEOUT-20260525:
+   1512x758 is the strict MacBook working area. The large-screen stretch rules
+   above are intentionally disabled here so tables do not run into the bottom
+   status bar while the 27-inch layouts can still use the larger workbench. */
+@media (max-width: 1600px) and (max-height: 900px) {
+  .trading-page .page-header-panel {
+    min-height: 38px;
+    padding: 4px 8px;
+  }
+
+  .trading-page .command-panel {
+    min-height: 54px;
+    padding: 6px 8px;
+    grid-template-columns: 1fr;
+  }
+
+  .trading-page .command-panel__description {
+    -webkit-line-clamp: 1;
+  }
+
+  .trading-page .command-panel__items,
+  .trading-page .command-panel__actions {
+    display: none;
+  }
+
+  .trading-page .trading-overview .metric-card.ant-card .ant-card-body {
+    min-height: 48px;
+    padding: 6px 8px !important;
+  }
+
+  .trading-page .trading-overview .metric-card-value {
+    font-size: 14px !important;
+  }
+
+  .trading-page .trading-overview .metric-card-subvalue {
+    display: none !important;
+  }
+
+  .trading-page .trading-overview .metric-card__icon {
+    display: none;
+  }
+
+  .trading-page .workbench-nav__item {
+    min-height: 40px;
+    padding: 6px 8px;
+  }
+
+  .trading-page .trading-signal-layout__table,
+  .trading-page .trading-manual-workbench {
+    min-height: 0 !important;
+  }
+
+  .trading-page .trading-manual-workbench__grid > .ant-col > .section-card > .ant-card-body {
+    min-height: 0 !important;
+  }
+
+  .trading-page .trading-submit-trace-card .ant-card-head {
+    min-height: 28px !important;
+  }
+
+  .trading-page .trading-submit-trace-card .ant-card-body {
+    padding: 5px !important;
+  }
+
+  .trading-page .trading-submit-trace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .trading-page .trading-submit-trace__item {
+    min-height: 34px;
+    padding: 5px 6px;
+    grid-template-columns: 22px minmax(54px, 0.32fr) minmax(0, 1fr);
+    column-gap: 6px;
+    align-items: center;
+  }
+
+  .trading-page .trading-submit-trace__item span {
+    width: 20px;
+    height: 20px;
+  }
+
+  .trading-page .trading-submit-trace__item em {
+    grid-column: auto;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  .trading-page .data-table--trading-signals .data-table__table .ant-table,
+  .trading-page .data-table--trading-positions .data-table__table .ant-table,
+  .trading-page .data-table--trading-orders .data-table__table .ant-table,
+  .trading-page .data-table--trading-trades .data-table__table .ant-table,
+  .trading-page .data-table--trading-logs .data-table__table .ant-table {
+    min-height: 0 !important;
+  }
+
+  .trading-page .data-table--trading-signals .ant-table-tbody > tr > td,
+  .trading-page .data-table--trading-positions .ant-table-tbody > tr > td,
+  .trading-page .data-table--trading-orders .ant-table-tbody > tr > td,
+  .trading-page .data-table--trading-trades .ant-table-tbody > tr > td,
+  .trading-page .data-table--trading-logs .ant-table-tbody > tr > td {
+    height: 32px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .trading-page .data-table--trading-signals .ant-table-placeholder > td,
+  .trading-page .data-table--trading-trades .ant-table-placeholder > td,
+  .trading-page .data-table--trading-logs .ant-table-placeholder > td {
+    height: 78px !important;
+  }
+
+  .trading-page :is(.ant-btn, .ant-btn-sm, .ant-select-selector, .ant-input, .ant-input-affix-wrapper, .ant-switch) {
+    min-height: 30px !important;
+    height: 30px !important;
+    line-height: 28px !important;
+  }
+
+  .trading-page .ant-switch {
+    min-width: 44px !important;
+  }
+
+  .trading-page a:has(.ant-btn) {
+    min-height: 30px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .trading-page .command-panel {
+    min-height: 40px !important;
+    max-height: 42px !important;
+    overflow: hidden !important;
+  }
+
+  .trading-page .trading-overview .metric-card.ant-card {
+    max-height: 50px !important;
+    overflow: hidden !important;
+  }
+
+  .trading-page .data-table__table .ant-table-placeholder,
+  .trading-page .data-table__table .ant-table-tbody > tr.ant-table-placeholder > td {
+    height: 48px !important;
+    min-height: 40px !important;
+    max-height: 48px !important;
+    padding: 0 !important;
+  }
+
+  .trading-page .empty-guide.empty-guide {
+    height: 40px !important;
+    min-height: 40px !important;
+    max-height: 48px !important;
+    margin: 0 !important;
+    padding: 4px 8px !important;
+  }
+}
+
+/* UI-IA-CLOSEOUT-HARD-STOP-20260525:
+   Last rule wins over older Mac fallbacks above. */
+@media (max-width: 1600px) and (max-height: 900px) {
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .command-panel.command-panel {
+    height: 36px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+    padding: 3px 7px !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    overflow: hidden !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .command-panel.command-panel .command-panel__eyebrow,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .command-panel.command-panel .command-panel__description,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .command-panel.command-panel .command-panel__items,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .command-panel.command-panel .command-panel__actions {
+    display: none !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .command-panel.command-panel .command-panel__title {
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 18px !important;
+    white-space: nowrap !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-overview .metric-card.ant-card {
+    height: 48px !important;
+    min-height: 48px !important;
+    max-height: 48px !important;
+    overflow: hidden !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-overview .metric-card.ant-card .ant-card-body {
+    height: 48px !important;
+    min-height: 48px !important;
+    max-height: 48px !important;
+    padding: 4px 7px !important;
+    overflow: hidden !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-overview .metric-card-subvalue,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-overview .metric-card__icon,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-overview .metric-card__footer {
+    display: none !important;
+  }
+}
+
+/* UI-CLOSEOUT-CONTROLS-20260525:
+   Keep table controls on the same terminal density even when older page rules
+   above set generic Ant controls back to 32px. */
+.trading-page .data-table__table .ant-table-pagination.ant-pagination :is(
+  .ant-pagination-item,
+  .ant-pagination-prev,
+  .ant-pagination-next,
+  .ant-pagination-jump-prev,
+  .ant-pagination-jump-next,
+  .ant-pagination-item-link,
+  .ant-select-selector,
+  .ant-pagination-options-quick-jumper input
+) {
+  height: 30px !important;
+  min-height: 30px !important;
+  line-height: 28px !important;
+}
+
+.trading-page .data-table__table .ant-table-pagination.ant-pagination :is(
+  .ant-pagination-item a,
+  .ant-pagination-prev button,
+  .ant-pagination-next button,
+  .ant-pagination-jump-prev a,
+  .ant-pagination-jump-next a,
+  .ant-select-selection-item,
+  .ant-select-selection-placeholder
+) {
+  height: 30px !important;
+  min-height: 30px !important;
+  line-height: 28px !important;
+}
+
+.trading-page .data-table__table :is(.table-action-group .ant-btn, .task-action-group--inline .ant-btn, td .ant-btn.ant-btn-sm) {
+  height: 28px !important;
+  min-height: 28px !important;
+  max-height: 30px !important;
+  line-height: 26px !important;
+  padding-block: 0 !important;
+}
+
+/* UI-CLOSEOUT-TRADING-SAFETY-RAIL-20260525:
+   Signal trading needs a safety inspector, not a full-width banner. Preserve
+   the confirmation semantics while restoring the compact right-rail shape on
+   MacBook browser-safe work areas. */
+@media (min-width: 1281px) and (max-width: 1600px) and (max-height: 900px) {
+  .trading-page .trading-signal-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 344px) !important;
+    align-items: start !important;
+  }
+
+  .trading-page .trading-tabs {
+    min-height: 476px !important;
+  }
+
+  .trading-page .trading-tabs .ant-tabs-content-holder {
+    min-height: 428px !important;
+  }
+
+  .trading-page .trading-signal-layout__rail {
+    width: 100%;
+    max-width: 344px;
+    max-height: 336px;
+    min-height: 0;
+    overflow: auto;
+  }
+
+  .trading-page .trading-signal-flow-head__desc {
+    -webkit-line-clamp: 1;
+  }
+
+  .trading-page .trading-signal-flow-list {
+    grid-template-columns: 1fr;
+  }
+
+  .trading-page .trading-signal-flow-step {
+    min-height: 34px;
+    padding: 5px 7px;
+  }
+
+  .trading-page .trading-signal-flow-step__body .ant-typography-secondary {
+    display: none;
+  }
+
+  .trading-page .trading-signal-flow-actions {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .trading-page .trading-record-workbench.section-card.ant-card {
+    min-height: 462px !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .trading-page .trading-record-workbench.section-card.ant-card > .ant-card-body {
+    flex: 1 1 auto !important;
+    min-height: 366px !important;
+    display: grid !important;
+    grid-template-rows: minmax(0, 1fr) !important;
+  }
+
+  .trading-page .trading-record-workbench .data-table {
+    min-height: 0 !important;
+    display: grid !important;
+    grid-template-rows: auto minmax(0, 1fr) !important;
+  }
+
+  .trading-page .trading-record-workbench .data-table__table {
+    min-height: 0 !important;
+    display: grid !important;
+    grid-template-rows: minmax(0, 1fr) auto !important;
+  }
+
+  .trading-page .trading-record-workbench .data-table__table .ant-table,
+  .trading-page .trading-record-workbench .data-table__table .ant-table-container,
+  .trading-page .trading-record-workbench .data-table__table .ant-table-content {
+    min-height: 252px !important;
+  }
+}
+
+/* UI-CLOSEOUT-LARGE-WORKBENCH-20260525:
+   27-inch work areas should read like a terminal workstation instead of a
+   short form followed by empty floor space. Keep the Mac compact rules above
+   untouched, and only stretch the manual trading workspace within the height
+   guardrails asserted by device-density tests. */
+@media (min-width: 2200px) and (max-width: 2800px) and (min-height: 1100px) {
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-manual-workbench {
+    min-height: 890px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-manual-workbench__grid > .ant-col > .section-card > .ant-card-body {
+    min-height: 590px !important;
+  }
+}
+
+@media (min-width: 2801px) and (min-height: 1500px) {
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-manual-workbench {
+    min-height: 1176px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-manual-workbench__grid > .ant-col > .section-card > .ant-card-body {
+    min-height: 815px !important;
+  }
+}
+/* UI-THEME-CLOSEOUT-20260529:
+   Page CSS can load after global theme guards. Keep disabled/loading primary
+   controls neutral in both light and dark themes. */
+html[data-theme] body .app-shell.app-shell .trading-page.trading-page :is(
+  button.ant-btn.ant-btn-primary[disabled],
+  button.ant-btn.ant-btn-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-primary.ant-btn-loading,
+  button.ant-btn.ant-btn-color-primary[disabled],
+  button.ant-btn.ant-btn-color-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-color-primary.ant-btn-loading
+) {
+  color: var(--lqc-control-disabled-text) !important;
+  background: var(--lqc-control-disabled-bg) !important;
+  background-color: var(--lqc-control-disabled-bg) !important;
+  background-image: none !important;
+  border-color: var(--lqc-border-soft) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+html[data-theme] body .app-shell.app-shell .trading-page.trading-page :is(
+  button.ant-btn.ant-btn-primary[disabled],
+  button.ant-btn.ant-btn-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-primary.ant-btn-loading,
+  button.ant-btn.ant-btn-color-primary[disabled],
+  button.ant-btn.ant-btn-color-primary.ant-btn-disabled,
+  button.ant-btn.ant-btn-color-primary.ant-btn-loading
+) :is(span:not(.anticon), svg, .anticon) {
+  color: var(--lqc-control-disabled-text) !important;
+}
+
+html[data-theme] body .app-shell.app-shell .trading-page.trading-page button.ant-btn.ant-btn-variant-solid:is([disabled], .ant-btn-disabled, .ant-btn-loading) {
+  color: var(--lqc-control-disabled-text) !important;
+  background: var(--lqc-control-disabled-bg) !important;
+  background-color: var(--lqc-control-disabled-bg) !important;
+  background-image: none !important;
+  border-color: var(--lqc-border-soft) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+/* UI-MACBOOK14-LAYOUT-CLOSEOUT-20260529:
+   The submit-trace card is an auxiliary checklist, not a form workstation.
+   On MacBook 14 it should not stretch to the full form column height and leave
+   a mostly empty module. */
+@media (min-width: 1281px) and (max-width: 1600px) and (max-height: 900px) {
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-submit-trace-card.trading-submit-trace-card {
+    height: auto !important;
+    min-height: 0 !important;
+    align-self: start !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-submit-trace-card.trading-submit-trace-card .ant-card-body {
+    min-height: 0 !important;
+    padding: 5px !important;
+  }
+}
+
+/* UI-MACBOOK14-SHORT-VIEWPORT-GUARD-20260529:
+   The trading signal workflow must stay operable in the 1512x625 Chrome-safe
+   viewport. Compress the rail and tab workbench so bottom actions do not sit
+   underneath the shell status bar. */
+@media (min-width: 1281px) and (max-width: 1600px) and (max-height: 680px) {
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-tabs {
+    min-height: 416px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-tabs .ant-tabs-content-holder {
+    min-height: 368px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-signal-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 328px) !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-signal-layout__rail {
+    max-height: 232px !important;
+    padding: 5px !important;
+    gap: 5px !important;
+    overflow: auto !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-signal-flow-head__desc,
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-signal-flow-step__body .ant-typography-secondary {
+    display: none !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-signal-flow-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-signal-flow-step {
+    min-height: 28px !important;
+    padding: 3px 5px !important;
+    grid-template-columns: 21px minmax(0, 1fr) !important;
+    gap: 4px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-signal-flow-step__icon {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-signal-flow-actions {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-record-workbench.section-card.ant-card {
+    min-height: 360px !important;
+    max-height: calc(100vh - var(--lqc-status-height, 32px) - var(--lqc-shell-bottom-height, 22px) - 196px) !important;
+    overflow: hidden !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-record-workbench.section-card.ant-card > .ant-card-body {
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-record-workbench .data-table__table .ant-table {
+    min-height: 256px !important;
+  }
+
+  html[data-density] body .app-shell .workspace-canvas > .module-page.module-page.trading-page.trading-page .trading-record-workbench .data-table__table .ant-table-container {
+    max-height: 238px !important;
+    overflow: auto !important;
+  }
+}

@@ -1,0 +1,825 @@
+.detail-drawer .ant-drawer-content {
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-panel);
+}
+
+.ant-drawer-open > .ant-drawer-content-wrapper:has(.detail-drawer) {
+  transform: translateX(0) !important;
+}
+
+.detail-drawer.ant-drawer-right > .ant-drawer-content-wrapper {
+  width: min(var(--detail-drawer-width, 720px), calc(100vw - 32px)) !important;
+  max-width: calc(100vw - 32px) !important;
+}
+
+.detail-drawer .ant-drawer-header {
+  min-height: 48px;
+  padding: 10px 14px;
+  border-color: var(--lqc-terminal-line);
+  background: var(--lqc-terminal-panel-2);
+}
+
+.detail-drawer .ant-drawer-extra {
+  flex-shrink: 0;
+  margin-inline-start: 12px;
+}
+
+.detail-drawer .ant-drawer-extra .ant-space {
+  gap: 6px !important;
+  flex-wrap: nowrap;
+}
+
+.detail-drawer .ant-drawer-title,
+.detail-drawer .ant-drawer-title .ant-typography {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.detail-drawer__title {
+  width: 100%;
+  min-width: 0;
+}
+
+.detail-drawer__title-row {
+  width: 100%;
+  min-width: 0;
+  row-gap: 4px;
+}
+
+.detail-drawer__title-text {
+  max-width: min(420px, calc(var(--detail-drawer-width, 720px) - 260px));
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.detail-drawer__subtitle {
+  display: block;
+  max-width: min(520px, calc(var(--detail-drawer-width, 720px) - 180px));
+  overflow: hidden;
+  color: var(--lqc-terminal-muted) !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.detail-drawer .ant-drawer-close {
+  color: var(--lqc-terminal-muted);
+}
+
+.detail-drawer .ant-drawer-extra .ant-btn {
+  height: 28px;
+  min-height: 28px;
+  border-radius: 0;
+  font-size: 12px;
+}
+
+.detail-drawer .ant-btn-default {
+  color: var(--lqc-text-soft) !important;
+  border-color: var(--lqc-terminal-line-strong) !important;
+  background: var(--lqc-terminal-panel-2) !important;
+  box-shadow: none !important;
+}
+
+.detail-drawer .ant-btn-default:hover {
+  color: var(--lqc-text-inverse) !important;
+  border-color: var(--lqc-terminal-blue) !important;
+  background: var(--lqc-terminal-hover) !important;
+}
+
+.detail-drawer .ant-tag {
+  max-width: 100%;
+  margin-inline-end: 4px;
+  border-color: var(--lqc-terminal-line-strong) !important;
+  border-radius: 0;
+  color: var(--lqc-text-soft) !important;
+  background: var(--lqc-terminal-panel-2) !important;
+}
+
+.detail-drawer .ant-tag-green,
+.detail-drawer .ant-tag-success {
+  border-color: var(--lqc-success-border-soft) !important;
+  color: var(--lqc-success-text) !important;
+  background: var(--lqc-success-soft-bg) !important;
+}
+
+.detail-drawer .ant-tag-red,
+.detail-drawer .ant-tag-error {
+  border-color: var(--lqc-danger-border-soft) !important;
+  color: var(--lqc-danger-text) !important;
+  background: var(--lqc-danger-soft-bg) !important;
+}
+
+.detail-drawer .ant-tag-orange,
+.detail-drawer .ant-tag-warning {
+  border-color: var(--lqc-warning-border-soft) !important;
+  color: var(--lqc-warning-text) !important;
+  background: var(--lqc-warning-soft-bg) !important;
+}
+
+.detail-drawer .ant-tag-blue,
+.detail-drawer .ant-tag-processing {
+  border-color: var(--lqc-info-border-soft) !important;
+  color: var(--lqc-link-hover) !important;
+  background: var(--lqc-info-soft-bg) !important;
+}
+
+.detail-drawer .ant-drawer-body {
+  padding: 10px;
+  overflow: hidden auto;
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-sunken);
+  scrollbar-color: var(--lqc-scrollbar-thumb) var(--lqc-scrollbar-track);
+}
+
+.detail-drawer__content {
+  width: 100%;
+  gap: 10px !important;
+}
+
+.detail-drawer__section {
+  min-height: 64px;
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid var(--lqc-terminal-line);
+  border-radius: 0;
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-panel);
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.detail-drawer__section--message {
+  min-height: 82px;
+}
+
+.detail-drawer__section--technical {
+  min-height: 112px;
+}
+
+.detail-drawer__section--summary {
+  min-height: 0;
+  padding: 8px;
+}
+
+.detail-drawer__section--fields {
+  max-height: min(46vh, 440px);
+  overflow: auto;
+}
+
+.detail-drawer__section .ant-typography {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.detail-drawer__section .ant-typography-secondary {
+  color: var(--lqc-terminal-muted) !important;
+}
+
+.detail-drawer__section-head {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.detail-drawer__message {
+  max-height: min(16vh, 128px);
+  margin: 6px 0 0 !important;
+  padding-right: 2px;
+  overflow: auto;
+  color: var(--lqc-terminal-text);
+  font-size: 12px;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.detail-drawer__summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.detail-drawer__summary-card {
+  position: relative;
+  min-width: 0;
+  min-height: 50px;
+  padding: 7px 8px 7px 10px;
+  border: 1px solid var(--lqc-terminal-line);
+  border-left: 2px solid var(--lqc-terminal-line-strong);
+  background: var(--lqc-terminal-panel);
+  box-sizing: border-box;
+}
+
+.detail-drawer__summary-card--identity {
+  border-left-color: var(--lqc-terminal-blue);
+}
+
+.detail-drawer__summary-card--status {
+  border-left-color: var(--lqc-info-text);
+}
+
+.detail-drawer__summary-card--money {
+  border-left-color: var(--lqc-terminal-green);
+}
+
+.detail-drawer__summary-card--time {
+  border-left-color: var(--lqc-accent-violet);
+}
+
+.detail-drawer__summary-card--diagnostic {
+  border-left-color: var(--lqc-terminal-orange);
+}
+
+.detail-drawer__summary-card--tone-success {
+  background: linear-gradient(90deg, rgba(var(--lqc-success-rgb), 0.1), rgba(var(--lqc-surface-rgb), 0.92));
+}
+
+.detail-drawer__summary-card--tone-warning {
+  border-left-color: var(--lqc-terminal-orange);
+  background: linear-gradient(90deg, rgba(var(--lqc-warning-rgb), 0.12), rgba(var(--lqc-surface-rgb), 0.92));
+}
+
+.detail-drawer__summary-card--tone-danger {
+  border-left-color: var(--lqc-terminal-red);
+  background: linear-gradient(90deg, rgba(var(--lqc-danger-rgb), 0.12), rgba(var(--lqc-surface-rgb), 0.92));
+}
+
+.detail-drawer__summary-card--tone-info {
+  border-left-color: var(--lqc-terminal-blue);
+  background: linear-gradient(90deg, rgba(var(--lqc-primary-rgb), 0.12), rgba(var(--lqc-surface-rgb), 0.92));
+}
+
+.detail-drawer__summary-label {
+  display: block;
+  color: var(--lqc-terminal-muted);
+  font-size: 11px;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.detail-drawer__summary-value {
+  display: block;
+  max-width: 100%;
+  margin-top: 5px;
+  overflow: hidden;
+  color: var(--lqc-terminal-text);
+  font-family: var(--lqc-font-number);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.detail-drawer__technical {
+  max-height: min(30vh, 240px);
+  margin: 8px 0 0 !important;
+  padding: 8px;
+  border: 1px solid var(--lqc-terminal-line);
+  border-radius: 0;
+  overflow: auto;
+  color: var(--lqc-text-soft);
+  background: var(--lqc-bg-page);
+  font-family: var(--lqc-font-code, Consolas, "Courier New", monospace);
+  font-size: 11px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-word;
+  scrollbar-color: var(--lqc-scrollbar-thumb) var(--lqc-scrollbar-track);
+}
+
+.detail-drawer__section--fields::-webkit-scrollbar,
+.detail-drawer .ant-drawer-body::-webkit-scrollbar,
+.detail-drawer__message::-webkit-scrollbar,
+.detail-drawer__technical::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.detail-drawer__section--fields::-webkit-scrollbar-track,
+.detail-drawer .ant-drawer-body::-webkit-scrollbar-track,
+.detail-drawer__message::-webkit-scrollbar-track,
+.detail-drawer__technical::-webkit-scrollbar-track {
+  background: var(--lqc-scrollbar-track);
+}
+
+.detail-drawer__section--fields::-webkit-scrollbar-thumb,
+.detail-drawer .ant-drawer-body::-webkit-scrollbar-thumb,
+.detail-drawer__message::-webkit-scrollbar-thumb,
+.detail-drawer__technical::-webkit-scrollbar-thumb {
+  border: 2px solid var(--lqc-scrollbar-border);
+  border-radius: 999px;
+  background: var(--lqc-scrollbar-thumb);
+}
+
+.detail-drawer__technical code {
+  color: var(--lqc-text-soft);
+  background: transparent;
+}
+
+.detail-drawer__technical--node {
+  padding: 0;
+  white-space: normal;
+}
+
+.detail-drawer__descriptions .ant-descriptions-view,
+.detail-drawer__descriptions .ant-descriptions-row,
+.detail-drawer__descriptions .ant-descriptions-item-label,
+.detail-drawer__descriptions .ant-descriptions-item-content {
+  border-color: var(--lqc-terminal-line) !important;
+}
+
+.detail-drawer__descriptions .ant-descriptions-item-label {
+  width: 108px;
+  min-width: 108px;
+  max-width: 108px;
+  padding: 6px 8px;
+  color: var(--lqc-terminal-muted);
+  background: var(--lqc-terminal-panel-3);
+  font-size: 11px;
+}
+
+.detail-drawer__descriptions .ant-descriptions-item-content {
+  min-width: 0;
+  max-width: 100%;
+  padding: 6px 8px;
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-panel);
+  font-size: 11px;
+  line-height: 1.45;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.detail-drawer__field-value {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.detail-drawer__field-value[data-detail-field-group="money"],
+.detail-drawer__field-value[data-detail-field-group="time"],
+.detail-drawer__field-value[data-detail-field-group="identity"] {
+  font-family: var(--lqc-font-number);
+}
+
+.detail-drawer__field-value[data-detail-field-tone="success"] {
+  color: var(--lqc-success-text);
+}
+
+.detail-drawer__field-value[data-detail-field-tone="warning"] {
+  color: var(--lqc-warning-text);
+}
+
+.detail-drawer__field-value[data-detail-field-tone="danger"] {
+  color: var(--lqc-danger-text);
+}
+
+.detail-drawer__field-value[data-detail-field-tone="info"] {
+  color: var(--lqc-link-hover);
+}
+
+.detail-drawer__descriptions {
+  margin-top: 6px;
+}
+
+.detail-drawer__descriptions .ant-tag {
+  margin-bottom: 2px;
+}
+
+.detail-drawer__descriptions .ant-descriptions-table {
+  width: 100%;
+  table-layout: auto;
+}
+
+.detail-drawer__descriptions code,
+.detail-drawer__descriptions pre,
+.detail-drawer__descriptions .ant-typography {
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.detail-drawer--columns-2 .detail-drawer__descriptions .ant-descriptions-item-label {
+  width: 96px;
+  min-width: 96px;
+  max-width: 96px;
+}
+
+/* UI-25: order detail drawers use a denser workstation inspection layout. */
+.order-detail-drawer .ant-drawer-header {
+  background:
+    linear-gradient(90deg, rgba(var(--lqc-primary-rgb), 0.12), transparent 42%),
+    var(--lqc-terminal-panel-2);
+}
+
+.order-detail-drawer .detail-drawer__content {
+  gap: 8px !important;
+}
+
+.order-detail-drawer .detail-drawer__section {
+  padding: 8px;
+}
+
+.order-detail-drawer .detail-drawer__message {
+  font-size: 12px;
+}
+
+.order-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label {
+  width: 94px;
+  padding: 6px 8px;
+  color: var(--lqc-terminal-muted);
+  font-size: 11px;
+}
+
+.order-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content {
+  min-width: 0;
+  padding: 6px 8px;
+  font-family: var(--lqc-font-number);
+  font-size: 11px;
+}
+
+.order-detail-drawer .detail-drawer__technical {
+  max-height: 190px;
+  font-size: 11px;
+}
+
+.position-detail-drawer .ant-drawer-header,
+.trade-detail-drawer .ant-drawer-header,
+.execution-log-detail-drawer .ant-drawer-header {
+  background:
+    linear-gradient(90deg, rgba(var(--lqc-success-rgb), 0.1), transparent 42%),
+    var(--lqc-terminal-panel-2);
+}
+
+.trade-detail-drawer .ant-drawer-header {
+  background:
+    linear-gradient(90deg, rgba(var(--lqc-danger-rgb), 0.1), transparent 42%),
+    var(--lqc-terminal-panel-2);
+}
+
+.execution-log-detail-drawer .ant-drawer-header {
+  background:
+    linear-gradient(90deg, rgba(var(--lqc-warning-rgb), 0.1), transparent 42%),
+    var(--lqc-terminal-panel-2);
+}
+
+.position-detail-drawer .detail-drawer__content,
+.trade-detail-drawer .detail-drawer__content,
+.execution-log-detail-drawer .detail-drawer__content {
+  gap: 8px !important;
+}
+
+.position-detail-drawer .detail-drawer__section,
+.trade-detail-drawer .detail-drawer__section,
+.execution-log-detail-drawer .detail-drawer__section {
+  padding: 8px;
+}
+
+.position-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.trade-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.execution-log-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label {
+  width: 94px;
+  padding: 6px 8px;
+  color: var(--lqc-terminal-muted);
+  font-size: 11px;
+}
+
+.position-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.trade-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.execution-log-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content {
+  min-width: 0;
+  padding: 6px 8px;
+  font-family: var(--lqc-font-number);
+  font-size: 11px;
+}
+
+.position-detail-drawer .detail-drawer__technical,
+.trade-detail-drawer .detail-drawer__technical,
+.execution-log-detail-drawer .detail-drawer__technical {
+  max-height: 190px;
+  font-size: 11px;
+}
+
+/* UI-IBKR-42: unify inspection drawers across data center and backtest. */
+.data-sync-detail-drawer .ant-drawer-header,
+.data-quality-detail-drawer .ant-drawer-header,
+.data-coverage-detail-drawer .ant-drawer-header,
+.data-kline-detail-drawer .ant-drawer-header,
+.data-dictionary-detail-drawer .ant-drawer-header,
+.system-env-detail-drawer .ant-drawer-header,
+.system-log-detail-drawer .ant-drawer-header,
+.system-backup-detail-drawer .ant-drawer-header,
+.system-operation-detail-drawer .ant-drawer-header,
+.system-startup-detail-drawer .ant-drawer-header,
+.system-env-group-detail-drawer .ant-drawer-header,
+.trading-signal-reason-drawer .ant-drawer-header,
+.strategy-run-detail-drawer .ant-drawer-header,
+.strategy-version-detail-drawer .ant-drawer-header,
+.strategy-signal-detail-drawer .ant-drawer-header,
+.task-progress-detail-drawer .ant-drawer-header,
+.backtest-trade-detail-drawer .ant-drawer-header,
+.backtest-log-detail-drawer .ant-drawer-header {
+  background:
+    linear-gradient(90deg, rgba(var(--lqc-primary-rgb), 0.1), transparent 46%),
+    var(--lqc-terminal-panel-2);
+}
+
+.data-quality-detail-drawer .ant-drawer-header {
+  background:
+    linear-gradient(90deg, rgba(var(--lqc-warning-rgb), 0.11), transparent 46%),
+    var(--lqc-terminal-panel-2);
+}
+
+.data-coverage-detail-drawer .ant-drawer-header,
+.data-kline-detail-drawer .ant-drawer-header {
+  background:
+    linear-gradient(90deg, rgba(var(--lqc-success-rgb), 0.09), transparent 46%),
+    var(--lqc-terminal-panel-2);
+}
+
+.system-backup-detail-drawer .ant-drawer-header,
+.system-operation-detail-drawer .ant-drawer-header,
+.system-startup-detail-drawer .ant-drawer-header {
+  background:
+    linear-gradient(90deg, rgba(var(--lqc-warning-rgb), 0.1), transparent 46%),
+    var(--lqc-terminal-panel-2);
+}
+
+.strategy-run-detail-drawer .ant-drawer-header,
+.strategy-version-detail-drawer .ant-drawer-header,
+.strategy-signal-detail-drawer .ant-drawer-header {
+  background:
+    linear-gradient(90deg, rgba(var(--lqc-accent-violet-rgb), 0.1), transparent 46%),
+    var(--lqc-terminal-panel-2);
+}
+
+.backtest-trade-detail-drawer .ant-drawer-header {
+  background:
+    linear-gradient(90deg, rgba(var(--lqc-danger-rgb), 0.1), transparent 46%),
+    var(--lqc-terminal-panel-2);
+}
+
+.backtest-log-detail-drawer .ant-drawer-header {
+  background:
+    linear-gradient(90deg, rgba(var(--lqc-accent-violet-rgb), 0.1), transparent 46%),
+    var(--lqc-terminal-panel-2);
+}
+
+.data-sync-detail-drawer .detail-drawer__content,
+.data-quality-detail-drawer .detail-drawer__content,
+.data-coverage-detail-drawer .detail-drawer__content,
+.data-kline-detail-drawer .detail-drawer__content,
+.data-dictionary-detail-drawer .detail-drawer__content,
+.system-env-detail-drawer .detail-drawer__content,
+.system-log-detail-drawer .detail-drawer__content,
+.system-backup-detail-drawer .detail-drawer__content,
+.system-operation-detail-drawer .detail-drawer__content,
+.system-startup-detail-drawer .detail-drawer__content,
+.system-env-group-detail-drawer .detail-drawer__content,
+.trading-signal-reason-drawer .detail-drawer__content,
+.strategy-run-detail-drawer .detail-drawer__content,
+.strategy-version-detail-drawer .detail-drawer__content,
+.strategy-signal-detail-drawer .detail-drawer__content,
+.task-progress-detail-drawer .detail-drawer__content,
+.backtest-trade-detail-drawer .detail-drawer__content,
+.backtest-log-detail-drawer .detail-drawer__content,
+.order-detail-drawer .detail-drawer__content,
+.position-detail-drawer .detail-drawer__content,
+.trade-detail-drawer .detail-drawer__content,
+.execution-log-detail-drawer .detail-drawer__content {
+  gap: 8px !important;
+}
+
+.data-sync-detail-drawer .detail-drawer__section,
+.data-quality-detail-drawer .detail-drawer__section,
+.data-coverage-detail-drawer .detail-drawer__section,
+.data-kline-detail-drawer .detail-drawer__section,
+.data-dictionary-detail-drawer .detail-drawer__section,
+.system-env-detail-drawer .detail-drawer__section,
+.system-log-detail-drawer .detail-drawer__section,
+.system-backup-detail-drawer .detail-drawer__section,
+.system-operation-detail-drawer .detail-drawer__section,
+.system-startup-detail-drawer .detail-drawer__section,
+.system-env-group-detail-drawer .detail-drawer__section,
+.trading-signal-reason-drawer .detail-drawer__section,
+.strategy-run-detail-drawer .detail-drawer__section,
+.strategy-version-detail-drawer .detail-drawer__section,
+.strategy-signal-detail-drawer .detail-drawer__section,
+.task-progress-detail-drawer .detail-drawer__section,
+.backtest-trade-detail-drawer .detail-drawer__section,
+.backtest-log-detail-drawer .detail-drawer__section,
+.order-detail-drawer .detail-drawer__section,
+.position-detail-drawer .detail-drawer__section,
+.trade-detail-drawer .detail-drawer__section,
+.execution-log-detail-drawer .detail-drawer__section {
+  padding: 8px;
+}
+
+.data-sync-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.data-quality-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.data-coverage-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.data-kline-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.data-dictionary-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.system-env-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.system-log-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.system-backup-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.system-operation-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.system-startup-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.system-env-group-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.trading-signal-reason-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.strategy-run-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.strategy-version-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.strategy-signal-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.task-progress-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.backtest-trade-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.backtest-log-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.order-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.position-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.trade-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content,
+.execution-log-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-content {
+  font-family: var(--lqc-font-number);
+}
+
+.data-sync-detail-drawer .detail-drawer__technical,
+.data-quality-detail-drawer .detail-drawer__technical,
+.data-coverage-detail-drawer .detail-drawer__technical,
+.data-kline-detail-drawer .detail-drawer__technical,
+.data-dictionary-detail-drawer .detail-drawer__technical,
+.system-env-detail-drawer .detail-drawer__technical,
+.system-log-detail-drawer .detail-drawer__technical,
+.system-backup-detail-drawer .detail-drawer__technical,
+.system-operation-detail-drawer .detail-drawer__technical,
+.system-startup-detail-drawer .detail-drawer__technical,
+.system-env-group-detail-drawer .detail-drawer__technical,
+.trading-signal-reason-drawer .detail-drawer__technical,
+.strategy-run-detail-drawer .detail-drawer__technical,
+.strategy-version-detail-drawer .detail-drawer__technical,
+.strategy-signal-detail-drawer .detail-drawer__technical,
+.task-progress-detail-drawer .detail-drawer__technical,
+.backtest-trade-detail-drawer .detail-drawer__technical,
+.backtest-log-detail-drawer .detail-drawer__technical,
+.order-detail-drawer .detail-drawer__technical,
+.position-detail-drawer .detail-drawer__technical,
+.trade-detail-drawer .detail-drawer__technical,
+.execution-log-detail-drawer .detail-drawer__technical {
+  max-height: 220px;
+  font-size: 11px;
+}
+
+/* QA right-panel pass: every inspection drawer keeps the same field cadence and empty-space balance. */
+.data-sync-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.data-quality-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.data-coverage-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.data-kline-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.data-dictionary-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.backtest-trade-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.backtest-log-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.system-env-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.system-log-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.system-backup-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.system-operation-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.system-startup-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.system-env-group-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.trading-signal-reason-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.strategy-run-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.strategy-version-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.strategy-signal-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.task-progress-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.order-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.position-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.trade-detail-drawer .detail-drawer__descriptions .ant-descriptions-table,
+.execution-log-detail-drawer .detail-drawer__descriptions .ant-descriptions-table {
+  table-layout: auto;
+}
+
+.data-sync-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.data-quality-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.data-coverage-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.data-kline-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.data-dictionary-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.system-env-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.system-log-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.system-backup-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.system-operation-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.system-startup-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.system-env-group-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.trading-signal-reason-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.strategy-run-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.strategy-version-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.strategy-signal-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.task-progress-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.backtest-trade-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.backtest-log-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.order-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.position-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.trade-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label,
+.execution-log-detail-drawer .detail-drawer__descriptions .ant-descriptions-item-label {
+  width: 96px;
+  min-width: 96px;
+  max-width: 96px;
+  padding: 6px 8px;
+  color: var(--lqc-terminal-muted);
+  font-size: 11px;
+}
+
+.data-sync-detail-drawer .detail-drawer__message,
+.data-quality-detail-drawer .detail-drawer__message,
+.data-coverage-detail-drawer .detail-drawer__message,
+.data-kline-detail-drawer .detail-drawer__message,
+.data-dictionary-detail-drawer .detail-drawer__message,
+.system-env-detail-drawer .detail-drawer__message,
+.system-log-detail-drawer .detail-drawer__message,
+.system-backup-detail-drawer .detail-drawer__message,
+.system-operation-detail-drawer .detail-drawer__message,
+.system-startup-detail-drawer .detail-drawer__message,
+.system-env-group-detail-drawer .detail-drawer__message,
+.trading-signal-reason-drawer .detail-drawer__message,
+.strategy-run-detail-drawer .detail-drawer__message,
+.strategy-version-detail-drawer .detail-drawer__message,
+.strategy-signal-detail-drawer .detail-drawer__message,
+.task-progress-detail-drawer .detail-drawer__message,
+.backtest-trade-detail-drawer .detail-drawer__message,
+.backtest-log-detail-drawer .detail-drawer__message,
+.order-detail-drawer .detail-drawer__message,
+.position-detail-drawer .detail-drawer__message,
+.trade-detail-drawer .detail-drawer__message,
+.execution-log-detail-drawer .detail-drawer__message {
+  min-height: 36px;
+}
+
+.detail-drawer__descriptions .ant-descriptions-item-content .ant-tag {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* QA data detail pass: keep all data-center drawers on the same visual grid. */
+.data-center-inspection-drawer .ant-drawer-body {
+  padding: 10px;
+}
+
+.data-center-inspection-drawer .detail-drawer__section {
+  min-height: 68px;
+}
+
+.data-center-inspection-drawer .detail-drawer__section--fields {
+  max-height: min(48vh, 460px);
+}
+
+.data-center-inspection-drawer .detail-drawer__technical {
+  max-height: 220px;
+}
+
+.data-center-inspection-drawer .detail-drawer__descriptions .ant-descriptions-item-label {
+  width: 98px;
+}
+
+.strategy-version-detail-drawer .detail-drawer__section--message {
+  max-height: none;
+}
+
+.strategy-version-detail-drawer .detail-drawer__message {
+  max-height: none;
+  overflow: visible;
+}
+
+@media (max-width: 760px) {
+  .detail-drawer.ant-drawer-right > .ant-drawer-content-wrapper {
+    width: calc(100vw - 16px) !important;
+    max-width: calc(100vw - 16px) !important;
+  }
+
+  .detail-drawer .ant-drawer-header {
+    padding: 8px 10px;
+  }
+
+  .detail-drawer .ant-drawer-extra {
+    margin-inline-start: 8px;
+  }
+
+  .detail-drawer .ant-drawer-extra .ant-space {
+    gap: 6px !important;
+    flex-wrap: wrap;
+  }
+
+  .detail-drawer .ant-drawer-extra .ant-btn {
+    padding: 0 8px;
+  }
+
+  .detail-drawer__title-text,
+  .detail-drawer__subtitle {
+    max-width: calc(100vw - 250px);
+  }
+
+  .detail-drawer__section {
+    min-height: 0;
+    padding: 8px;
+  }
+
+  .detail-drawer__summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-drawer__section--fields {
+    max-height: 44vh;
+  }
+}

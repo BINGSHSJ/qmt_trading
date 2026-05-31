@@ -1,0 +1,49 @@
+{
+  "name": "local-quant-console-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 3000 --strictPort",
+    "preview": "vite preview",
+    "preview:e2e": "vite preview --host 127.0.0.1 --port 3100 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "e2e": "playwright test",
+    "e2e:smoke": "playwright test tests/e2e/smoke.spec.ts --project=chromium --workers=1",
+    "e2e:visual": "playwright test tests/e2e/visual-regression.spec.ts --project=chromium --workers=1",
+    "e2e:device-density": "playwright test tests/e2e/device-density.spec.ts --project=chromium --workers=2",
+    "e2e:device-density:capture": "set LQC_CAPTURE_DEVICE_DENSITY=1&& playwright test tests/e2e/device-density-capture.spec.ts --project=chromium --workers=1",
+    "qa:static": "npm run lint && npm run typecheck && npm run build",
+    "qa:ui": "npm run qa:static && npm run e2e:smoke && npm run e2e:visual && npm run e2e:device-density"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.5.2",
+    "@ant-design/v5-patch-for-react-19": "^1.0.3",
+    "@monaco-editor/react": "^4.7.0",
+    "antd": "^5.22.5",
+    "lightweight-charts": "^5.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.14.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.19.1",
+    "vite": "^6.0.7"
+  },
+  "overrides": {
+    "dompurify": "^3.4.2"
+  }
+}

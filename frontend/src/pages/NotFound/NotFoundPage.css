@@ -1,0 +1,34 @@
+.not-found-page {
+  min-height: calc(100vh - 112px);
+  display: flex;
+  align-items: center;
+}
+
+.not-found-page > .section-card {
+  width: 100%;
+}
+
+.not-found-page .empty-guide {
+  min-height: 128px;
+  margin: 0 !important;
+  border-left-color: var(--lqc-terminal-orange);
+}
+
+.not-found-page__detail {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 12px 12px;
+  border: 1px solid var(--lqc-terminal-line);
+  border-top: 0;
+  background: var(--lqc-terminal-sunken);
+}
+
+.not-found-page__detail .ant-typography {
+  color: var(--lqc-terminal-muted) !important;
+}
+
+.not-found-page__detail code {
+  color: var(--lqc-terminal-text) !important;
+  background: var(--lqc-terminal-panel) !important;
+}

@@ -1,0 +1,32 @@
+.financial-number {
+  color: var(--lqc-text-primary);
+  font-family: var(--lqc-font-number);
+  font-weight: 750;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: "tnum", "lnum";
+}
+
+.financial-number--primary {
+  color: var(--lqc-primary);
+}
+
+.financial-number--profit {
+  color: var(--lqc-profit-a);
+}
+
+.financial-number--loss {
+  color: var(--lqc-loss-a);
+}
+
+.financial-number--muted {
+  color: var(--lqc-text-muted);
+  font-weight: 600;
+}
+
+.financial-number__suffix {
+  margin-left: 4px;
+  color: currentColor;
+  font-size: 0.72em;
+  font-weight: 600;
+}

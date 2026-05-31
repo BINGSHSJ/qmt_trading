@@ -1,0 +1,142 @@
+.task-progress-inline.ant-card {
+  border-color: var(--lqc-terminal-line) !important;
+  border-radius: 0 !important;
+  color: var(--lqc-terminal-text) !important;
+  background: var(--lqc-terminal-panel) !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+.task-progress-inline.ant-card .ant-card-body {
+  padding: 12px 14px !important;
+  background: transparent !important;
+}
+
+.task-progress-inline__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+}
+
+.task-progress-inline__head > .ant-space {
+  min-width: 0;
+}
+
+.task-progress-inline__actions {
+  flex: 0 0 auto;
+  justify-content: flex-end;
+}
+
+.task-progress-inline__head .ant-typography {
+  max-width: min(42vw, 520px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.task-progress-inline .ant-typography {
+  color: var(--lqc-terminal-text) !important;
+}
+
+.task-progress-inline .ant-typography-secondary {
+  color: var(--lqc-terminal-muted) !important;
+}
+
+.task-progress-inline .ant-tag {
+  border-color: var(--lqc-terminal-line-strong) !important;
+  border-radius: 0 !important;
+  color: var(--lqc-text-soft) !important;
+  background: var(--lqc-terminal-panel-2) !important;
+}
+
+.task-progress-inline .ant-tag-blue,
+.task-progress-inline .ant-tag-processing {
+  border-color: var(--lqc-info-border-soft) !important;
+  color: var(--lqc-link-hover) !important;
+  background: var(--lqc-info-soft-bg) !important;
+}
+
+.task-progress-inline .ant-tag-green,
+.task-progress-inline .ant-tag-success {
+  border-color: var(--lqc-success-border-soft) !important;
+  color: var(--lqc-success-text) !important;
+  background: var(--lqc-success-soft-bg) !important;
+}
+
+.task-progress-inline .ant-tag-red,
+.task-progress-inline .ant-tag-error {
+  border-color: var(--lqc-danger-border-soft) !important;
+  color: var(--lqc-danger-text) !important;
+  background: var(--lqc-danger-soft-bg) !important;
+}
+
+.task-progress-inline .ant-tag-orange,
+.task-progress-inline .ant-tag-warning {
+  border-color: var(--lqc-warning-border-soft) !important;
+  color: var(--lqc-warning-text) !important;
+  background: var(--lqc-warning-soft-bg) !important;
+}
+
+.task-progress-inline .ant-progress-inner {
+  background: var(--lqc-terminal-line) !important;
+}
+
+.task-progress-inline .ant-progress-bg {
+  background: linear-gradient(90deg, var(--lqc-action-primary-bg), var(--lqc-primary-hover)) !important;
+}
+
+.task-progress-inline .ant-progress-text {
+  color: var(--lqc-terminal-text) !important;
+  font-family: var(--lqc-font-number);
+}
+
+.task-progress-inline .ant-btn-default {
+  border-color: var(--lqc-terminal-line-strong) !important;
+  color: var(--lqc-text-soft) !important;
+  background: var(--lqc-terminal-panel-2) !important;
+  box-shadow: none !important;
+}
+
+.task-progress-inline__actions .ant-btn {
+  min-width: 0;
+}
+
+.task-progress-inline__detail {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+  gap: 8px;
+  width: 100%;
+}
+
+.task-progress-inline__detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  min-height: 50px;
+  padding: 7px 9px;
+  border: 1px solid var(--lqc-terminal-line);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+}
+
+.task-progress-inline__detail-item .ant-typography {
+  margin: 0;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.task-progress-inline__raw-detail {
+  word-break: break-all;
+}
+
+@media (max-width: 768px) {
+  .task-progress-inline__head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

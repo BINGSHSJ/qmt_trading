@@ -1,0 +1,115 @@
+.empty-guide {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 36px;
+  max-height: 44px;
+  margin: 0;
+  padding: 3px 7px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--lqc-terminal-line);
+  border-left: 2px solid var(--lqc-terminal-blue);
+  border-radius: 0;
+  background: var(--lqc-terminal-panel);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.empty-guide__icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lqc-info-text);
+  border: 1px solid rgba(var(--lqc-primary-rgb), 0.32);
+  background: rgba(var(--lqc-primary-rgb), 0.1);
+  font-size: 12px;
+}
+
+.empty-guide__body {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 6px !important;
+  overflow: hidden;
+}
+
+.empty-guide .ant-typography {
+  max-width: 720px;
+  color: var(--lqc-terminal-muted);
+  font-size: 12px;
+  line-height: 1.38;
+}
+
+.empty-guide__title {
+  flex: 0 0 auto;
+  color: var(--lqc-terminal-text);
+  font-size: 12px !important;
+  line-height: 15px !important;
+  white-space: nowrap;
+}
+
+.empty-guide__reason {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: fit-content;
+  max-width: 100%;
+  padding: 1px 6px;
+  border: 1px solid rgba(var(--lqc-primary-rgb), 0.3);
+  color: var(--lqc-info-text) !important;
+  background: rgba(var(--lqc-surface-muted-rgb), 0.72);
+  font-size: 11px !important;
+}
+
+.empty-guide .ant-typography.ant-typography-secondary {
+  color: var(--lqc-terminal-muted) !important;
+}
+
+.empty-guide__description {
+  display: block;
+  flex: 1 1 auto;
+  overflow: hidden;
+  min-width: 0;
+  max-width: 100% !important;
+  margin: 0 !important;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.empty-guide__action {
+  flex: 0 0 auto;
+  min-width: 0;
+  max-width: 42%;
+  margin-left: auto;
+  padding-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+  overflow: hidden;
+}
+
+.empty-guide__action .ant-btn {
+  height: 26px;
+  min-height: 26px;
+  padding-inline: 8px;
+  border-radius: 0;
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  .empty-guide {
+    min-height: 38px;
+  }
+
+  .empty-guide__icon {
+    display: none;
+  }
+}

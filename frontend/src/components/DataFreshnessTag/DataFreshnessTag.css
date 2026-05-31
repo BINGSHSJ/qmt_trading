@@ -1,0 +1,42 @@
+.data-freshness-tag {
+  margin-inline-end: 0;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  overflow: hidden;
+  border-color: var(--lqc-terminal-line-strong);
+  border-radius: 999px;
+  color: var(--lqc-terminal-muted);
+  background: var(--lqc-terminal-panel-2);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.data-freshness-tag .anticon {
+  flex: 0 0 auto;
+  margin-inline-end: 0;
+}
+
+.data-freshness-tag > span:not(.anticon) {
+  min-width: 0;
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.data-freshness-tag__text {
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.data-freshness-tag--fresh {
+  border-color: var(--lqc-info-border-soft);
+  color: var(--lqc-link-hover);
+  background: var(--lqc-info-soft-bg);
+}

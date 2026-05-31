@@ -1,0 +1,209 @@
+.risk-confirm-content {
+  width: 100%;
+  display: grid;
+  gap: var(--lqc-modal-section-gap, 8px);
+  box-sizing: border-box;
+  color: var(--lqc-terminal-text);
+}
+
+.risk-confirm-content > * {
+  box-sizing: border-box;
+}
+
+.risk-confirm-content__object,
+.risk-confirm-content__block {
+  min-height: var(--lqc-modal-section-min-height, 56px);
+  padding: var(--lqc-modal-section-padding-y, 8px) var(--lqc-modal-section-padding-x, 10px);
+  border: 1px solid var(--lqc-terminal-line);
+  border-radius: 0;
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-panel);
+}
+
+.risk-confirm-content__object {
+  display: grid;
+  grid-template-columns: var(--lqc-modal-label-width, 112px) minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+}
+
+.risk-confirm-content__block,
+.risk-confirm-content__details-wrap,
+.risk-confirm-content__next,
+.risk-confirm-content__extra {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: var(--lqc-modal-section-min-height, 56px);
+  box-sizing: border-box;
+}
+
+.risk-confirm-content__list {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  color: var(--lqc-terminal-muted);
+  font-size: 12px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.risk-confirm-content__list li + li {
+  margin-top: 4px;
+}
+
+.risk-confirm-content__details-wrap {
+  min-height: var(--lqc-modal-section-min-height, 56px);
+  padding: var(--lqc-modal-section-padding-y, 8px) var(--lqc-modal-section-padding-x, 10px);
+  border: 1px solid var(--lqc-terminal-line);
+  background: var(--lqc-terminal-sunken);
+  box-sizing: border-box;
+}
+
+.risk-confirm-content__details-wrap > .ant-typography {
+  display: inline-flex;
+  margin-bottom: 8px;
+}
+
+.risk-confirm-content__next {
+  min-height: var(--lqc-modal-section-min-height, 56px);
+  padding: var(--lqc-modal-section-padding-y, 8px) var(--lqc-modal-section-padding-x, 10px);
+  border: 1px solid var(--lqc-info-border-soft);
+  color: var(--lqc-info-text);
+  background: var(--lqc-info-soft-bg);
+  box-sizing: border-box;
+}
+
+.risk-confirm-content__next .ant-typography {
+  color: var(--lqc-info-text) !important;
+}
+
+.risk-confirm-content__next .ant-typography:last-child {
+  margin-bottom: 0 !important;
+}
+
+.risk-confirm-content__block > .ant-typography,
+.risk-confirm-content__details-wrap > .ant-typography,
+.risk-confirm-content__next > .ant-typography,
+.risk-confirm-content__extra > .ant-typography {
+  margin-bottom: 0 !important;
+  line-height: 1.4;
+}
+
+.risk-confirm-content__extra {
+  min-height: var(--lqc-modal-section-min-height, 56px);
+  padding: var(--lqc-modal-section-padding-y, 8px) var(--lqc-modal-section-padding-x, 10px);
+  border: 1px solid rgba(var(--lqc-warning-rgb), 0.36);
+  color: var(--lqc-terminal-text);
+  background: rgba(var(--lqc-surface-muted-rgb), 0.72);
+}
+
+.risk-confirm-content__details .ant-descriptions-view,
+.risk-confirm-content__details .ant-descriptions-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.risk-confirm-content__details .ant-descriptions-item-label {
+  width: var(--lqc-modal-label-width, 112px);
+  min-width: var(--lqc-modal-label-width, 112px);
+  max-width: var(--lqc-modal-label-width, 112px);
+  min-height: 32px;
+  padding: 6px 8px;
+  color: var(--lqc-terminal-muted);
+  background: var(--lqc-terminal-panel-3);
+  font-size: 11px;
+}
+
+.risk-confirm-content__details .ant-descriptions-item-content {
+  min-width: 0;
+  min-height: 32px;
+  padding: 6px 8px;
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-panel);
+  font-family: var(--lqc-font-number);
+  font-size: 11px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.risk-confirm-content .ant-alert {
+  min-height: var(--lqc-modal-alert-min-height, 42px);
+  padding: 8px 10px;
+  border-radius: 0;
+  color: var(--lqc-terminal-text);
+  background: var(--lqc-terminal-panel);
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.risk-confirm-content .ant-alert-message {
+  color: var(--lqc-terminal-text);
+  font-weight: 800;
+}
+
+.risk-confirm-content .ant-alert-description {
+  color: var(--lqc-text-secondary);
+}
+
+.risk-confirm-content .ant-alert-warning {
+  border-color: var(--lqc-warning-border-soft);
+  background: var(--lqc-warning-soft-bg);
+}
+
+.risk-confirm-content .ant-alert-error {
+  border-color: var(--lqc-danger-border-soft);
+  background: var(--lqc-danger-soft-bg);
+}
+
+.risk-confirm-content__details .ant-descriptions-view,
+.risk-confirm-content__details .ant-descriptions-row,
+.risk-confirm-content__details .ant-descriptions-item-label,
+.risk-confirm-content__details .ant-descriptions-item-content {
+  border-color: var(--lqc-terminal-line) !important;
+}
+
+.risk-confirm-content__block,
+.risk-confirm-content__details-wrap,
+.risk-confirm-content__next,
+.risk-confirm-content__extra {
+  max-height: var(--lqc-modal-section-max-height, 200px);
+  overflow: auto;
+  scrollbar-color: var(--lqc-scrollbar-thumb) var(--lqc-scrollbar-track);
+}
+
+.risk-confirm-content__block::-webkit-scrollbar,
+.risk-confirm-content__details-wrap::-webkit-scrollbar,
+.risk-confirm-content__next::-webkit-scrollbar,
+.risk-confirm-content__extra::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.risk-confirm-content__block::-webkit-scrollbar-track,
+.risk-confirm-content__details-wrap::-webkit-scrollbar-track,
+.risk-confirm-content__next::-webkit-scrollbar-track,
+.risk-confirm-content__extra::-webkit-scrollbar-track {
+  background: var(--lqc-scrollbar-track);
+}
+
+.risk-confirm-content__block::-webkit-scrollbar-thumb,
+.risk-confirm-content__details-wrap::-webkit-scrollbar-thumb,
+.risk-confirm-content__next::-webkit-scrollbar-thumb,
+.risk-confirm-content__extra::-webkit-scrollbar-thumb {
+  border: 2px solid var(--lqc-scrollbar-border);
+  border-radius: 999px;
+  background: var(--lqc-scrollbar-thumb);
+}
+
+@media (max-width: 680px) {
+  .risk-confirm-content__object {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+
+  .risk-confirm-content__details .ant-descriptions-item-label,
+  .risk-confirm-content__details .ant-descriptions-item-content {
+    display: block;
+    width: 100%;
+  }
+}

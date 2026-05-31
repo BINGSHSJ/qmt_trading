@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark" data-density="compact">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0b0f14" />
+    <title>本地量化控制台</title>
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const defaultTheme = 'dark';
+        const defaultDensity = 'compact';
+        const validThemes = new Set(['dark', 'light']);
+        const validDensities = new Set(['comfortable', 'compact', 'dense']);
+
+        const readStorage = (key, fallback, validValues) => {
+          try {
+            const value = window.localStorage.getItem(key);
+            return validValues.has(value) ? value : fallback;
+          } catch {
+            return fallback;
+          }
+        };
+
+        const theme = readStorage('lqc_theme_mode', defaultTheme, validThemes);
+        const density = readStorage('lqc_display_density', defaultDensity, validDensities);
+        root.dataset.theme = theme;
+        root.dataset.density = density;
+        root.style.colorScheme = theme;
+        const themeColor = document.querySelector('meta[name="theme-color"]');
+        if (themeColor) {
+          themeColor.setAttribute('content', theme === 'light' ? '#edf2f8' : '#0b0f14');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
